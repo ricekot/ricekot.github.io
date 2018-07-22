@@ -1,7 +1,6 @@
 ---
 layout: page
 title: About
-permalink: /about/
 ---
 
 <img src="/assets/images/face-capture.jpg" style="float:right; margin-left:15px; margin-top:50px; margin-bottom:10px;" width="300" height="225" >
