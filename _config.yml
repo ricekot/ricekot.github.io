@@ -17,7 +17,7 @@ title: Akshath Kothari (sablerime)
 email: akshath.kothari+blog@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   The personal website of Akshath Kothari (sablerime).
-baseurl: "sablerime.github.io" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: sablerime
 github_username:  sablerime
