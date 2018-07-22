@@ -5,7 +5,7 @@ date:   2018-07-22 21:15:30 +0530
 categories: general
 ---
 
-I created this website mainly to have a place to write down whatever thoughts come to my head, in a somewhat organised manner. I used to have a blog hosted on blogger [here][blogger-link], but I always wanted to create a website of my own. 
+I created this website mainly to have a place to write down whatever thoughts come to my head, in an organised manner. I used to have a blog hosted on blogger [here][blogger-link], but I always wanted to create a website of my own. 
 
 I created this website using [Github Pages][ghpages-link] and [Jekyll][jekyll-link].
 
