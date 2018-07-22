@@ -25,6 +25,8 @@ My social media accounts:
 [Facebook][facebook-link]
 [Twitter][twitter-link]
 
+About *sablerime* : When I was trying to find a handle to represent me online, I came up with many names, but each of them failed to meet one or more of the following criteria: it must mean something, it must have something to do with me, it should be unique, it should be easy to pronounce and easy to remember. That is when I came up with the name *sablerime*.
+*sablerime* is a combination of two words: 'sable' and 'rime'. The word 'sable' is a synonym of 'black', which is my favourite colour. The word 'rime' is defined as the frost formed on cold surfaces by the rapid freezing of water vapour in cloud or fog. It is, literally, <a href = "/assets/images/i-am-so-cool.jpg" style="color:black; ">cool</a>.
 
 [soundcloud-link]: https://soundcloud.com/sablerime
 [youtube-link]: https://www.youtube.com/akshathkothari
