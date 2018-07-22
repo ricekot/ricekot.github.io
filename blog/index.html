@@ -1,0 +1,35 @@
+---
+layout: page
+title: Blog
+---
+
+<!-- This loops through the paginated posts -->
+{% for post in paginator.posts %}
+  <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+  <p class = "post-meta"> {{ post.date | date: "%-d %B %Y"}} </p>
+  <div class="content">
+    {{ post.content }}
+  </div>
+  <br><hr><br>
+{% endfor %}
+
+<!-- Pagination links -->
+<div class="pagination">
+  <p style="text-align:center;">
+    {% if paginator.previous_page %}
+      <span class="previous" style="float:left;">
+        <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+      </span>
+    {% else %}
+      <span class="previous " style="float:left; color:grey;">Previous</span>
+    {% endif %}
+      <span class="page_number " style="color:grey;">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+    {% if paginator.next_page %}
+      <span class="next " style="float:right;">
+        <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+      </span>
+    {% else %}
+      <span class="next " style="float:right; color:grey;">Next</span>
+    {% endif %}
+  </p>
+</div>

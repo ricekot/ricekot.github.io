@@ -1,0 +1,24 @@
+---
+layout: page
+---
+
+{% for post in site.posts %}
+    {% assign total_posts = forloop.rindex %}
+    {% break %}
+{% endfor %}
+
+{% for post in site.posts %}
+    {% if forloop.index0 > 4 %}
+        {% break %}
+    {% endif %}
+    <h1 class="post-title p-name" itemprop="name headline"><a href="{{ post.url }}">{{ post.title }}</a></h1>
+    <p class = "post-meta"> {{ post.date | date: "%-d %B %Y"}} </p>
+    {{ post.content }}
+    <br><hr><br>
+{% endfor %}
+
+<!-- Navigation Links -->
+<div class= "to_page2 ">
+    <p style="text-align:center;"><span class="page_number " style="color:grey;">Page: 1 of {{ total_posts | divided_by: 5.0 | ceil }}</span>
+    <!-- <span class = "next" style="float:right"><a href="/blog/page2" class="next">Next</a></span> --></p>
+</div> 
