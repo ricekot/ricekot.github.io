@@ -8,7 +8,7 @@ permalink: /about/
 
 # Hi there.
 
-My name is Akshath Kothari. I'm currently a first-year student at BITS, Pilani, pursuing an M.Sc. degree in Biological Sciences. I hope to be able to study for a Bachelor's degree in Computer Science as well by the end of this academic year. 
+My name is Akshath Kothari. I'm currently a first-year student at BITS, Pilani, pursuing an M.Sc. degree in Mathematics. I hope to be able to study for a Bachelor's degree in Computer Science as well by the end of this academic year. 
 
 I like studying both science and liberal arts subjects. It is in my mission statement to improve myself and to learn as much as I can while minimising the time I spend doing other, non-productive things.
 
