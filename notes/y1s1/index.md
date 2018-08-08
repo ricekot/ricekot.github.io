@@ -2,12 +2,18 @@
 layout: page
 ---
 
-[Computer Programmin][cp-link]
+[Computer Programming][cp-link]
+
 [Engineering Graphics][eg-link]
+
 [General Chemistry][chem-link]
+
 [Mathematics I][math-link]
+
 [Mechanics, Oscillations and Waves][meow-link]
+
 [Thermodynamics][thermo-link]
+
 
 [cp-link]: /notes/y1s1/cp/
 [eg-link]: /notes/y1s1/eg/
