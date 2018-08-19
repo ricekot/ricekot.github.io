@@ -1,3 +1,3 @@
-# sablerime.github.io
+# akshathkothari.github.io
 
 My personal website. I mostly blog here.
