@@ -7,4 +7,4 @@ categories: general
 
 I hope I don't regret this.
 
-<img src="/assets/images/dive.jpg">
+<img src="/assets/images/dive.jpg" width="500" height="446.32">
