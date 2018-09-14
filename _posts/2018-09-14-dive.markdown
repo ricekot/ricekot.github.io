@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "Dive"
+date:   2018-09-14 23:50:30 +0530
+categories: general
+---
+
+I hope I don't regret this.
+
+<img src="/assets/images/dive.jpg">
