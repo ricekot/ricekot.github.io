@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "A Path I Couldn't See Before"
+title:  "Negligence"
 date:   2018-11-21 22:19:30 +0530
 categories: general
 ---
