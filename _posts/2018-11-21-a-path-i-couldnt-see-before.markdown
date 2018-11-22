@@ -15,4 +15,4 @@ So, what's next? Exams. And another shot at trying to learn something new everyd
 
 [1]: Read 'Deep Work' by Cal Newport
 
-[problem-solving-link]: /posts/2018-10-12-problem-solving.html
+[problem-solving-link]: general/2018/10/11/problem-solving.html
