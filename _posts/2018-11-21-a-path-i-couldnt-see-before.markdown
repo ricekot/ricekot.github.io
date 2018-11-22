@@ -5,7 +5,7 @@ date:   2018-11-21 22:19:30 +0530
 categories: general
 ---
 
-Okay. So here's the thing. My "problem solving" approach didn't work. Hell, I didn't even _think_ of approaching things that way since posting that. I think that this is where my problem lies. I keep on planning things and thinking of what I should be doing without actually doing any of it.
+Okay. So here's the thing. My "[problem solving][problem-solving-link]" approach didn't work out. Hell, I didn't even _think_ of approaching things that way since I wrote that post. I think that this is where my problem lies. I keep on planning things and thinking of what I should be doing without actually doing any of it.
 
 There's only one thing left for me to do now. I have to stop giving in to the urges of instant gratification. This is how I spend most of my time these days. I keep on doing things in a shallow manner<sup>[1]</sup>, unconciously living the principle of least effort.
 
@@ -13,4 +13,6 @@ It really gets you down when things stop going your way. That's how I've been fe
 
 So, what's next? Exams. And another shot at trying to learn something new everyday and posting about it here starting ~~today~~ tomorrow.
 
-[1]: Check out this book called 'Deep Work' by Cal Newport
+[1]: Read 'Deep Work' by Cal Newport
+
+[problem-solving-link]: /posts/2018-10-12-problem-solving.html
