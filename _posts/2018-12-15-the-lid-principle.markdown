@@ -20,11 +20,11 @@ Document your ideas, your point of view, your shortcomings and your bravery, and
 
 Until now, I wasn't really sure about why I was writing a blog. Henceforth, this website will act as a documentation of all the things that I learn from this moment onwards.
 
->As I begin this journey
->There's one thing on my mind
->Will I succeed
->Or will I stay far behind?
->I am not wise
->But I can say this much
->I will not quit
->Even if I fall
+>As I begin this journey<br>
+>There's one thing on my mind<br>
+>Will I succeed<br>
+>Or will I stay far behind?<br>
+>I am not wise<br>
+>But I can say this much<br>
+>I will not quit<br>
+>Even if I fall<br>
