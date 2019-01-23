@@ -13,9 +13,8 @@ I will try to post here as frequently as possible! Here's to new beginnings!
 
 <center><img title = "Cheers!" src="/assets/images/anime-cheer.gif" style="border: 1px solid #ddd; border-radius: 4px; padding: 10px; max-width: 100%; height: auto; margin-top:10px; margin-bottom:20px;"></center>
 
-I created this website using [Github Pages][ghpages-link] and [Jekyll][jekyll-link]. For those interested, the entire source code of this website can be found [here][sourcecode-link].
+I created this website using [Github Pages][ghpages-link] and [Jekyll][jekyll-link].
 
 [blogger-link]: https://herecomesAK.blogspot.com
 [ghpages-link]: https://pages.github.com/
 [jekyll-link]: https://jekyllrb.com/
-[sourcecode-link]: https://github.com/sablerime/sablerime.github.io
