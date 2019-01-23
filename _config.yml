@@ -28,6 +28,7 @@ total_pages: {{ paginator.total_pages }}
 # Build settings
 markdown: kramdown
 theme: minima
+plugins_dir: ./_scripts
 plugins:
   - jekyll-feed
   - jekyll-paginate
