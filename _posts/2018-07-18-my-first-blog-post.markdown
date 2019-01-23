@@ -11,7 +11,7 @@ Why did I create this website? My primary motive for creating this blog is to ke
 
 I will try to post here as frequently as possible! Here's to new beginnings!
 
-<center><img title = "Cheers!" src="/assets/images/anime-cheer.gif"></center>
+<center><img title = "Cheers!" src="/assets/images/anime-cheer.gif" style="border: 1px solid #ddd; border-radius: 4px; padding: 10px; max-width: 100%; height: auto;"></center>
 
 I created this website using [Github Pages][ghpages-link] and [Jekyll][jekyll-link]. For those interested, the entire source code of this website can be found [here][sourcecode-link].
 
