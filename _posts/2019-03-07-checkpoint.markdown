@@ -7,6 +7,8 @@ categories: general
 
 This post serves as a checkpoint for me. If any action of mine causes me to turn into a person who lacks creativity and the capability for out of the box thinking, I should be able to read this post and “respawn” back into the person I am as of 22:29 hrs 7th March 2019 IST.
 
+<center><img title = "Checkpoint" src="/assets/images/checkpoint.gif" style="border: 1px solid #ddd; border-radius: 4px; padding: 10px; max-width: 35%; height: auto; margin-top:10px; margin-bottom:20px;"></center>
+
 I have decided to make a big decision concerning one significant part of my life – formal education.
 
 Ever since I was 11, I have thought of school education as being essential for personal development. And it was! I spent a lot of time trying to understand the logic behind things, always prioritising understanding concepts over rote memorisation. This way I was inspired by history, mathematics and the sciences. I developed an interest in reading and writing stories, poems and essays. I fell in love with French grammar and pondered over ancient Hindi dohé (couplets). I genuinely feel that the things I studied until tenth grade were responsible in shaping who I am today. Then I entered the eleventh grade, and everything went haywire.
@@ -20,5 +22,3 @@ I started my second semester with a newfound determination. I planned to attend 
 It is difficult to get an in-depth understanding of any subject without spending a substantial amount of time reading concepts, solving problems, and analysing mistakes - time that I want to spend doing other things too - like designing motion graphics, contributing to open source software and socialising. I must start studying only as much is required for a good grade. Not more, not less. This style of learning things violates my principles, and I am afraid of turning into someone I will despise.
 
 I feel that studying for grades, and not for learning, is linked to a loss in the ability of creative thinking. Fortunately, I only have to work like this temporarily, and then things will be back the way they are. If not, I can remain worry-free thanks to this checkpoint.
-
-<center><img title = "Checkpoint" src="/assets/images/checkpoint.gif" style="border: 1px solid #ddd; border-radius: 4px; padding: 10px; max-width: 50%; height: auto; margin-top:10px; margin-bottom:20px;"></center>
