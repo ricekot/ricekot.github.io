@@ -21,4 +21,4 @@ It is difficult to get an in-depth understanding of any subject without spending
 
 I feel that studying for grades, and not for learning, is linked to a loss in the ability of creative thinking. Fortunately, I only have to work like this temporarily, and then things will be back the way they are. If not, I can remain worry-free thanks to this checkpoint.
 
-<center><img title = "Checkpoint" src="/assets/images/checkpoint.gif" style="border: 1px solid #ddd; border-radius: 4px; padding: 10px; max-width: 100%; height: auto; margin-top:10px; margin-bottom:20px;"></center>
+<center><img title = "Checkpoint" src="/assets/images/checkpoint.gif" style="border: 1px solid #ddd; border-radius: 4px; padding: 10px; max-width: 50%; height: auto; margin-top:10px; margin-bottom:20px;"></center>
