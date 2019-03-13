@@ -20,6 +20,8 @@ For entertainment, I love to watch Anime. You can find a list of all the anime I
 
 I also really like contributing towards open source projects. You can find my Github page [here][github-link].
 
+I'm gonna fucking change the world. Or at least die trying.
+
 My social media accounts:
 [Instagram][instagram-link]
 [Facebook][facebook-link]
@@ -30,15 +32,15 @@ About *sablerime* : When I was trying to find a handle to represent me online, I
 *sablerime* is a combination of two words: 'sable' and 'rime'. The word 'sable' is a synonym of 'black', which is my favourite colour. The word 'rime' is defined as the frost formed on cold surfaces by the rapid freezing of water vapour in cloud or fog. It is, literally, <a href = "/assets/images/i-am-so-cool.jpg" style="color:black; ">cool</a>.
 -->
 
-[soundcloud-link]: https://soundcloud.com/sablerime
+[soundcloud-link]: https://soundcloud.com/akshathkothari
 [youtube-link]: https://www.youtube.com/akshathkothari
 [goodreads-link]: https://www.goodreads.com/user/show/29882240-akshath-kothari
 [myanimelist-link]: https://myanimelist.net/animelist/sablerime
 [steam-link]: https://steamcommunity.com/id/sablerime
-[instagram-link]: https://instagram.com/sablerime
-[facebook-link]: https://www.facebook.com/sablerime
-[twitter-link]: https://twitter.com/sablerime
-[github-link]: https://github.com/sablerime
+[instagram-link]: https://instagram.com/akshathkothari
+[facebook-link]: https://www.facebook.com/akshathkothari
+[twitter-link]: https://twitter.com/akshathkothari
+[github-link]: https://github.com/akshathkothari
 [jekyll-organization]: https://github.com/jekyll
 
 <!---
