@@ -42,7 +42,3 @@ About *sablerime* : When I was trying to find a handle to represent me online, I
 [twitter-link]: https://twitter.com/akshathkothari
 [github-link]: https://github.com/akshathkothari
 [jekyll-organization]: https://github.com/jekyll
-
-<!---
-As of today (22nd July 2018), I'm certainly not the person that I have projected myself to be in the above introduction. But I will strive to be that person. I will do whatever it takes. This is my promise to myself.
--->
