@@ -44,7 +44,6 @@ bs = 64
 path = Path('/home/jupyter/tutorials/data/anime-vs-cartoon')
 ```
 
-
 ```python
 classes = ['anime','cartoon']
 for c in classes:
@@ -56,94 +55,6 @@ for c in classes:
     download_images(path/file, dest, max_pics=1000)
     verify_images(path/c, delete=True, max_size=500)
 ```
-
-    anime
-
-
-
-
-    <div>
-        <style>
-            /* Turns off some styling */
-            progress {
-                /* gets rid of default border in Firefox and Opera. */
-                border: none;
-                /* Needs to be in here for Safari polyfill so background images work as expected. */
-                background-size: auto;
-            }
-            .progress-bar-interrupted, .progress-bar-interrupted::-webkit-progress-bar {
-                background: #F44336;
-            }
-        </style>
-      <progress value='1000' class='' max='1000', style='width:300px; height:20px; vertical-align: middle;'></progress>
-      100.00% [1000/1000 01:27<00:00]
-    </div>
-    
-
-
-
-
-    <div>
-        <style>
-            /* Turns off some styling */
-            progress {
-                /* gets rid of default border in Firefox and Opera. */
-                border: none;
-                /* Needs to be in here for Safari polyfill so background images work as expected. */
-                background-size: auto;
-            }
-            .progress-bar-interrupted, .progress-bar-interrupted::-webkit-progress-bar {
-                background: #F44336;
-            }
-        </style>
-      <progress value='1000' class='' max='1000', style='width:300px; height:20px; vertical-align: middle;'></progress>
-      100.00% [1000/1000 00:09<00:00]
-    </div>
-    
-    cannot identify image file <_io.BufferedReader name='/home/jupyter/tutorials/data/anime-vs-cartoon/anime/00000091.jpg'>
-    cannot identify image file <_io.BufferedReader name='/home/jupyter/tutorials/data/anime-vs-cartoon/anime/00000670.jpg'>
-    cannot identify image file <_io.BufferedReader name='/home/jupyter/tutorials/data/anime-vs-cartoon/anime/00000856.png'>
-
-    
-    cartoon
-
-  <div>
-        <style>
-            /* Turns off some styling */
-            progress {
-                /* gets rid of default border in Firefox and Opera. */
-                border: none;
-                /* Needs to be in here for Safari polyfill so background images work as expected. */
-                background-size: auto;
-            }
-            .progress-bar-interrupted, .progress-bar-interrupted::-webkit-progress-bar {
-                background: #F44336;
-            }
-        </style>
-      <progress value='256' class='' max='256', style='width:300px; height:20px; vertical-align: middle;'></progress>
-      100.00% [256/256 00:02&lt;00:00]
-  </div>
-
-  <div>
-        <style>
-            /* Turns off some styling */
-            progress {
-                /* gets rid of default border in Firefox and Opera. */
-                border: none;
-                /* Needs to be in here for Safari polyfill so background images work as expected. */
-                background-size: auto;
-            }
-            .progress-bar-interrupted, .progress-bar-interrupted::-webkit-progress-bar {
-                background: #F44336;
-            }
-        </style>
-      <progress value='272' class='' max='272', style='width:300px; height:20px; vertical-align: middle;'></progress>
-      100.00% [272/272 00:00&lt;00:00]
-  </div>
-    
-
-
-For some reason a lot of anime image URLs were broken. Good thing we verified the images.
 
 ### Step 2: Transform & View Data
 
