@@ -77,7 +77,7 @@ for c in classes:
           }
       </style>
     <progress value='1000' class='' max='1000', style='width:300px; height:20px; vertical-align: middle;'></progress>
-    100.00% [1000/1000 01:27<00:00]
+    100.00% [1000/1000 01:27&lt;00:00]
   </div>
 
   <div>
@@ -93,9 +93,10 @@ for c in classes:
               background: #F44336;
           }
       </style>
-    <progress value='1000' class='' max='1000', style='width:300px; height:20px; vertical-align: middle;'></progress>
-    100.00% [1000/1000 00:09<00:00]
+    <progress value='1000' class='' max='1000', style='width:300px; height:20px; vertical-align: middle'></progress>
+    100.00% [1000/1000 00:09&lt;00:00]
   </div>
+
   <br>
   <div style="overflow: auto; width:900px; height:250px;">
       cannot identify image file <_io.BufferedReader name='/home/jupyter/tutorials/data/anime-vs-cartoon/anime/00000091.jpg'>
