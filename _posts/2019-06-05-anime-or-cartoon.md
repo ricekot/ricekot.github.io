@@ -1,7 +1,9 @@
+---
+layout: post
+title:  "Anime or Cartoon"
+---
 
-# Anime and Cartoons
-
-This blog post is actually a jupyter notebook, converted to markdown. If interested, you can find this notebook [here]().
+This blog post is actually a jupyter notebook, converted to markdown. If interested, you can find this notebook [here](https://github.com/akshathkothari/akshathkothari.github.io/tree/master/_jupyter).
 
 After watching the first lesson video of the fastai course, ['Practical Deep Learning for Coders'](http://course.fast.ai/), I was moved. All those things that seemed would take years for me to achieve were now at my fingertips. 
 
