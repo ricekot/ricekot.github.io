@@ -3,7 +3,7 @@ layout: post
 title:  "Handwritten Digit Classifier"
 ---
 
-After a bad first attempt at creating an image classification model, I will be training a model on the MNIST database of handwritten digits this time around. This post is actually a jupyter notebook, which you can find [here](https://github.com/akshathkothari/akshathkothari.github.io/tree/master/_jupyter).
+After a bad first attempt at creating an image classification model, I trained a model on the MNIST database of handwritten digits this time around. This post is actually a jupyter notebook, which you can find [here](https://github.com/akshathkothari/akshathkothari.github.io/tree/master/_jupyter).
 
 ## The Project
 
