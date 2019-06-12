@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-<img src="/assets/images/face-capture.jpg" style="float:right; margin-left:15px; margin-top:50px; margin-bottom:10px;" width="225" height="225" >
+<img src="/assets/images/face-capture.jpg" style="float:left; margin-right:15px; margin-bottom:10px; margin-top:10px" width="225" height="225">
 
 # Hi there.
 
