@@ -8,6 +8,7 @@ layout: page
   <p class = "post-meta"> {{ post.date | date: "%-d %B %Y"}} </p>
   <div class="content">
     {{ post.excerpt }}
+    <p align="right"><a href="{{ post.url }}">Read more...</a></p>
   </div>
   <br><hr><br>
 {% endfor %}
