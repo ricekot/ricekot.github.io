@@ -3,6 +3,8 @@ layout: post
 title:  "Anime or Cartoon"
 ---
 
+**UPDATE (13 June 2019):** This post now includes an additional step: Data Cleaning. I learnt about this in the second lesson of the fastai course that I have been following. I was able to remove the images that weren't good enough for my data set (take a look at `top_losses` images in Step 4).
+
 This blog post is actually a jupyter notebook, converted to markdown. If interested, you can find this notebook [here](https://github.com/akshathkothari/akshathkothari.github.io/tree/master/_jupyter).
 
 After watching the first lesson video of the fastai course, ['Practical Deep Learning for Coders'](http://course.fast.ai/), I was moved. All those things that seemed would take years for me to achieve were now at my fingertips. 
@@ -67,6 +69,14 @@ Before training our model, we must normalise our images. The fastai library prov
 np.random.seed(2)
 data = ImageDataBunch.from_folder(path, train=".", valid_pct=0.2, ds_tfms=get_transforms(),
                                   size=224, num_workers=4).normalize(imagenet_stats)
+```
+
+
+```python
+# This cell should be run after Step 5:Data Cleaning (if required)
+# np.random.seed(42)
+# data = ImageDataBunch.from_csv(path, folder=".", valid_pct=0.2, csv_labels='cleaned.csv',
+#         ds_tfms=get_transforms(), size=224, num_workers=4).normalize(imagenet_stats)
 ```
 
 
@@ -191,7 +201,44 @@ interp.plot_top_losses(4, figsize=(6, 6), heatmap=False)
 
 Looking at the above pictures, it makes sense why our model classified these incorrectly! Even a casual anime viewer would be confused when looking at these pictures. Once again, please excuse me for my poorly curated data sets.
 
-### Step 5: Fine Tuning
+### Step 5: Data Cleaning
+
+As can be seen above, there are some images in the data set which don't belong there. I used the `ImageCleaner` widget from the fastai library to remove these images.
+
+
+```python
+from fastai.widgets import *
+```
+
+
+```python
+db = (ImageList.from_folder(path)
+                   .split_none()
+                   .label_from_folder()
+                   .transform(get_transforms(), size=224)
+                   .databunch()
+     )
+```
+
+
+```python
+learn_cln = cnn_learner(db, models.resnet34, metrics=error_rate)
+learn_cln.load('stage-1');
+```
+
+
+```python
+ds, idxs = DatasetFormatter().from_toplosses(learn_cln)
+```
+
+
+```python
+ImageCleaner(ds, idxs, path)
+```
+
+We can now go back to Step 2 and train a new model on the cleaned data set.
+
+### Step 6: Fine Tuning
 
 Let's see if we can reduce the error rate by choosing a range of learning rate optimum for this model.
 
@@ -279,7 +326,7 @@ The train_loss variable has gone down considerably. This probably means that the
 learn.load('stage-1')
 ```
 
-### Step 6: Testing
+### Step 7: Testing
 
 This step was a lot of fun! I tested the model on a lot of images from my favourite anime and cartoons, and the thing that surprised me the most was, the model was _actually_ working! I was a little sceptical at first, but after testing it a couple of times I was pretty satisfied with it's performance. It seemed to guess the image correctly most of the time, save for a few instances. For example, it incorrectly identified a scene from [Boku no Hero Academia](https://myanimelist.net/manga/75989/Boku_no_Hero_Academia) as a cartoon.
 
@@ -308,7 +355,7 @@ As you can see, the model isn't perfect! Also, there are many things that I do n
 
 I will try to find the answers to these questions as I progress further in the course, discuss in the forums etc.. I will post whatever I learn here on this blog.
 
-### Step 7: Put Model in Production
+### Step 8: Put Model in Production
 
 This was something I made just for fun, as a project to test out what I had learnt. I have no plans to put this in production anytime soon, for this is in no means perfect and is only a trivial application of deep learning. However, I may eventually create a very basic android app just to see how I can integrate deep learning with an app running on a mobile device.
 
