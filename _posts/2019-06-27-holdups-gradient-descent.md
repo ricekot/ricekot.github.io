@@ -14,7 +14,7 @@ I will be posting stuff that I think is holding me back from moving forward in t
 
 ### Some questions I have
 1. What is Automatic Differentiation? How does it work?
-    * To Read:
+    * To read:
         * [A Hitchhiker's Guide to Automatic Differentiation [arXiv:1411.0583]](https://arxiv.org/abs/1411.0583)
         * [A Review of automatic differentiation and its efficient implementation [arXiv:1811.05031]](https://arxiv.org/abs/1811.05031)
         * [Automatic Differentiation of Algorithms for Machine Learning [arXiv:1404.7456]](https://arxiv.org/abs/1404.7456)
