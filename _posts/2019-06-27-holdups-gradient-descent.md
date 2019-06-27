@@ -10,7 +10,7 @@ I will be posting stuff that I think is holding me back from moving forward in t
     * I got a satisfactory answer from the books Thomas' Calculus and Ian Goodfellow's Deep Learning. But these in turn led me to ask the following questions:
 2. How does minimising the directional derivative at a point help us realise the direction of steepest descent?
 3. Why does ∇f always point in the direction of steepest ascent?
-    * I was able to answer these two questions after I watched [this great Khan Academy video](https://www.khanacademy.org/math/multivariable-calculus/multivariable-derivatives/gradient-and-directional-derivatives/v/why-the-gradient-is-the-direction-of-steepest-ascent).
+    * I was able to answer these two questions after watching [this great Khan Academy video](https://www.khanacademy.org/math/multivariable-calculus/multivariable-derivatives/gradient-and-directional-derivatives/v/why-the-gradient-is-the-direction-of-steepest-ascent).
 
 ### Some questions I have
 1. What is Automatic Differentiation? How does it work?
