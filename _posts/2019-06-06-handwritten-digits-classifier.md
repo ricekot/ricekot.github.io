@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-with-comments
 title:  "Handwritten Digit Classifier"
 ---
 

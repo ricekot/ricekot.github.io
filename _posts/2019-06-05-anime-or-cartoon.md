@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post-with-comments
 title:  "Anime or Cartoon"
 ---
 
