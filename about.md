@@ -8,7 +8,7 @@ permalink: /about/
 
 # Hi there.
 
-My name is Akshath Kothari. I'm currently a sophomore at BITS, Pilani, pursuing a dual degree program in Mathematics and Mechanical Engineering.
+My name is Akshath Kothari. I'm currently a sophomore at BITS, Pilani, pursuing dual degrees in Mathematics and Mechanical Engineering.
 
 I'm deeply passionate about music. I mostly make covers of my favourite songs but I try to produce something original occasionally. I upload my (bad) covers to my [Youtube channel][youtube-link] and my original music to my [Soundcloud page][soundcloud-link].
 
