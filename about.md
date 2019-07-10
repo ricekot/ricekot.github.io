@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-<img src="/assets/images/face-capture.jpg" style="float:left; margin-right:15px; margin-bottom:10px; margin-top:10px" width="225" height="225">
+<img src="/assets/images/back-capture.jpg" style="float:right; margin-left:15px; margin-top:50px; margin-bottom:10px;" width="300" height="225" >
 
 # Hi there.
 
@@ -12,7 +12,7 @@ My name is Akshath Kothari. I'm currently a sophomore at BITS, Pilani, pursuing 
 
 I'm deeply passionate about music. I mostly make covers of my favourite songs but I try to produce something original occasionally. I upload my (bad) covers to my [Youtube channel][youtube-link] and my original music to my [Soundcloud page][soundcloud-link].
 
-I also like to read lots of books. You can check out my Goodreads page [here][goodreads-link] to view the list of books that I've read in the past, I'm currently reading or plan to read in the future.
+I also like to read lots of books. You can check out my [Goodreads page][goodreads-link] to view the list of books that I've read in the past, I'm currently reading or plan to read in the future.
 
 For entertainment, I watch anime and play video games. You can find a list of all the anime I've watched or plan to watch [here][myanimelist-link]. If you're a gamer too, add me on [Steam][steam-link] or [PSN][psn-link].
 
