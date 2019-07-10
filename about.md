@@ -8,19 +8,17 @@ permalink: /about/
 
 # Hi there.
 
-My name is Akshath Kothari. I'm currently a first-year student at BITS, Pilani, pursuing an M.Sc. degree in Mathematics. I hope to be able to study for a Bachelor's degree in Computer Science as well by the end of this academic year. 
+My name is Akshath Kothari. I'm currently a sophomore at BITS, Pilani, pursuing a double major in Mathematics and Mechanical Engineering. 
 
-I like studying both science and liberal arts subjects. It is in my mission statement to improve myself and to learn as much as I can while minimising the time I spend doing other, non-productive things.
-
-I'm deeply passionate about music. I mostly make covers of my favourite songs but I try to produce something original occasionally. You can check out my Soundcloud page [here][soundcloud-link] and my Youtube channel [here][youtube-link].
+I'm deeply passionate about music. I mostly make covers of my favourite songs but I try to produce something original occasionally. I upload my (bad) covers to my [Youtube channel][youtube-link] and my original music to my [Soundcloud page][soundcloud-link].
 
 I also like to read lots of books. You can check out my Goodreads page [here][goodreads-link] to view the list of books that I've read in the past, I'm currently reading or plan to read in the future.
 
-For entertainment, I love to watch Anime. You can find a list of all the anime I've watched or plan to watch [here][myanimelist-link]. From time to time, I also like to play computer games. To add me on steam, go [here][steam-link].
+For entertainment, I watch anime and play video games. You can find a list of all the anime I've watched or plan to watch [here][myanimelist-link]. If you're a gamer too, add me on [Steam][steam-link] or [PSN][psn-link].
 
 I also really like contributing towards open source projects. You can find my Github page [here][github-link].
 
-I'm gonna fucking change the world. Or at least die trying.
+I vow to make a dent in the universe. 
 
 My social media accounts:
 [Instagram][instagram-link]
@@ -32,11 +30,12 @@ About *sablerime* : When I was trying to find a handle to represent me online, I
 *sablerime* is a combination of two words: 'sable' and 'rime'. The word 'sable' is a synonym of 'black', which is my favourite colour. The word 'rime' is defined as the frost formed on cold surfaces by the rapid freezing of water vapour in cloud or fog. It is, literally, <a href = "/assets/images/i-am-so-cool.jpg" style="color:black; ">cool</a>.
 -->
 
-[soundcloud-link]: https://soundcloud.com/akshathkothari
+[soundcloud-link]: https://soundcloud.com/sablerime
 [youtube-link]: https://www.youtube.com/akshathkothari
 [goodreads-link]: https://www.goodreads.com/user/show/29882240-akshath-kothari
 [myanimelist-link]: https://myanimelist.net/animelist/sablerime
 [steam-link]: https://steamcommunity.com/id/sablerime
+[psn-link]: https://my.playstation.com/profile/arystorblack
 [instagram-link]: https://instagram.com/akshathkothari
 [facebook-link]: https://www.facebook.com/akshathkothari
 [twitter-link]: https://twitter.com/akshathkothari
