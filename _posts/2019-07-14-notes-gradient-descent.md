@@ -3,14 +3,13 @@ layout: post-with-comments
 title: "Notes - Gradient Descent"
 ---
 
+This [notebook](https://github.com/akshathkothari/akshathkothari.github.io/tree/master/_jupyter) post contains some of my notes I took while studying gradient descent. This notebook was derived from the lesson2-sgd.ipynb notebook from fastai course-v3.
 
 
 ```python
 %matplotlib inline
 from fastai.basics import *
 ```
-
-This notebook post contains some of my notes I took while studying gradient descent. This notebook was derived from the lesson2-sgd.ipynb notebook from fastai course-v3.
 
 ## Linear Regression Problem
 
