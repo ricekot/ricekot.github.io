@@ -1,5 +1,5 @@
 ---
-layout: post-with-comments
+layout: post
 title:  "Hold-ups - Gradient Descent"
 ---
 
