@@ -1,40 +1,42 @@
----
-layout: page
----
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <div id="background" class = "frame"></div>
+  <body>
+    <div id = "content">
+        <div id = "header">
+          <h4><span id="who"></span></h4>
+          <script src="/assets/js/flex.js"></script>
+          <h1>Akshath Kothari</h1>
+          <span id="caption"></span>
+          <script src="/assets/js/caption.js"></script>
+        </div>
+        
+        <div class = "padding-32">
+          <div class="navbar">
+              <a href="/about/" class="button">About</a>
+              <a href="/archive/" class="button">Archive</a>
+              <a href="/blog/" class="button">Blog</a>
+              <a href="/contact/" class="button">Contact</a>
+          </div>
+        </div>
+    </div>
 
-<!-- This loops through the paginated posts -->
-{% for post in paginator.posts %}
-  <h1 class="post-title p-name" itemprop="name headline"><a href="{{ post.url }}">{{ post.title }}</a></h1>
-  <p class = "post-meta"> {{ post.date | date: "%-d %B %Y"}} </p>
-  <div class="content">
-    {{ post.excerpt }}
-    <p align="right"><a href="{{ post.url }}">Read more...</a></p>
-  </div>
-  <hr><br>
-{% endfor %}
+    <div id="footer">
+      <a href="https://www.facebook.com/akshathkothari"><i class="fa fa-facebook-official social"></i></a>
+      <a href="https://instagram.com/akshathkothari"><i class="fa fa-instagram social"></i></a>
+      <a href="https://www.youtube.com/akshathkothari"><i class="fa fa-youtube-play social"></i></a>
+      <a href="https://twitter.com/akshathkothari"><i class="fa fa-twitter social"></i></a>
+      <a href="https://github.com/akshathkothari"><i class="fa fa-github social"></i></a>
+      <a href="https://www.linkedin.com/in/akshathkothari/"><i class="fa fa-linkedin social"></i></a>
+      <br>
+      <br>
+      Copyright Ⓒ 2019 Akshath Kothari. All rights reserved.
+    </div>
 
-<!-- Pagination links -->
-<div class="pagination">
-<p style="text-align:center;">
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <span class="previous" style="float:left;">
-        <a href="/" class="previous">Previous</a>
-      </span>
-    {% else %}
-      <span class="previous" style="float:left;">
-        <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
-      </span>
-    {% endif %}
-  {% else %}
-    <span class="next " style="float:left; color:grey;">Previous</span>
-  {% endif %}
-    <span class="page_number " style="color:grey;">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
-  {% if paginator.next_page %}
-    <span class="next " style="float:right;">
-      <a href="{{ paginator.next_page_path }}" class="next">Next</a>
-    </span>
-  {% else %}
-    <span class="next " style="float:right; color:grey;">Next</span>
-  {% endif %}
-</p>
+  </body>
+</html>
