@@ -13,23 +13,27 @@ html {
 body {
     position: relative;
     margin: 0;
-    padding-bottom: 1rem;
     min-height: 100vh;
     font-family: "Raleway", Arial, sans-serif;
-    font-size: 15px;
-    line-height:1.5;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
-h1{font-size:4vw}
+
+h1{font-size:36px}
+h2{font-size:30px}
+h3{font-size:24px}
 h4{font-size:20px}
+h5{font-size:18px}
+h6{font-size:16px}
 h1,h2,h3,h4,h5,h6{
     font-weight:400;
     margin:10px 0;
     letter-spacing: 6px;
 }
 
-.padding-32 {
-    padding-top:32px!important;
+.padding-navbar {
+    padding-top:24px!important;
     padding-bottom:300px!important;
 }
 
@@ -99,13 +103,11 @@ h1,h2,h3,h4,h5,h6{
     max-width: 1500px;
     margin-left:auto; 
     margin-right:auto;
-    margin-bottom:-16px;
-    padding:128px 16px 2.5rem;
+    padding:15vh 4vw;
     text-align:center!important;
     background-image: var(--bg-img-url), url("/assets/images/white.png");
     background-size: cover;
     background-repeat: no-repeat; 
-    background-origin: center;
     background-position: center;
     background-attachment: scroll;
     -webkit-background-clip: text;
@@ -113,3 +115,5 @@ h1,h2,h3,h4,h5,h6{
     color:transparent;
     filter:invert(1) contrast(100);
 }
+
+@media (max-width:600px) {.hide-small{display:none!important}}
