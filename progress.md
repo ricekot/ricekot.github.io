@@ -4,6 +4,8 @@ Title: Progress
 permalink: /progress/
 ---
 
+# Progress
+
 ## The Two Day Rule
 
 This page is a monthly tracker for habits I'm trying to form using the two day rule. The rule basically says that I can't take two consecutive days off from practicing a habit. I got this idea from watching [this Matt D'Avella video](https://www.youtube.com/watch?v=YgB_XfudqeU).
