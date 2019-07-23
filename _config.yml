@@ -28,8 +28,8 @@ total_pages: {{ paginator.total_pages }}
 header_pages:
   - about.md
   - archive.md
-  - /blog/index.html
-  - /progress/index.md
+  - blog/index.html
+  - progress/index.md
   - contact.md
 
 # Build settings
