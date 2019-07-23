@@ -25,13 +25,6 @@ paginate: 5
 paginate_path: "/blog/page:num/"
 total_pages: {{ paginator.total_pages }}
 
-header_pages:
-  - about.md
-  - archive.md
-  - blog/index.html
-  - progress/index.md
-  - contact.md
-
 # Build settings
 markdown: kramdown
 theme: minima
