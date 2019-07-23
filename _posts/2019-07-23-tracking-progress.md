@@ -6,7 +6,7 @@ Title: Progress
 I find it difficult to do things unless I'm under a deadline or in a challenging situation. In light of this (and to build consistency), I have decided to start following some rules to get things into motion and form new habits.
 
 ### The Rules
-1. 100 Day Challenge: I will be logging my experience daily at <{% link /progress/index.md %}> for the next 100 days, commiting to work at least 1 hour each day at a habit. This brings us to rule 2:
+1. 100 Day Challenge: I will be logging my experience daily at </progress/index.md> for the next 100 days, commiting to work at least 1 hour each day at a habit. This brings us to rule 2:
 2. No More than 3 Habits at a Time
 3. The Two Day Rule: It's okay to miss a day. However, I am NOT allowed to miss two days in a row.
 Also, for each day I miss, I will have to add one more day to the remaining days to make up for it. 
