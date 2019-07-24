@@ -24,12 +24,9 @@ If you're a gamer too, add me on [Steam][steam-link] or [PSN][psn-link].
 
 You can find my Github page [here][github-link].
 
-I vow to make a dent in the universe. 
+Check the footer for my social media accounts.
 
-My social media accounts:
-[Instagram][instagram-link]
-[Facebook][facebook-link]
-[Twitter][twitter-link]
+I vow to make a dent in the universe. 
 
 [soundcloud-link]: https://soundcloud.com/sablerime
 [youtube-link]: https://www.youtube.com/akshathkothari
@@ -37,8 +34,4 @@ My social media accounts:
 [myanimelist-link]: https://myanimelist.net/animelist/sablerime
 [steam-link]: https://steamcommunity.com/id/sablerime
 [psn-link]: https://my.playstation.com/profile/arystorblack
-[instagram-link]: https://instagram.com/akshathkothari
-[facebook-link]: https://www.facebook.com/akshathkothari
-[twitter-link]: https://twitter.com/akshathkothari
 [github-link]: https://github.com/akshathkothari
-[jekyll-organization]: https://github.com/jekyll
