@@ -7,7 +7,7 @@ html {
 }
 
 :root {
-    --bg-img-url: ""
+    --bg-img-url: url("https://source.unsplash.com/collection/8130287")
 }
 
 body {
@@ -52,15 +52,14 @@ h1,h2,h3,h4,h5,h6{
     vertical-align:middle;
     overflow:hidden;
     text-decoration: none;
-    color: blue;
+    color: black;
     background-image: inherit;
     text-align:center;
     cursor:pointer;
 }
 
 .button:hover{
-    color:#000!important;
-    background-color:#ccc!important;
+    background-color:white;
 }
 
 .social{
@@ -70,7 +69,7 @@ h1,h2,h3,h4,h5,h6{
 .social:hover{opacity:0.60;}
 
 #background {
-    background-image: var(--bg-img-url), url("/assets/images/white.png");
+    background-image: var(--bg-img-url), url("/assets/images/black.png");
     background-size: cover;
     background-repeat: no-repeat; 
     background-origin: center;
@@ -86,6 +85,10 @@ h1,h2,h3,h4,h5,h6{
 .frame {
     height: 100%;
     width: 100%;
+}
+
+#header {
+    padding-top: 10vh;
 }
 
 #footer {
@@ -105,7 +108,7 @@ h1,h2,h3,h4,h5,h6{
     margin-right:auto;
     padding:15vh 4vw;
     text-align:center!important;
-    background-image: var(--bg-img-url), url("/assets/images/white.png");
+    background-image: var(--bg-img-url), url("/assets/images/black.png");
     background-size: cover;
     background-repeat: no-repeat; 
     background-position: center;
