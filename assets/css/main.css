@@ -96,7 +96,7 @@ h1,h2,h3,h4,h5,h6{
     right: 0;
     bottom: 0;
     left: 0;
-    padding-bottom: 5rem;
+    padding-bottom: 1rem;
     padding-top: 1rem;
     background-color: #efefef;
     text-align: center;
@@ -106,7 +106,7 @@ h1,h2,h3,h4,h5,h6{
     max-width: 1500px;
     margin-left:auto; 
     margin-right:auto;
-    padding:15vh 4vw;
+    padding:15vh 4vw 10vh;
     text-align:center!important;
     background-image: var(--bg-img-url), url("/assets/images/black.png");
     background-size: cover;
