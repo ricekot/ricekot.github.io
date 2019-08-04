@@ -10,8 +10,8 @@ My name is Akshath Kothari. I'm currently a sophomore at BITS, Pilani, pursuing 
 
 I am passionate about Data Science, Machine Learning and Statistics.
 
-I mostly blog here about things I find interesting. At present, I am studying deep learning and posting here to document my progress.
+I mostly blog here about things I find interesting. At present, I am studying deep learning and documenting my progress on this website.
 
-Find out more [about me](/about/),  
-read my [blog](/blog/index.html), or  
-[contact me](/contact/).
+[Contact me](/contact/),
+check out my [blog](/blog/index.html), or  
+read [about me](/about/).
