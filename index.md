@@ -12,6 +12,6 @@ I am passionate about Data Science, Machine Learning and Statistics.
 
 I mostly blog here about things I find interesting. At present, I am studying deep learning and documenting my progress on this website.
 
-[Contact me](/contact/),
-check out my [blog](/blog/index.html), or  
-read [about me](/about/).
+[Contact me](/contact/),  
+[check out my blog](/blog/index.html), or  
+[read about me](/about/).
