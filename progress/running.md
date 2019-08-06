@@ -19,3 +19,6 @@ Completed C25k Week 8 Day 1
 ---
 ### Day 4 (8.05):
 Day Off (C25k)
+
+---
+### Day 5 (8.06) [MISSED]

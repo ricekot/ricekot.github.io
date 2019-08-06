@@ -29,3 +29,6 @@ title: Studying
 
 #### Elementary Real Analysis
 - Rational Zero Theorem
+
+---
+### Day 3 (8.06) [MISSED]
