@@ -1,0 +1,31 @@
+---
+layout: page
+permalink: /gsoc/
+---
+
+<center>
+    <img src="/assets/images/GSoC-ZAP-banner.png" width="600px">
+    <br>
+    <h2 style="color:grey;"><a href="https://summerofcode.withgoogle.com/projects/#5797622171828224" style="color:grey;">Project</a> Blog</h2>
+</center>
+
+<br>
+
+<p>This summer, I will be working with my mentors Simon, Rick and Ricardo to add support for GraphQL Security Testing to OWASP ZAP, the world's most widely used web app scanner. Read more about ZAP at <a href="https://www.zaproxy.org/">zaproxy.org</a>. Check the progress of the project <a href="https://github.com/users/ricekot/projects/1">here</a>.</p>
+
+<p>Follow <a href="https://twitter.com/zaproxy">@zaproxy</a> on Twitter for latest ZAP updates.</p>
+
+<br><hr><br>
+
+<h4>Posts</h4> 
+
+{% for category in site.categories %}
+    {% if category[0] == "gsoc" %}
+        <ul style="list-style-type:none; font-size:18px;">
+        {% for post in category[1] %}
+            <li><a href="{{ post.url }}"><span style="color:grey;">{{ post.date | date: "%B %-d, %Y" }}</span> - {{ post.title }}</a></li>
+            {% if forloop.last %}</ul>{% endif %}
+        {% endfor %}
+        </ul>
+    {% endif %}
+{% endfor %}

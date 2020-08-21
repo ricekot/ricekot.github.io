@@ -1,0 +1,90 @@
+---
+layout: page
+permalink: /projects/
+title: My Projects
+---
+
+<style>
+
+.row {
+  margin: 8px -16px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  flex:initial;
+  min-width: 47%;
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  padding: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 #f1f1f1;
+}
+
+img.project {
+  display:block;
+  width: 55%;
+  margin-bottom:5%;
+  margin-left:auto; 
+  margin-right:auto;
+}
+
+/* @media (prefers-color-scheme: dark) {
+	.content {
+		background: #272727;
+    box-shadow: 0 4px 8px 0 #202020;
+	}
+  #invert1 {
+    filter:invert(1);
+  }
+} */
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .row {
+    margin-right: -14px;
+  }
+  .column {
+    width: 100%;
+  }
+  img.project {
+    float: left;
+    width: 35%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+}
+
+</style>
+
+<div>
+		
+	<div class="row">
+    <div class = "column">
+      <div class = "content">
+        <img class="project" src="/assets/images/project1.png"/>
+        <h4 style="text-align:center;margin:unset">GraphQL add-on for OWASP ZAP</h4>
+        <h6 style="color:grey;text-align:center;margin:unset">May 2020 - Present</h6>
+        <center><a href="/gsoc/">/gsoc/</a></center>
+      </div>
+    </div>
+  </div>
+
+</div>
