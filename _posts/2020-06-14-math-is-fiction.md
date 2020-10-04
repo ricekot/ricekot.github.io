@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Math is Fiction
+tags: notes math-f241
 contains_math: true
 ---
 

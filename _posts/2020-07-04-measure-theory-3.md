@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Adventures in Measure Theory - 3
+tags: notes math-f244
 contains_math: true
 ---
 

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Solving Cryptography Problems - 3
+tags: notes bits-f463
 contains_math: true
 ---
 
