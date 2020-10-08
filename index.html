@@ -8,8 +8,13 @@ contains_math: true
   <h1 class="post-title p-name" itemprop="name headline"><a href="{{ post.url }}">{{ post.title }}</a></h1>
   <p class = "post-meta"> 
     {{ post.date | date: "%-d %B %Y"}}
-    {% if post.tags.size > 1 %}| tags: {{ post.tags | join: ",  "}}
-    {% elsif post.tags.size > 0 %}| tag: {{ post.tags }} {% endif %}
+    {% if post.tags.size > 1 %}| tags: 
+    {% elsif post.tags.size > 0 %}| tag: {% endif %}
+    {% for tag in post.tags %}
+      {%- if tag == "notes" -%}<a href="/notes/">notes</a> 
+      {%- else -%} {{ tag }} {%- endif -%}
+      {% if forloop.last == false %}, {% endif %}
+    {% endfor %}
   </p>
   <div class="content">
     {{ post.content }}

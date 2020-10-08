@@ -8,8 +8,13 @@ layout: default
     <p class="post-meta">
       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         {{ page.date | date: "%-d %B %Y"}}
-        {% if page.tags.size > 1 %}| tags: {{ page.tags | join: ",  "}}
-        {% elsif page.tags.size > 0 %}| tag: {{ page.tags }} {% endif %}
+        {% if page.tags.size > 1 %}| tags: 
+        {% elsif page.tags.size > 0 %}| tag: {% endif %}
+        {% for tag in page.tags %}
+          {%- if tag == "notes" -%}<a href="/notes/">notes</a> 
+          {%- else -%} {{ tag }} {%- endif -%}
+          {% if forloop.last == false %}, {% endif %}
+        {% endfor %}
       </time>
     </p>
   </header>
