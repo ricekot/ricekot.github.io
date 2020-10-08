@@ -30,7 +30,9 @@ arr = [0x195, 0x140, 0x15e, 0x181, 0x19a, 0x186, 0x177, 0x145, 0x276, 0xf0,
 
 print(''.join([chr(int(i/5)^5) for i in arr]))
 ```
-> TECHWKND{5t4y_H0m3_N_5t4y_X0RR3d}
+```
+TECHWKND{5t4y_H0m3_N_5t4y_X0RR3d}
+```
 
 What I'd like to do next: Read about reverse engineering, learn assembly, improve my code reading comprehension.
 
@@ -52,7 +54,9 @@ encoded = [361939290199, 323435658101, 474110520688, 521506348907,
 
 print(bytearray.fromhex(''.join([hex(i)[2:] for i in encoded])).decode())
 ```
-> TECHWKND{unc0mpyl3_kn0w5_wh47_1_wr073_s0_s4d}
+```
+TECHWKND{unc0mpyl3_kn0w5_wh47_1_wr073_s0_s4d}
+```
 
 It seems from the flag that they expected me to use a package called [uncompyle](https://pypi.org/project/uncompyle6/) to decompile the given file.
 
@@ -104,7 +108,9 @@ data = '{"admin":"no", "user":"JBourne", "admin":"yes", "pass":"mattdamon"}';
 ```
 
 This will get us the flag,
-> TECHWKND{b0uRN3_2_h4Ck_Gq9jh}
+```
+TECHWKND{b0uRN3_2_h4Ck_Gq9jh}
+```
 
 Note that we cannot inject JSON in place of the password, because it is being hashed and compared.
 
