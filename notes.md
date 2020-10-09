@@ -13,6 +13,7 @@ permalink: /notes/
         {% elsif subject[0] == "math-f244" %} Measure and Integration
         {% elsif subject[0] == "bits-f463" %} Cryptography
         {% elsif subject[0] == "math-f311" %} Introduction to Topology 
+        {% elsif subject[0] == "me-f211" %} Mechanics of Solids
         {% endif %}
     </h3>
     <ul style="list-style-type:none; font-size:18px;">
