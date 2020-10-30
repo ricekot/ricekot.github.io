@@ -1,0 +1,29 @@
+---
+layout: default
+permalink: /tycs/
+---
+
+<h2 style="color:grey;">Learning Computer Science</h2>
+
+<p>My university won't let me take any computer science courses, so I decided to learn as much as I can on my own. I'm following the <a href="https://teachyourselfcs.com/">teachyourselfcs.com</a> guide for now. </p>
+
+<br><hr><br>
+
+<h4>Posts</h4>
+
+<ul style="list-style-type:none; font-size:18px;">
+{% for category in site.categories %}
+    {% if category[0] == "tycs" %}
+        {% for post in category[1] %}
+            <li>
+                {% if post.title == "Introducing the GraphQL Add-on for ZAP" %}
+                    <a href="https://www.zaproxy.org/blog/2020-08-28-introducing-the-graphql-add-on-for-zap/">
+                {% else %}
+                    <a href="{{ post.url }}">
+                {% endif %}
+                <span style="color:grey;">{{ post.date | date: "%B %-d, %Y" }}</span> - {{ post.title }}
+            </a></li>
+        {% endfor %}
+    {% endif %}
+{% endfor %}
+</ul>
