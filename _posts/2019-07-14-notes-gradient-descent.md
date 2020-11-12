@@ -3,7 +3,7 @@ layout: post
 title: "Notes - Gradient Descent"
 ---
 
-This [notebook](https://github.com/akshathkothari/akshathkothari.github.io/tree/master/_jupyter) post contains some of my notes I took while studying gradient descent. This notebook was derived from the lesson2-sgd.ipynb notebook from fastai course-v3.
+This [notebook](https://github.com/ricekot/learning/tree/main/fastai-practical-deep-learning) post contains some of my notes I took while studying gradient descent. This notebook was derived from the lesson2-sgd.ipynb notebook from fastai course-v3.
 
 
 ```python

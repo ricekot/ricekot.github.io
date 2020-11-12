@@ -3,7 +3,7 @@ layout: post
 title:  "Handwritten Digit Classifier"
 ---
 
-After a bad [first attempt]({% post_url 2019-06-05-anime-or-cartoon %}) at creating an image classification model, I trained a model on the MNIST database of handwritten digits this time around. This post is actually a jupyter notebook, which you can find [here](https://github.com/akshathkothari/akshathkothari.github.io/tree/master/_jupyter).
+After a bad [first attempt]({% post_url 2019-06-05-anime-or-cartoon %}) at creating an image classification model, I trained a model on the MNIST database of handwritten digits this time around. This post is actually a jupyter notebook, which you can find [here](https://github.com/ricekot/learning/tree/main/fastai-practical-deep-learning).
 
 ## The Project
 

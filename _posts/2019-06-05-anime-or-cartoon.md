@@ -5,7 +5,7 @@ title:  "Anime or Cartoon?"
 
 **UPDATE (13 June 2019):** This post now includes an additional step: Data Cleaning. I learnt about this in the second lesson of the fastai course that I have been following. I was able to remove the images that weren't good enough for my data set (take a look at `top_losses` images in Step 4).
 
-This blog post is actually a jupyter notebook, converted to markdown. If interested, you can find this notebook [here](https://github.com/akshathkothari/akshathkothari.github.io/tree/master/_jupyter).
+This blog post is actually a jupyter notebook, converted to markdown. If interested, you can find this notebook [here](https://github.com/ricekot/learning/tree/main/fastai-practical-deep-learning).
 
 After watching the first lesson video of the fastai course, ['Practical Deep Learning for Coders'](http://course.fast.ai/), I was moved. All those things that seemed would take years for me to achieve were now at my fingertips. 
 
