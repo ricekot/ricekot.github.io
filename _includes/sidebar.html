@@ -9,6 +9,7 @@
 <div id="nav-wrapper">
 
   <div id="profile-wrapper" class="d-flex flex-column">
+    {% if site.avatar %}
     <div id="avatar" class="d-flex justify-content-center">
       <a href="{{ site.baseurl }}/" alt="avatar">
         {% assign avatar_url = site.avatar %}
@@ -19,6 +20,7 @@
         <img src="{{ avatar_url }}" alt="avatar" onerror="this.style.display='none'">
       </a>
     </div>
+    {% endif %}
 
     <div class="profile-text mt-3">
       <div class="site-title">
@@ -30,14 +32,16 @@
 
   <ul class="nav flex-column">
     <!-- home -->
-    <li class="nav-item d-flex justify-content-center {% if page.layout == 'home' %}active{% endif %}">
+    <!-- <li class="nav-item d-flex justify-content-center {% if page.layout == 'home' %}active{% endif %}">
       <a href="{{ '/' | relative_url }}" class="nav-link d-flex justify-content-center align-items-center w-100">
         <i class="fa-fw fas fa-home ml-xl-3 mr-xl-3 unloaded"></i>
-        <span>{{ "HOME" }}</span>
+        <span>ENCLOSE IN BRACES -> "HOME" </span>
       </a>
-    </li>
+    </li> -->
     <!-- the real tabs -->
-    {% for tab in site.tabs %}
+    {% assign tabs = site.tabs | sort: "order" %}
+    {% for tab in tabs %}
+    {% if tab.title == 'Tags' or tab.title == 'Categories' %} {% continue %} {% endif %}
     <li class="nav-item d-flex justify-content-center {% if tab.url == page.url %}active{% endif %}">
       <a href="{{ tab.url | relative_url }}" class="nav-link d-flex justify-content-center align-items-center w-100">
         <i class="fa-fw {{ tab.icon }} ml-xl-3 mr-xl-3 unloaded"></i>

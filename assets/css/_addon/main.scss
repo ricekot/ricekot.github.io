@@ -64,7 +64,7 @@ body {
 
 /*--- sidebar layout ---*/
 
-$tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
+$tab-count: {{ site.tabs | size | plus: -2 }}; // minus 1 for tags, 1 for categories
 
 $sidebar-display: "sidebar-display";
 

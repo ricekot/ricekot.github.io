@@ -1,0 +1,90 @@
+---
+title: Projects
+icon: fas fa-code
+order: 1
+permalink: /projects/
+---
+
+<style>
+  .project-row {
+    margin: 8px -16px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /* Add padding BETWEEN each project-col */
+  .project-row,
+  .project-row>.project-col {
+    padding: 8px;
+  }
+
+  /* Create two equal columns that floats next to each other */
+  .project-col {
+    flex: auto;
+    min-width: 50%;
+  }
+
+  /* Clear floats after project-rows */
+  .project-row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Content */
+  .content {
+    padding: 10px;
+    overflow: hidden;
+  }
+
+  img.project {
+    display: block;
+    height: 30vh;
+    margin-bottom: 5%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Responsive layout - makes the two project-cols stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .project-row {
+      margin-right: -14px;
+    }
+
+    .project-col {
+      width: 100%;
+    }
+
+    img.project {
+      float: left;
+      height: auto;
+      width: 35%;
+      margin-top: 5%;
+      margin-bottom: 5%;
+    }
+  }
+</style>
+
+<div>
+
+  <div class="project-row">
+    <div class="project-col">
+      <div class="content">
+        <img class="project" src="/assets/images/project1.png" />
+        <h4 style="text-align:center;margin:unset">GraphQL add-on for OWASP ZAP</h4>
+        <h6 style="color:grey;text-align:center;margin:unset">May 2020 - Present</h6>
+        <center><a href="/gsoc/">/gsoc/</a></center>
+      </div>
+    </div>
+
+    <div class="project-col">
+      <div class="content">
+        <img class="project" src="/assets/images/project2.jpg" />
+        <h4 style="text-align:center;margin:unset">Learning Computer Science</h4>
+        <h6 style="color:grey;text-align:center;margin:unset">October 2020 - Present</h6>
+        <center><a href="/tycs/">/tycs/</a></center>
+      </div>
+    </div>
+  </div>
+
+</div>

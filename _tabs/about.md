@@ -2,13 +2,11 @@
 title: About
 icon: fas fa-info
 order: 4
-
-# The About page
-# v2.0
-# https://github.com/cotes2020/jekyll-theme-chirpy
-# © 2017-2019 Cotes Chung
-# MIT License
+permalink: /about/
 ---
 
+# Hi there!
 
-> **Note**: Add Markdown syntax content to file `_tabs/about.md` and it will show up on this page.
+My name is Akshath Kothari. I'm a third-year college student studying Mathematics and Mechanical Engineering at BITS Pilani, India. I love all kinds of machines (especially computers), and I love learning new stuff. 
+
+Get in touch: ricekot [at] gmail [dot] com

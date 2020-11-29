@@ -1,8 +1,16 @@
-# hidden files
-.*
-!.github
+# Jekyll
+_site/
+.jekyll-cache
+.jekyll-metadata
+.sass-cache
 
-# jekyll cache 
-_site
+# Ruby
+.bundle/
 Gemfile.lock
-vendor
+
+# Folders
+/vendor
+_removed/
+
+# Other
+.vscode/

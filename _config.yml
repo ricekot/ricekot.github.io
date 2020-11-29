@@ -7,40 +7,39 @@
 
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 #--------------------------
-title: Chirpy                          # the main title
+title: Akshath's Blog                  # the main title
 
-tagline: A text-focused Jekyll theme.  # it will display as the sub-title
+# tagline: # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  A minimal, portfolio, sidebar,
-  bootstrap Jekyll theme with responsive web design
-  and focuses on text presentation.
+  My personal website. 
+  I blog here.
 
 # fill in the base hostname & protocol for your site, e.g., 'https://username.github.io'
-url: ''
+url: 'https://akshathkothari.com'
 
-author: your_full_name                  # change to your full name
+author: Akshath Kothari                  # change to your full name
 
-avatar: /assets/img/sample/avatar.jpg   # support internet resources
+# avatar: /assets/images/sample/avatar.jpg   # support internet resources
 
 github:
-  username: github_username             # change to your github username
+  username: ricekot             # change to your github username
 
 twitter:
-  username: twitter_username            # change to your twitter username
+  username: ricekot_            # change to your twitter username
 
 social:
-  name: your_full_name                  # it will shows as the copyright owner in Footer
-  email: example@doamin.com             # change to your email address
+  name: Akshath Kothari                  # it will shows as the copyright owner in Footer
+  email: ricekot@gmail.com             # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username      # change to your twitter homepage
-    - https://github.com/username       # change to your github homepage
+    - https://github.com/ricekot       # change to your github homepage
+    - https://twitter.com/ricekot_      # change to your twitter homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
 
-google_site_verification: google_meta_tag_verification # change to your verification string
+google_site_verification: # change to your verification string
 #--------------------------
 
 
@@ -49,7 +48,7 @@ google_site_verification: google_meta_tag_verification # change to your verifica
 baseurl: ''
 
 # Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
-timezone: Asia/Shanghai
+timezone: Asia/Kolkata
 
 google_analytics:
   id: ''          # Fill with your Google Analytics ID
@@ -144,7 +143,7 @@ defaults:
           url: /
         -
           label: Tags
-          url: /tabs/tags/
+          url: /tags/
   -
     scope:
       path: categories
@@ -155,7 +154,7 @@ defaults:
           url: /
         -
           label: Categories
-          url: /tabs/categories/
+          url: /categories/
   -
     scope:
       path: ''

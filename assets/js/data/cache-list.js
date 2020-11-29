@@ -33,7 +33,7 @@ const include = [
   {% for tab in site.data.tabs %}
     {% capture item %}
       {%- unless tab.name == 'Home' -%}
-        /tabs/{{ tab.name | downcase }}
+        /{{ tab.name | downcase }}
       {%- endunless -%}
       {{- "/" -}}
     {% endcapture %}
@@ -43,7 +43,7 @@ const include = [
   /*--- Icons ---*/
 
   {%- capture icon_url -%}
-    {{ "/assets/img/favicons" | relative_url }}
+    {{ "/assets/images/favicons" | relative_url }}
   {%- endcapture -%}
   '{{ icon_url }}/favicon.ico',
   '{{ icon_url }}/apple-icon.png',

@@ -1,7 +1,8 @@
 ---
 title: Categories
 icon: fas fa-stream
-order: 1
+order: 5
+permalink: /categories/
 
 # All the Categories of posts
 # v2.0
@@ -47,7 +48,7 @@ order: 1
       {% else %}
         <i class="far fa-folder fa-fw"></i>
       {% endif %}
-        <a href="{{ site.baseurl }}/categories/{{ category_name | replace: ' ', '-' | downcase | url_encode }}/"
+        <a href="{{ site.baseurl }}/{{ category_name | replace: ' ', '-' | downcase | url_encode }}/"
           class="ml-1 mr-2">
           {{ category_name }}
         </a>

@@ -1,7 +1,7 @@
 /**
  * Count pageviews form GA or local cache file.
  *
- * Dependences:
+ * Dependencies:
  *   - jQuery
  *   - countUp.js <https://github.com/inorganik/countUp.js>
  *

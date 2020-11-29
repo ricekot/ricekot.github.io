@@ -2,6 +2,7 @@
 title: Tags
 icon: fas fa-tags
 order: 2
+permalink: /tags/
 
 # All the Tags of posts.
 # v2.0
