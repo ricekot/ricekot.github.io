@@ -1,0 +1,18 @@
+name: Update Posts
+on:
+  repository_dispatch:
+    types: [new-post]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Update _posts submodule
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git submodule update --init --remote --rebase
+          git add -A
+          git commit -m "Add new post"
+          git push
