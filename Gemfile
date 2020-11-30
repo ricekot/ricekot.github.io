@@ -9,7 +9,7 @@ group :jekyll_plugins do
   gem "jekyll-seo-tag", "~> 2.6.1"
   gem "jekyll-archives"
   gem "jekyll-sitemap"
-  gem "github-pages"
+  gem 'jekyll-postfiles'
 end
 
 group :test do
