@@ -5,7 +5,7 @@ tags: notes bits-f463
 contains_math: true
 ---
 
-Following the "solving a mystery" approach from my [last post]({% post_url 2020-06-14-math-is-fiction %}), I will be attempting to solve a couple of problems from my Cryptography Assignment.
+Following the "solving a mystery" approach from my [last post]({% post_url 2020/2020-06-14-maths-is-fiction %}), I will be attempting to solve a couple of problems from my Cryptography Assignment.
 
 Here's the first one:
 

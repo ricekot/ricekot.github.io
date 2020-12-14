@@ -7,7 +7,7 @@ contains_math: true
 
 I am following the [Measure Theory series by D.H. Fremlin](https://www1.essex.ac.uk/maths/people/fremlin/mt.htm) and blogging my notes here.
 
-Continuing from where I left off [last time]({% post_url 2020-07-04-measure-theory-3 %}),
+Continuing from where I left off [last time]({% post_url 2020/2020-07-04-measure-theory-3 %}),
 
 #### 111X (c)
 Let $X$ and $Y$ be sets and $\Sigma$ a $\sigma$-algebra of subsets of $X$. Let $\phi:X\to Y$ be a function. Show that

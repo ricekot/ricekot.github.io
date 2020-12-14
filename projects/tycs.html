@@ -1,29 +1,31 @@
 ---
 layout: default
-permalink: /tycs/
+permalink: /projects/tycs/
 ---
 
 <h2 style="color:grey;">Learning Computer Science</h2>
 
-<p>My university has limited seats in computer science courses, so I decided to learn as much as I can on my own. I'm following the <a href="https://teachyourselfcs.com/">teachyourselfcs.com</a> guide for now. </p>
+<p>My university has limited seats in computer science courses, so I decided to learn as much as I can on my own. I'm
+    following the <a href="https://teachyourselfcs.com/">teachyourselfcs.com</a> guide for now. </p>
 
-<br><hr><br>
+<br>
+<hr><br>
 
 <h4>Posts</h4>
 
-<ul style="list-style-type:none; font-size:18px;">
-{% for category in site.categories %}
+<table>
+    {% for category in site.categories %}
     {% if category[0] == "tycs" %}
-        {% for post in category[1] %}
-            <li>
-                {% if post.title == "Introducing the GraphQL Add-on for ZAP" %}
-                    <a href="https://www.zaproxy.org/blog/2020-08-28-introducing-the-graphql-add-on-for-zap/">
-                {% else %}
-                    <a href="{{ post.url }}">
-                {% endif %}
-                <span style="color:grey;">{{ post.date | date: "%B %-d, %Y" }}</span> - {{ post.title }}
-            </a></li>
-        {% endfor %}
+    {% for post in category[1] %}
+    <tr>
+        <td style="width: 100px;color:grey;" nowrap>{{ post.date | date: "%b %-d, %Y" }}</td>
+        <td>
+            <a href="{{ post.url }}">
+                {{ post.title }}
+            </a>
+        </td>
+    </tr>
+    {% endfor %}
     {% endif %}
-{% endfor %}
-</ul>
+    {% endfor %}
+</table>

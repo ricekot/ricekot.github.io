@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Switching the Site Theme
+title: Hot-swappable Jekyll Themes
 ---
 
 You might have noticed that the blog looks different. I've been thinking of updating the blog for quite some time but I never got around to it. I wanted a dark mode layout and toggle and the theme [Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) seemed to fit all my needs. The design is minimal and focuses on functionality. I like it.
@@ -116,7 +116,5 @@ _posts
 
 ...only to find out later that Jekyll did not support this out of the box and GitHub Pages did not support it at all. "Well," I thought, "since I've come this far, I might as well go the full length."
 And so, I added the [jekyll-postfiles](https://nhoizey.github.io/jekyll-postfiles/) gem to my Gemfile and created a Netlify account.
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/853f518f-2e43-4207-a8c7-0cd30a3a9e8c/deploy-status)](https://app.netlify.com/sites/ricekot/deploys)
 
 So, did it work? Well, if you can see the images in this post, it sure did! Was it worth the effort? Not so sure about that. I'll stick with this for now and time will tell.

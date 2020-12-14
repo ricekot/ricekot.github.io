@@ -25,8 +25,7 @@
   
   {% for category in site.categories %}
   <url>
-      <loc>{{ site.url }}/{{ category[0] }}/</loc>
-      <lastmod>{{ post.date | date: "%Y-%m-%d" }}</lastmod>
+      <loc>{{ site.url }}/projects/{{ category[0] }}/</loc>
   </url>
   {% endfor %}
 

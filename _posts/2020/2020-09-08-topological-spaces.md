@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 🍩 Topological Spaces
+title: Topological Spaces
 tags: notes math-f311
 contains_math: true
 ---

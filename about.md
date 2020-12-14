@@ -4,19 +4,20 @@ title: About
 permalink: /about/
 ---
 
-# Hi there!
+Hello and welcome to my website!
 
-My name is Akshath Kothari. I'm a third-year college student at BITS Pilani, India and a Core Team Member at OWASP ZAP. I love all kinds of machines (especially computers), and I love learning new stuff.
+My name is Akshath Kothari and I'm currently a student at BITS Pilani, India. In my spare time I work on writing code and documentation for [OWASP ZAP](https://zaproxy.org/) as a core team member.
+
+I use this blog to document any interesting ideas I encounter and to write technical posts related to programming, mathematics and engineering. The contents of this blog reflect my personal opinions.
+
+<h2> Projects </h2>
+
+Most of the stuff I learn or work on is available on my [GitHub profile](https://github.com/ricekot/). I also have a [projects page](/projects/) on this website.
+
+<h2> Art </h2>
+
+In my first two years at college, I had a lot of fun editing videos for cultural and technical festivals. You can view some of these on the [art page](/art/).
+
+<h2> Contact </h2>
 
 Get in touch: ricekot [at] gmail [dot] com
-
-<a href="https://github.com/ricekot/"><img src="/assets/images/github-icon.svg" alt="GitHub" title="my GitHub profile" height="25px"></a>
-<a href="https://twitter.com/ricekot_"><img src="/assets/images/twitter-icon.png" alt="Twitter" title="my Twitter profile" height="22.5px"></a>
-
-<!-- <style>
-    @media (prefers-color-scheme: dark) {
-        img {
-            filter: invert(1);
-        }
-    }
-</style> -->

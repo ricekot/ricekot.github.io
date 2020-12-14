@@ -10,7 +10,7 @@ I found this technique "cool" for a variety of reasons:
 1.  It is really simple (to understand and to recreate).
 2.  The fact that simple logic actually works.
 
-I learnt about this when I stumbled upon (yet) another question from [the previously mentioned]({% post_url 2016-02-02-number-guessing-game %}) book.  
+I learnt about this when I stumbled upon (yet) another question from [the previously mentioned]({% post_url 2016/2016-02-02-number-guessing-game %}) book.  
 This question asked to create a simple program which generated the prime numbers up to a given number entered by the user. As a hint, the question asked to research about the 'Sieve of Eratosthenes' and hence, here I am.  
 
 So what _is_ the 'Sieve of Eratosthenes'?  

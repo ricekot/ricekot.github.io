@@ -1,12 +1,12 @@
 ---
 layout: page
-permalink: /gsoc/
+permalink: /projects/gsoc/
 ---
 
 <center>
     <img src="/assets/images/GSoC-ZAP-banner.png" width="600px">
     <br>
-    <h2 style="color:grey;"><a href="https://summerofcode.withgoogle.com/projects/#5797622171828224" style="color:grey;">Project</a> Blog</h2>
+    <h2 style="color:grey;"><a href="https://summerofcode.withgoogle.com/archive/2020/projects/5781284153982976/" style="color:grey;">Project</a> Blog</h2>
 </center>
 
 <br>
@@ -19,19 +19,23 @@ permalink: /gsoc/
 
 <h4>Posts</h4> 
 
-<ul style="list-style-type:none; font-size:18px;">
-{% for category in site.categories %}
+<table>
+    {% for category in site.categories %}
     {% if category[0] == "gsoc" %}
-        {% for post in category[1] %}
-            <li>
-                {% if post.title == "Introducing the GraphQL Add-on for ZAP" %}
-                    <a href="https://www.zaproxy.org/blog/2020-08-28-introducing-the-graphql-add-on-for-zap/">
+    {% for post in category[1] %}
+    <tr>
+        <td style="width: 100px;color:grey;" nowrap>{{ post.date | date: "%b %-d, %Y" }}</td>
+        <td>
+            {% if post.title == "Introducing the GraphQL Add-on for ZAP" %}
+            <a href="https://www.zaproxy.org/blog/2020-08-28-introducing-the-graphql-add-on-for-zap/">
                 {% else %}
-                    <a href="{{ post.url }}">
-                {% endif %}
-                <span style="color:grey;">{{ post.date | date: "%B %-d, %Y" }}</span> - {{ post.title }}
-            </a></li>
-        {% endfor %}
+                <a href="{{ post.url }}">
+                    {% endif %}
+                    {{ post.title }}
+                </a>
+        </td>
+    </tr>
+    {% endfor %}
     {% endif %}
-{% endfor %}
-</ul>
+    {% endfor %}
+</table>

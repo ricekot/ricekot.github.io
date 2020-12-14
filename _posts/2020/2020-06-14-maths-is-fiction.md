@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Math is Fiction
+title: Maths is Fiction
 tags: notes math-f241
 contains_math: true
 ---
 
-3b1b said in [his TED talk](https://youtu.be/s_L-fp8gDzY?t=545) that Math is like a Mystery story. I'll be trying to solve a question today with very little prior knowledge and will be listing out my thought process and internet search history.
+3b1b said in [his TED talk](https://youtu.be/s_L-fp8gDzY?t=545) that Maths is like a Mystery story. I'll be trying to solve a question today with very little prior knowledge and will be listing out my thought process and internet search history.
 
 >If the extremal of the functional
 >

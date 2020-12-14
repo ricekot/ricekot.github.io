@@ -103,16 +103,14 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: $brand-color;
-  text-decoration: none;
-
-  &:visited {
-    color: darken($brand-color, 15%);
-  }
+  color: $text-color;
+  text-decoration-style: dotted;
+  text-decoration-color: $text-color;
+  text-decoration-thickness: .05em;
+  text-underline-offset: 1.5px;
 
   &:hover {
-    color: $text-color;
-    text-decoration: underline;
+    text-decoration-style: solid;
   }
 
   .social-media-list &:hover {

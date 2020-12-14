@@ -131,7 +131,7 @@ Now that ```a``` is a Parameter, it has a flag called ```requires_grad``` of whi
 
 Read [this answer](https://stackoverflow.com/a/51383465) for a little more insight on the difference between Tensors and Parameters.
 
-Also check out my [last post]({% post_url 2019-06-27-holdups-gradient-descent %}) for some info on ```requires_grad``` and autograd.
+Also check out my [last post]({% post_url 2019/2019-06-27-holdups-gradient-descent %}) for some info on ```requires_grad``` and autograd.
 
 
 ```python

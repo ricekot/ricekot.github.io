@@ -11,9 +11,7 @@ layout: default
         {% if page.tags.size > 1 %}| tags: 
         {% elsif page.tags.size > 0 %}| tag: {% endif %}
         {% for tag in page.tags %}
-          {%- if tag == "notes" -%}<a href="/notes/">notes</a> 
-          {%- else -%} {{ tag }} {%- endif -%}
-          {% if forloop.last == false %}, {% endif %}
+          {{ tag }}{% if forloop.last == false %}, {% endif %}
         {% endfor %}
       </time>
     </p>

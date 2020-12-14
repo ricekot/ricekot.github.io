@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "GraphQL: Generating Queries from a Schema"
+title: "GraphQL Query Generator - 1"
 category: gsoc
 ---
 

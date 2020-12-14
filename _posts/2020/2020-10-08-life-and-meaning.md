@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 🧬 Life and Meaning
+title: Life and Meaning
 ---
 
 > "He who has a why to live can bear almost any how." 

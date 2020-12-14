@@ -5,7 +5,7 @@ tags: notes bits-f463
 contains_math: true
 ---
 
-Following up from my [previous post]({% post_url 2020-06-19-cryptography-assignment-1 %}), here's the next problem:
+Following up from my [previous post]({% post_url 2020/2020-06-19-cryptography-assignment-1 %}), here's the next problem:
 
 The public key is $(n, e) = (221, 11)$. What is the _RSA Decryption_ of $7$?
 
@@ -57,7 +57,7 @@ Further reading:
 $$ a^m \equiv 1 \bmod n $$  
 for every integer $a$ between $1$ and $n$ that is coprime to $n$. 
 
-[wikipedia](https://en.wikipedia.org/wiki/Multiplicative_group_of_integers_modulo_n#General_composite_numbers): The exponent of the multiplicative group of integers mod n ([previous post]({% post_url 2020-06-19-cryptography-assignment-1 %})), that is, the least common multiple of the orders in the cyclic groups, is given by the Carmichael function $\lambda (n)$. In other words, $\lambda (n)$ is the smallest number such that for each $a$ coprime to $n$, $a^{\lambda(n)} \equiv 1 \pmod n$ holds.
+[wikipedia](https://en.wikipedia.org/wiki/Multiplicative_group_of_integers_modulo_n#General_composite_numbers): The exponent of the multiplicative group of integers mod n ([previous post]({% post_url 2020/2020-06-19-cryptography-assignment-1 %})), that is, the least common multiple of the orders in the cyclic groups, is given by the Carmichael function $\lambda (n)$. In other words, $\lambda (n)$ is the smallest number such that for each $a$ coprime to $n$, $a^{\lambda(n)} \equiv 1 \pmod n$ holds.
 
 - How can we find the modular multiplicative inverse using pen and paper?
 By making use of the Extended Euclidean Algorithm. Here's a [youtube video](https://www.youtube.com/watch?v=fz1vxq5ts5I) that walks you through the procedure and here's a [Khan Academy article](https://www.khanacademy.org/computing/computer-science/cryptography/modarithmetic/a/the-euclidean-algorithm) that explains it well. Adding these here for myself for future reference.
