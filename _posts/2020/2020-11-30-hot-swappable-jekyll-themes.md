@@ -68,7 +68,7 @@ jobs:
       - name: Repository Dispatch
         uses: peter-evans/repository-dispatch@v1.1.3
         with:
-          token: $\{\{ secrets.REPO_ACCESS_TOKEN \}\}
+          token: {% raw %} ${{ secrets.REPO_ACCESS_TOKEN }} {% endraw %}
           repository: ricekot/ricekot.github.io
           event-type: new-post
 ```
