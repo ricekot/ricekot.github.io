@@ -1,11 +1,12 @@
 ---
+layout: post
 title: The Grand SCHEME of Things
 category: tycs
 tags: notes sicp
 contains_math: true
 ---
 
-I recently began reading "Structure and Interpretation of Computer Programs" as part of my "[Learning Computer Science](/tycs/)" project. I'm already enjoying it, and I'm going to be posting my notes and exercise solutions on this blog. Here's some of the stuff I've read about until now.
+I recently began reading "Structure and Interpretation of Computer Programs" as part of my "[Learning Computer Science](/projects/tycs/)" project. I'm already enjoying it, and I'm going to be posting my notes and exercise solutions on this blog. Here's some of the stuff I've read about until now.
 
 ### Applicative vs. Normal Order of Evaluation
 
