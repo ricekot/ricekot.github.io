@@ -44,6 +44,7 @@ A feed for the blog can be found [here](/feed.xml).
             {% elsif subject[0] == "bits-f463" %} Cryptography
             {% elsif subject[0] == "math-f311" %} Introduction to Topology 
             {% elsif subject[0] == "me-f211" %} Mechanics of Solids
+            {% elsif subject[0] == "me-f220" %} Heat Transfer
             {% elsif subject[0] == "sicp" %} Structure and Interpretation of Computer Programs
             {% else %} {{ subject[0] }}
             {% endif %}
