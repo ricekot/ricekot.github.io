@@ -6,6 +6,8 @@ tags: notes me-f220
 contains_math: true
 ---
 
+UPDATE (2021/03/12): My instructor checked the code I submitted. There was one mistake - I had assumed all flow as turbulent. The Nusselt number is calculated differently based on the type of flow. I have updated the code in this post with the changes I was suggested.
+
 Last night, I was writing a lab report for a Heat Transfer experiment. The experiment was titled "Transient Heat Conduction", where we immersed Aluminium and Brass specimens in hot water and recorded their temperatures at set intervals as they heated up. Then the Aluminium specimen was taken out of the hot water and the process was repeated as it cooled down.
 
 Unfortunately, I could not perform the experiment in person, because of the whole pandemic thing. Our professors and TAs performed the experiment on campus and sent us the recorded readings along with a worksheet. The worksheet had these four exercises in it:
@@ -48,7 +50,7 @@ def compute(T_initial, T_infinity, length, diameter, n):
 
         Gr = g * beta * (T_infinity - T_next) * L**3 / nu**2 # Grashof Number
         Ra = Gr * Pr # Rayleigh Number
-        Nu = 0.1 * Ra**(1/3) # Nusselt Number
+        Nu = 0.1 * Ra**(1/3) if Ra > 10**9 else 0.59 * Ra**0.25 # Nusselt Number
 
         # Convective Heat Transfer Coefficient
         h = Nu * k / L
