@@ -19,7 +19,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 disqus.shortname: akshathkothari
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://ricekot.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://ricekot.com" # the base hostname & protocol for your site, e.g. http://example.com
 paginate: 5
 paginate_path: "/blog/page:num/"
 total_pages: {{ paginator.total_pages }}
