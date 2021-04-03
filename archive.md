@@ -39,9 +39,9 @@ A feed for the blog can be found [here](/feed.xml).
     {% if subject[0] == "notes" %} {% continue %} {% endif %}
     <details>
         <summary>
-            {% if subject[0] == "math-f241" %} Mathematical Methods
+            {% if subject[0] == "bits-f463" %} Cryptography
+            {% elsif subject[0] == "math-f241" %} Mathematical Methods
             {% elsif subject[0] == "math-f244" %} Measure and Integration
-            {% elsif subject[0] == "bits-f463" %} Cryptography
             {% elsif subject[0] == "math-f311" %} Introduction to Topology 
             {% elsif subject[0] == "me-f211" %} Mechanics of Solids
             {% elsif subject[0] == "me-f220" %} Heat Transfer
