@@ -14,9 +14,6 @@
       <loc>{{ site.url }}/art/</loc>
   </url>
   <url>
-      <loc>{{ site.url }}/notes/</loc>
-  </url>
-  <url>
       <loc>{{ site.url }}/projects/</loc>
   </url>
   <url>
