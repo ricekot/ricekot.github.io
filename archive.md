@@ -32,7 +32,7 @@ A feed for the blog can be found [here](/feed.xml).
 </ul>
 </section>
 
-<h2 style="margin-top:15px"> By Tags </h2>
+<h2 style="margin-top:15px"> By Subject (Non-exhaustive) </h2>
 <section class="archive-post-list">
 {% assign subjects = site.tags | sort %}
 {% for subject in subjects %}
