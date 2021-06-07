@@ -1,4 +1,4 @@
-# akshathkothari.github.io
+# ricekot.github.io
 
 My personal website. I blog here.
-URL: http://akshathkothari.com/
+URL: https://ricekot.com/
