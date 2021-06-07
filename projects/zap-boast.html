@@ -1,0 +1,37 @@
+---
+layout: page
+permalink: /projects/zap-boast/
+---
+
+<center>
+    <img src="/assets/images/GSoC-ZAP-banner.png" width="600px">
+    <br>
+    <h2 style="color:grey;"><a href="https://summerofcode.withgoogle.com/projects/#6734301854433280" style="color:grey;">Project</a> Blog</h2>
+</center>
+
+<br>
+
+<p>This summer, I will be working under the guidance of my mentors Simon, Rick and Ricardo to add Out-of-band Application Security Testing (OAST) Support to ZAP, the world's most widely used web app scanner. Read more about ZAP at <a href="https://www.zaproxy.org/">zaproxy.org</a>.</p>
+
+<p>Follow <a href="https://twitter.com/zaproxy">@zaproxy</a> on Twitter for latest ZAP updates.</p>
+
+<br><hr><br>
+
+<h4>Posts</h4> 
+
+<table>
+    {% for category in site.categories %}
+    {% if category[0] == "zap-boast" %}
+    {% for post in category[1] %}
+    <tr>
+        <td style="width: 100px;color:grey;" nowrap>{{ post.date | date: "%b %-d, %Y" }}</td>
+        <td>
+                <a href="{{ post.url }}">
+                    {{ post.title }}
+                </a>
+        </td>
+    </tr>
+    {% endfor %}
+    {% endif %}
+    {% endfor %}
+</table>
