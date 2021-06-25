@@ -1,6 +1,7 @@
 ---
 layout: page
-permalink: /projects/zap-boast/
+permalink: /projects/zap-oast/
+redirect_from: /projects/zap-boast/
 ---
 
 <center>
@@ -21,7 +22,7 @@ permalink: /projects/zap-boast/
 
 <table>
     {% for category in site.categories %}
-    {% if category[0] == "zap-boast" %}
+    {% if category[0] == "zap-oast" %}
     {% for post in category[1] %}
     <tr>
         <td style="width: 100px;color:grey;" nowrap>{{ post.date | date: "%b %-d, %Y" }}</td>
