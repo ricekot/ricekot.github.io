@@ -48,7 +48,7 @@ ZAP OAST Options (Preview)
 </table>
 </center>
 
-Then, at an interval that can be set by the user, ZAP will poll OAST server for any interactions that it received and display them in a separate tab in the bottom panel.
+Then, at an interval that can be set by the user, ZAP will poll the OAST server for any interactions that it received and display them in a separate tab in the bottom panel.
 
 <!-- ZAP bottom panel OAST tab image -->
 
