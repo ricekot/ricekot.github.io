@@ -41,6 +41,7 @@ This means that we should also try to make it easy for developers to extend the 
 
 With this in mind, I proposed the following two directory structures for the add-on in our IRC channel:
 
+<div style="overflow-x: auto;">
 <table>
   <tr>
     <th> Option 1 </th>
@@ -94,6 +95,7 @@ oast
     </td>
   </tr>
 </table>
+</div>
 
 > &lt;ricekot&gt; which of these two directory structures for the oast add-on would you suggest? (Note that the classes are just there for the example) <br>
 > &lt;ricekot&gt; (of course if you have any other suggestions those would work too) <br>
