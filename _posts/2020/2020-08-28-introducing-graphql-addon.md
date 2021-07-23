@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Introducing the GraphQL Add-on for ZAP"
-category: gsoc
+category: zap-graphql
 ---
 
 My latest blog post was featured on the ZAP website. You can [click here to read it](https://www.zaproxy.org/blog/2020-08-28-introducing-the-graphql-add-on-for-zap/).

@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "GraphQL Query Generator - 1"
-category: gsoc
+category: zap-graphql
 ---
 
-This post is a part of a series of posts related to my [Google Summer of Code '20 project](/gsoc). 
+This post is a part of a series of posts related to my [Google Summer of Code '20 project](/projects/zap-graphql/).
 
 I am currently writing code that allows us to generate queries from a given a GraphQL Schema Definition. This post is a summary of the work I have done until now.
 

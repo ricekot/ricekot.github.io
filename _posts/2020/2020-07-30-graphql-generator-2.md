@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "GraphQL Query Generator - 2"
-category: gsoc
+category: zap-graphql
 date: 2020-07-30 01:15:00 +0530
 ---
 
-This post is a part of a series of posts related to my [Google Summer of Code '20 project](/gsoc/). It is a follow-up to the [last post]({% post_url 2020/2020-07-10-graphql-generator-1 %}) I wrote about the query generation functionality of the GraphQL add-on for OWASP ZAP.
+This post is a part of a series of posts related to my [Google Summer of Code '20 project](/projects/zap-graphql/). It is a follow-up to the [last post]({% post_url 2020/2020-07-10-graphql-generator-1 %}) I wrote about the query generation functionality of the GraphQL add-on for OWASP ZAP.
 
 I mentioned using a `TypeDefinitionRegistry` for all the GraphQL types last time. Turns out, the graphql-java library also provides a method for creating an unexecutable schema. I refactored the code to reflect this change. This way I was also able to avoid "raw types" warnings.
 

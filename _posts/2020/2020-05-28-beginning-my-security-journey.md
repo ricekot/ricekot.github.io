@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Beginning My Security Journey
-category: gsoc
+category: zap-graphql
 ---
 
-This post is the first in a series of posts related to my [Google Summer of Code '20 project](/gsoc). 
+This post is the first in a series of posts related to my [Google Summer of Code '20 project](/projects/zap-graphql/).
 
 I have a habit of opening stuff up.
 

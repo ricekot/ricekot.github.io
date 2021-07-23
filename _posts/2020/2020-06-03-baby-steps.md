@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Baby Steps
-category: gsoc
+category: zap-graphql
 ---
 
-This post is a part of a series of posts related to my [Google Summer of Code '20 project](/gsoc). 
+This post is a part of a series of posts related to my [Google Summer of Code '20 project](/projects/zap-graphql/).
 
 The past week, I worked on the GUI part of the add-on, which is simply two dialog boxes. These dialog boxes allow the user to specify the location of a GraphQL schema and corresponding endpoint. I also read up on some GraphQL concepts.
 
