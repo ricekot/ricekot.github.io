@@ -27,7 +27,11 @@ redirect_from: /projects/zap-boast/
     <tr>
         <td style="width: 100px;color:grey;" nowrap>{{ post.date | date: "%b %-d, %Y" }}</td>
         <td>
+            {% if post.title == "Out-of-band Application Security Testing with OWASP ZAP" %}
+            <a href="https://www.zaproxy.org/blog/2021-08-23-oast-with-owasp-zap/">
+                {% else %}
                 <a href="{{ post.url }}">
+                    {% endif %}
                     {{ post.title }}
                 </a>
         </td>
