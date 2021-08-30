@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Out-of-band Application Security Testing with OWASP ZAP"
+date: 2021-08-23 17:00:00 +0530
 category: zap-oast
 ---
 
