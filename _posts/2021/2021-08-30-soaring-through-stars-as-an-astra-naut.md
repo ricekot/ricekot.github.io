@@ -26,11 +26,11 @@ date: 2021-08-30 13:30:00 +0530
 </table>
 </center>
 
-This is a post about my internship experience at Astra Security, where I interned for 4 months from May 2021 to August 2021 as a Software Development Engineer Intern.
+This is a post about my internship experience at [Astra Security](https://www.getastra.com/), where I interned for 4 months from May 2021 to August 2021 as a Software Development Engineer Intern.
 
 I'm going to talk about all the cool stuff I got to work on, the fun times I had, and my general views on working remotely.
 
-I primarily worked on setting up a microservice for automated penetration testing. A rough architecture of all the components of the automated scanner was already planned out when I started my internship. The idea, in a nutshell, was to create a wrapper around OWASP ZAP as the core of the service. The microservice would expose APIs that would allow customers to start or stop automated scans from the front-end.
+I primarily worked on setting up a microservice for automated penetration testing. A rough architecture of all the components of the automated scanner was already planned out when I started my internship. The idea, in a nutshell, was to create a wrapper around [OWASP ZAP](https://www.zaproxy.org/) as the core of the service. The microservice would expose APIs that would allow customers to start or stop automated scans from the front-end.
 
 ZAP has a very extensive API, plus it's open source and actively maintained since the last 10 years, which made it an easy pick for our microservice even over other commercial alternatives.
 
@@ -55,9 +55,9 @@ The Scanner Microservice
 </table>
 </center>
 
-Other than being written in Python, the service uses Docker for containerization, Kubernetes for orchestration, PostgreSQL for the database, and DigitalOcean for hosting. The Scanner Rules add-on for ZAP is a major component of the service that consists of custom scan rules and metadata about vulnerabilities. *Chowkidar* is written in Java, and most rules in Scanner Rules are written in JavaScript.
+Other than being written in Python, the service uses Docker for containerization, Kubernetes for orchestration, PostgreSQL for the database, and DigitalOcean for hosting. The Scanner Rules add-on for ZAP is a major component of the service that consists of custom scan rules and metadata about vulnerabilities. *Chowkidar* is written in Java, and most rules in Scanner Rules are written in JavaScript. We created a deliberately-vulnerable application called [HypeJab](https://github.com/ricekot/hypejab) to test some of these rules.
 
-In the last few weeks of my internship, I worked on a browser extension (a fork of Selenium IDE) that would allow customers to record actions on their website using selenium and export them in a format that ZAP can understand.
+In the last few weeks of my internship, I worked on a browser extension (a fork of [Selenium IDE](https://github.com/SeleniumHQ/selenium-ide)) that would allow customers to record actions on their website using selenium and export them in a format that ZAP can understand.
 
 I did all my work remotely and I didn't find it to be a problem at all. We used Slack for textual discussions and Discord voice channels for daily stand-up meetings; Ora for managing tasks and a self-hosted GitLab instance for version control. We had a "convivial meet" at the end of every month where we played online games like skribbl.io to break the ice and got to know each other better.
 
