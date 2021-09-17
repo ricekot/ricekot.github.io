@@ -15,14 +15,11 @@
 # in the templates via {{ site.myvariable }}.
 title: Akshath's Blog
 email: ricekot@gmail.com
-description: My personal website. I blog here.
+tagline: Akshath Kothari
 disqus.shortname: akshathkothari
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ricekot.com" # the base hostname & protocol for your site, e.g. http://example.com
-paginate: 5
-paginate_path: "/blog/page:num/"
-total_pages: {{ paginator.total_pages }}
 permalink: /:year/:title/
 
 # SEO Stuff
@@ -37,7 +34,6 @@ social:
 markdown: kramdown
 plugins:
   - jekyll-feed
-  - jekyll-paginate
   - jekyll-seo-tag
   - jekyll-redirect-from
 

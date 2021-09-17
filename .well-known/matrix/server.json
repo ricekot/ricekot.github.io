@@ -1,7 +1,0 @@
----
-permalink: /.well-known/matrix/server/
----
-
-{
-    "m.server": "synapse.ricekot.com:443"
-}
