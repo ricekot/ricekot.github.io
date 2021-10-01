@@ -15,20 +15,11 @@
 # in the templates via {{ site.myvariable }}.
 title: Akshath's Blog
 email: ricekot@gmail.com
-tagline: Akshath Kothari
 disqus.shortname: akshathkothari
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://ricekot.com" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: /:year/:title/
-
-# SEO Stuff
-author: Akshath Kothari
-social:
-  name: Akshath Kothari
-  links:
-    - https://github.com/ricekot
-    - https://www.linkedin.com/in/ricekot/
 
 # Build settings
 markdown: kramdown
