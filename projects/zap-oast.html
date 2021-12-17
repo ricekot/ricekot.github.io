@@ -14,7 +14,7 @@ image: "/assets/images/project-zap-oast-preview.png"
 
 <br>
 
-<p>This summer, I will be working under the guidance of my mentors Simon, Rick and Ricardo to add Out-of-band Application Security Testing (OAST) Support to ZAP, the world's most widely used web app scanner. Read more about ZAP at <a href="https://www.zaproxy.org/">zaproxy.org</a>.</p>
+<p>In the summer of 2021, I worked under the guidance of my mentors Simon, Rick and Ricardo to add Out-of-band Application Security Testing (OAST) Support to ZAP, the world's most widely used web app scanner. Since then, I have continued to work on enhancing the OAST add-on for ZAP. Read more about ZAP at <a href="https://www.zaproxy.org/">zaproxy.org</a>.</p>
 
 <p>Follow <a href="https://twitter.com/zaproxy">@zaproxy</a> on Twitter for latest ZAP updates.</p>
 
@@ -29,8 +29,8 @@ image: "/assets/images/project-zap-oast-preview.png"
     <tr>
         <td style="width: 100px;color:grey;" nowrap>{{ post.date | date: "%b %-d, %Y" }}</td>
         <td>
-            {% if post.title == "Out-of-band Application Security Testing with OWASP ZAP" %}
-            <a href="https://www.zaproxy.org/blog/2021-08-23-oast-with-owasp-zap/">
+            {% if post.external_url %}
+            <a href="{{ post.external_url }}">
                 {% else %}
                 <a href="{{ post.url }}">
                     {% endif %}
