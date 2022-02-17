@@ -4,30 +4,19 @@ title: Archive
 permalink: /archive/
 ---
 
-<h2> Atom Feed </h2>
-A feed for the blog can be found [here](/feed.xml).
-
-<h2> By Year </h2>
 <section class="archive-post-list">
-<ul>
-{% assign counter = 0 %}
-{% for post in site.posts %}
-    {% assign curPostYear = post.date | date: "%Y" %}
-    {% if curPostYear != prevPostYear %}
-        {% unless forloop.first %}
-            <li> <a href="{{ prevPostYear }}/">
-                {{ prevPostYear }} ({{ counter }})
-            </a></li>
+{%- for post in site.posts -%}
+    {%- assign curPostYear = post.date | date: "%Y" -%}
+    {%- if curPostYear != prevPostYear -%}
+        {%- unless forloop.first -%}
+    </table>
         {% endunless %}
-        {% assign prevPostYear = curPostYear %}
-        {% assign counter = 0 %}
-    {% endif %}
-    {% assign counter = counter | plus: 1 %}
-    {% if forloop.last %}
-        <li> <a href="{{ prevPostYear }}/">
-            {{ prevPostYear }} ({{ counter }})
-        </a></li>
-    {% endif %}
-{% endfor %}
-</ul>
-</section>
+    <h2> {{ curPostYear }} </h2>
+    <table>
+    {%- endif -%}
+    {%- assign prevPostYear = curPostYear %}
+    <tr>
+        <td style="width: 100px; color: grey" nowrap>{{ post.date | date: "%B %-d" }}</td>
+        <td><a href="{{ post.url | relative_url }}" style="color:black">{{ post.title }}</a></td>
+    </tr>
+{%- endfor %}
