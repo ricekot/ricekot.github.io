@@ -7,6 +7,22 @@ image: "/assets/images/zapcon2022-social.png"
 ---
 
 <style>
+
+  .video-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 61%;
+  }
+
+  .video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
   ul {
     list-style-type: none;
     display: table;
@@ -53,4 +69,8 @@ image: "/assets/images/zapcon2022-social.png"
 
 <br>
 
-Resources related to my presentation on "Out-of-band Application Security Testing with ZAP" at [ZAPCon](https://zapcon.io/) on March 8, 2022. Use the Navbar above to get started.
+Resources related to my presentation on "Out-of-band Application Security Testing with ZAP" at [ZAPCon](https://zapcon.io/) on March 8, 2022.
+
+<div class="video-container">
+  <iframe class="video" src="https://www.youtube-nocookie.com/embed/6tkraWH4bwY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div><br>
