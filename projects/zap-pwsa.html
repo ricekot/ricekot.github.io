@@ -1,0 +1,43 @@
+---
+layout: default
+permalink: /projects/zap-pwsa/
+title: Web Security Academy with ZAP
+description: "Working through PortSwigger's Web Security Academy with OWASP ZAP."
+image: "/assets/images/project-zap-oast-preview.png"
+---
+
+<center>
+    <h2 style="color: grey">Web Security Academy with ZAP</h2>
+</center>
+
+<p>
+    In an effort to learn more about ZAP and web security, I will be working through the labs from
+    <a href="https://portswigger.net/web-security">PortSwigger's Web Security Academy</a> with <a
+        href="https://www.zaproxy.org/">ZAP</a>.
+</p>
+
+<br>
+<hr><br>
+
+<h3>Posts</h3>
+
+<table>
+    {% for category in site.categories %}
+    {% if category[0] == "zap-pwsa" %}
+    {% for post in category[1] %}
+    <tr>
+        <td style="width: 100px;color:grey;" nowrap>{{ post.date | date: "%b %-d, %Y" }}</td>
+        <td>
+            {% if post.external_url %}
+            <a href="{{ post.external_url }}">
+                {% else %}
+                <a href="{{ post.url }}">
+                    {% endif %}
+                    {{ post.title }}
+                </a>
+        </td>
+    </tr>
+    {% endfor %}
+    {% endif %}
+    {% endfor %}
+</table>
