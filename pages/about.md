@@ -6,17 +6,15 @@ permalink: /about/
 
 Hello and welcome to my website!
 
-My name is Akshath Kothari and I'm currently working on cool stuff at [Levo.ai](https://levo.ai) as a Founding Engineer.
-I'm also in the final year of my studies at BITS Pilani, India.
-In my spare time I work on writing code and documentation for [OWASP ZAP](https://zaproxy.org) as a core team member.
+My name is Akshath Kothari.
+I'm in the final year of my studies at BITS Pilani, India and I'm currently working on cool stuff at [Levo.ai](https://levo.ai).
+I'm also a [core team member](https://www.zaproxy.org/docs/team/ricekot/) for the open-source [OWASP ZAP](https://zaproxy.org) project.
 
 I use this blog to document any interesting ideas I encounter and to write technical posts related to programming, mathematics and engineering. The contents of this blog reflect my personal opinions.
 
-**What does *ricekot* mean?**
-Many people have asked me how I came up with my handle.
-*ricekot* may be broken up into "rice" and "kot".
-My first name, "Akshath" (अक्षत, /ʌkʃʌθ/), means "rice" in Hindi.
-"kot" is nothing but the first three letters of my last name, "Kothari" (कोठारी, /kotʰɑri/).
+My handle *ricekot* may be broken up into "rice" and "kot".
+My first name, "Akshath" (अक्षत, /ʌkʃəθ/), means "rice" in Hindi.
+"kot" is nothing but the first three letters of my last name, "Kothari" (कोठारी, /kotʰari/).
 
 ## Projects
 
@@ -28,4 +26,8 @@ In my first two years at college, I had a lot of fun editing videos for cultural
 
 ## Contact
 
-Get in touch: ricekot [at] ricekot [dot] com
+Email: `hello[at]ricekot[dot]com`  
+IRC: `ricekot` on Libera.Chat
+
+<a href="https://github.com/ricekot"><img src="/assets/images/GitHub-Mark-32px.png" height=21px /></a>
+<a href="https://www.linkedin.com/in/ricekot/"><img src="/assets/images/LI-In-Bug.png" height=21px /></a>
