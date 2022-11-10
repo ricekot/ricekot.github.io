@@ -32,12 +32,22 @@
       <loc>{{ site.url }}/zapcon2022/links/</loc>
   </url>
 
-  
-  {% for category in site.categories %}
   <url>
-      <loc>{{ site.url }}/projects/{{ category[0] }}/</loc>
+      <loc>{{ site.url }}/projects/zap-graphql/</loc>
   </url>
-  {% endfor %}
+  <url>
+      <loc>{{ site.url }}/projects/zap-oast/</loc>
+  </url>
+  <url>
+      <loc>{{ site.url }}/projects/lfs/</loc>
+  </url>
+  <url>
+      <loc>{{ site.url }}/projects/tycs/</loc>
+  </url>
+
+  <url>
+      <loc>{{ site.url }}/research/fvm-thesis/</loc>
+  </url>
 
   {% for post in site.posts %}
   <url>
