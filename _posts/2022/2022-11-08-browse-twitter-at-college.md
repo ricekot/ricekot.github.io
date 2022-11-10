@@ -1,12 +1,11 @@
 ---
 layout: post
-title: "How to Browse Twitter at BITS Pilani"
+title: "How to Browse Twitter at College"
 description: Using Tailscale and a Firefox PAC file to selectively proxy websites that are blocked by the firewall on my college network.
 date: 2022-11-08 10:30 +0530
 ---
 
-It's frustrating to deal with the antics of BITS Pilani's Information Processing Centre sometimes.
-In this post, I'm going to be sharing the setup I use for accessing blocked domains and doing other stuff like messaging friends on IRC over the Sophos-firewalled network at my college.
+In this post, I'm going to be sharing the setup I use for accessing blocked domains and doing other stuff like messaging friends on IRC over the firewalled network at my college.
 
 At my home almost 200km away, there lies a dusty Dell Latitude 3440 which has seen better days.
 With an Intel Core i3-4005U CPU and 12 GB of RAM, it's running Ubuntu 22.04 LTS.
