@@ -25,6 +25,6 @@ In an attempt to make it slightly easier for me to do code reviews, I quickly ha
 Review Checklist on GitHub PRs
 </td></tr></tbody></table></center>
 
-The script is available as a GitHub gist:
+The script is available as a [GitHub gist](https://gist.github.com/ricekot/a1331d4fd28bd6709f981b36d91cdb2e.js):
 
 <script src="https://gist.github.com/ricekot/a1331d4fd28bd6709f981b36d91cdb2e.js"></script>
