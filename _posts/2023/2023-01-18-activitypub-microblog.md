@@ -5,6 +5,8 @@ description: I share why and how I set up my new microblog that's accessible at 
 date: 2023-01-18 16:30 +0530
 ---
 
+**UPDATE [Mar 26, 2023]**: I wasn't using the microblog at all, so I went ahead and deleted the VM being used to host it.
+
 My microblog is now available at [til.ricekot.com](https://til.ricekot.com) and you should be able to follow me from any ActivityPub service (e.g. Mastodon) using my handle `@ricekot@ricekot.com`.
 
 I recently read a blog post titled [What to Blog About](https://simonwillison.net/2022/Nov/6/what-to-blog-about/) by Simon Willison.
