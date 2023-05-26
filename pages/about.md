@@ -7,8 +7,7 @@ permalink: /about/
 Hello and welcome to my website!
 
 My name is Akshath Kothari.
-I'm in the final year of my studies at BITS Pilani, India and I'm currently working on cool stuff at [Levo.ai](https://levo.ai).
-I'm also a [core team member](https://www.zaproxy.org/docs/team/ricekot/) for the open-source [OWASP ZAP](https://zaproxy.org) project.
+I'm currently working on cool stuff at [Levo.ai](https://levo.ai), and I'm also a [core team member](https://www.zaproxy.org/docs/team/ricekot/) for the open-source [OWASP ZAP](https://zaproxy.org) project.
 
 I use this blog to document any interesting ideas I encounter and to write technical posts related to programming, mathematics and engineering. The contents of this blog reflect my personal opinions.
 
