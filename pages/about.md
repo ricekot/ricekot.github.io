@@ -7,7 +7,7 @@ permalink: /about/
 Hello and welcome to my website!
 
 My name is Akshath Kothari.
-I'm currently working on cool stuff at [Levo.ai](https://levo.ai), and I'm also a [core team member](https://www.zaproxy.org/docs/team/ricekot/) for the open-source [OWASP ZAP](https://zaproxy.org) project.
+I'm currently working on cool stuff at [Levo.ai](https://levo.ai), and I'm also a [core team member](https://www.zaproxy.org/docs/team/ricekot/) for the open-source [ZAP](https://zaproxy.org) project.
 
 I use this blog to document any interesting ideas I encounter and to write technical posts related to programming, mathematics and engineering. The contents of this blog reflect my personal opinions.
 
@@ -17,7 +17,7 @@ My first name, "Akshath" (अक्षत, /ʌkʃəθ/), means "rice" in Hindi.
 
 ## Projects
 
-Most of the stuff I learn or work on is available on my [GitHub profile](https://github.com/ricekot/). I also have a [projects page](/projects/) on this website.
+Please visit my [GitHub profile](https://github.com/ricekot/) to view my open source contributions.
 
 ## Art
 
