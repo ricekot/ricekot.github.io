@@ -3,6 +3,7 @@ layout: default
 contains_math: true
 ---
 
+<header class="post-header">
 <h1 class="post-title p-name" itemprop="name headline">
   <a href="{{ site.posts.first.url }}" style="text-decoration: none;">
     {{ site.posts.first.title }}
@@ -16,9 +17,25 @@ contains_math: true
     {{ tag }}{% if forloop.last == false %}, {% endif %}
   {% endfor %}
 </p>
-<div class="content">
-  {{ site.posts.first.content }}
+</header>
+
+<div class="content e-content">
+  {{ site.posts.first.excerpt }}
+  <a href="{{ site.posts.first.url }}">
+  <center><table style="table-layout: auto; width: 100%">
+    <tbody>
+    <tr><td align="center">
+    Continue reading
+    </td></tr>
+    {% if site.posts.first.image %}
+    <tr><td align="center">
+    <img src = "/assets/images/levo-dashboard-k8s-context.png">
+    </td></tr>
+    {% endif %}
+    </tbody>
+  </table></center></a>
 </div>
+
 <br>
 <hr>
 <br>

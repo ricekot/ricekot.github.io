@@ -12,4 +12,7 @@
   {%- if page.contains_math -%}
     {%- include mathjax.html -%}
   {%- endif -%}
+  {%- if page.canonical_url -%}
+    <link rel="canonical" href="{{ page.canonical_url }}">
+  {%- endif -%}
 </head>
