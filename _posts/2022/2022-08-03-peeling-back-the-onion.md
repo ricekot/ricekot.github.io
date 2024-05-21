@@ -10,7 +10,7 @@ I find reading and working through problems in books like [SICP](https://mitpres
 However, it is so damn fun to get lost in rabbitholes doing things like setting up your own Kubernetes cluster, or using [Tailscale](https://tailscale.com/) to get around your school's firewall, or using [Syncthing](https://syncthing.net/) to sync files between your devices.
 While it is gratifying to use these tools, is it worthwhile to spend time on them?
 
-I have had the pleasure and privelege of working with several new technologies since I joined [Levo](https://levo.ai).
+I have had the pleasure and privilege of working with several new technologies since I joined [Levo](https://levo.ai).
 In the beginning, I was thrown into a Python codebase, where I learnt about Python generators and coroutines.
 Then, I was asked to write a [gRPC](https://grpc.io/) service in Java to start Google CloudRun apps on demand.
 I briefly worked with Golang to write custom components for the [OpenTelemetry Collector](https://github.com/open-telemetry/opentelemetry-collector).
