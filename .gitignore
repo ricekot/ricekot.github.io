@@ -15,3 +15,4 @@ _removed/
 
 # Other
 .vscode/
+.DS_Store

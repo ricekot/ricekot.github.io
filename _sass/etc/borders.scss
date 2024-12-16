@@ -1,0 +1,40 @@
+.rainbow-border {
+  margin: 0 auto;
+  padding: 0.5em;
+  background: white;
+  text-align: center;
+  border-radius: 13px;
+  position: relative;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.rainbow-border::after,
+.rainbow-border::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle), #ff99cc, #ff66ff, #cc99ff, #66ccff, #ff99cc);
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 5px;
+  border-radius: 13px;
+  animation: 5s spin linear infinite;
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+
+  to {
+    --angle: 360deg;
+  }
+}
