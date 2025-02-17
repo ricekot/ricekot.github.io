@@ -35,7 +35,7 @@ A screenshot of the project page. Try it out yourself at <a href="/zap-af-visual
 
 The heavy lifting of this project is being done by [Google Blockly](https://developers.google.com/blockly).
 I found its API a little tricky to work with, maybe because it's my first time writing TypeScript, but I think the whole thing turned out pretty well overall.
-A Blockly feature that I found cute is the sound played whenever two blocks click together or a block is deleted.
+A Blockly feature that I found cute is the sound that is played when two blocks click together or when a block is deleted.
 
 In addition to Blockly, I used [CodeMirror](https://codemirror.net/) for displaying and highlighting the generated YAML, [Tailwind CSS](https://tailwindcss.com/) for styling, and [Vite](https://vite.dev/) to package everything together.
 
