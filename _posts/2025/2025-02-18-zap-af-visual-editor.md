@@ -7,7 +7,7 @@ tags: experiments
 date: 2025-02-18 01:30 +0530
 ---
 
-This is the first post in the [Deliberate Curiosity]({% post_url 2024/2024-12-16-deliberate-curiosity %}) series.
+This is my first post in the [Deliberate Curiosity]({% post_url 2024/2024-12-16-deliberate-curiosity %}) series.
 I built an [MIT Scratch](https://en.wikipedia.org/wiki/Scratch_(programming_language)) inspired drag-and-drop editor that can generate ZAP automation framework plans in YAML.
 
 <center>
