@@ -1,6 +1,6 @@
 ---
 layout: post
-title: <div class="rainbow-border">Deliberate Curiosity</div>
+title: Deliberate Curiosity
 description: Practicing curiosity to stay sane
 tags: experiments
 date: 2024-12-16 23:00 +0530

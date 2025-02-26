@@ -1,6 +1,6 @@
 ---
 layout: post
-title: <div class="ants-border">A Visual Editor for the ZAP Automation Framework</div>
+title: A Visual Editor for the ZAP Automation Framework
 description: I built a drag-and-drop web-based editor for ZAP Automation Framework plans.
 image: "/assets/images/zap-af-visual-editor.png"
 tags: experiments
