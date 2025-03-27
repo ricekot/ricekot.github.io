@@ -3,6 +3,7 @@ layout: post
 title: Idea Slot Machine
 description: I vibe-coded a slot machine to generate project ideas.
 date: 2025-03-27 15:00 +0530
+image: "/assets/images/idea-slot-machine/preview.png"
 ---
 
 I vibe-coded a slot machine to generate project ideas.
@@ -15,17 +16,17 @@ If you want to build your own idea generating slot machine, you can copy and edi
 <style>
     .container {
         max-width: 500px;
-        margin: 0 auto;
+        margin: 0;
         padding: 20px;
         text-align: center;
         width: 100%;
+        box-sizing: border-box;
     }
     .slot-machine {
         background-color: #5d6d7e;
         border-radius: 10px;
         padding: 20px;
         max-width: 450px;
-        width: 95%;
         margin: 0 auto;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         padding-bottom: 30px;
@@ -89,6 +90,9 @@ If you want to build your own idea generating slot machine, you can copy and edi
         #combination-text {
             font-size: 16px;
         }
+        .combination-result {
+            max-width: 190px;
+        }
     }
     .slot-item img {
         max-width: 80%;
@@ -151,6 +155,7 @@ If you want to build your own idea generating slot machine, you can copy and edi
         margin-top: 15px;
         width: 100%;
         text-align: center;
+        max-width: 240px;
     }
     #combination-text {
         margin: 0;
@@ -297,14 +302,17 @@ If you want to build your own idea generating slot machine, you can copy and edi
         });
 
         // Touch events for mobile
-        leverHandle.addEventListener('touchstart', function(e) {
-            if (!spinLever.classList.contains('disabled')) {
+        spinLever.addEventListener('touchstart', function(e) {
+            if (!this.classList.contains('disabled')) {
                 isDragging = true;
                 startY = e.touches[0].clientY;
                 e.preventDefault();
+                
+                // Detect if this is a tap (will be cancelled if it becomes a drag)
+                this.isTap = true;
             }
         });
-
+        
         document.addEventListener('mousemove', function(e) {
             if (isDragging && !spinLever.classList.contains('disabled')) {
                 const deltaY = e.clientY - startY;
@@ -323,49 +331,58 @@ If you want to build your own idea generating slot machine, you can copy and edi
                 }
             }
         });
-
+        
         document.addEventListener('touchmove', function(e) {
             if (isDragging && !spinLever.classList.contains('disabled')) {
+                // If movement detected, this is not a tap
+                spinLever.isTap = false;
+                
                 const deltaY = e.touches[0].clientY - startY;
                 const maxPull = 100; // Maximum pull distance
-
+                
                 // Limit the pull to the maximum distance
                 const pullDistance = Math.min(Math.max(deltaY, 0), maxPull);
-
+                
                 // Apply the transform to the lever handle
                 leverHandle.style.transform = `translateX(-50%) translateY(${pullDistance}px)`;
-
+                
                 // If pulled more than 70% of the way, trigger the spin
                 if (pullDistance >= maxPull * 0.7 && !leverPulled) {
                     leverPulled = true;
                     spin();
                 }
-
+                
                 e.preventDefault(); // Prevent scrolling while dragging
             }
         });
-
+        
         document.addEventListener('mouseup', function() {
             if (isDragging) {
                 isDragging = false;
                 leverPulled = false;
                 document.body.style.cursor = 'default';
-
+                
                 // If not already in a spin animation, reset the lever position
                 if (!spinLever.classList.contains('pulled') && !spinLever.classList.contains('disabled')) {
                     leverHandle.style.transform = 'translateX(-50%) translateY(0)'; 
                 }
             }
         });
-
-        document.addEventListener('touchend', function() {
+        
+        document.addEventListener('touchend', function(e) {
             if (isDragging) {
+                // Check if this was a tap (no movement detected)
+                if (spinLever.isTap && !spinLever.classList.contains('disabled')) {
+                    spin();
+                }
+                
                 isDragging = false;
                 leverPulled = false;
-
+                spinLever.isTap = false;
+                
                 // If not already in a spin animation, reset the lever position
                 if (!spinLever.classList.contains('pulled') && !spinLever.classList.contains('disabled')) {
-                    leverHandle.style.transform = 'translateX(-50%) translateY(0)';
+                    leverHandle.style.transform = 'translateX(-50%) translateY(0)'; 
                 }
             }
         });
