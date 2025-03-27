@@ -20,20 +20,24 @@ contains_math: true
 </header>
 
 <div class="content e-content">
-  {{ site.posts.first.excerpt }}
-  <a href="{{ site.posts.first.url }}">
-  <center><table style="table-layout: auto; width: 80%">
-    <tbody>
-    <tr><td align="center">
-    Continue reading
-    </td></tr>
-    {% if site.posts.first.image %}
-    <tr><td align="center">
-    <img src = "{{ site.posts.first.image }}">
-    </td></tr>
-    {% endif %}
-    </tbody>
-  </table></center></a>
+  {%if site.posts.first.show_full_post_on_homepage %}
+    {{ site.posts.first.content }}
+  {% else %}
+    {{ site.posts.first.excerpt }}
+    <a href="{{ site.posts.first.url }}">
+    <center><table style="table-layout: auto; width: 80%">
+      <tbody>
+      <tr><td align="center">
+      Continue reading
+      </td></tr>
+      {% if site.posts.first.image %}
+      <tr><td align="center">
+      <img src = "{{ site.posts.first.image }}">
+      </td></tr>
+      {% endif %}
+      </tbody>
+    </table></center></a>
+  {% endif %}
 </div>
 
 <br>
