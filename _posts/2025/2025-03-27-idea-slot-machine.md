@@ -4,6 +4,7 @@ title: Idea Slot Machine
 description: I vibe-coded a slot machine to generate project ideas.
 date: 2025-03-27 15:00 +0530
 image: "/assets/images/idea-slot-machine/preview.png"
+show_full_post_on_homepage: true
 ---
 
 I vibe-coded a slot machine to generate project ideas.
@@ -164,6 +165,7 @@ If you want to build your own idea generating slot machine, you can copy and edi
         color: #2c3e50;
     }
 </style>
+<center>
 <div class="container">
     <div class="slot-machine">
         <div class="machine-container">
@@ -189,6 +191,7 @@ If you want to build your own idea generating slot machine, you can copy and edi
         </div>
     </div>
 </div>
+</center>
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
