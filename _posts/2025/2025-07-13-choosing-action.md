@@ -34,7 +34,7 @@ I need to be in the driver's seat.
 It's VERY easy to come up with excuses for not taking action.
 You could be afraid of uncertainty, or you could be an overthinker.
 Or maybe you're a perfectionist who wants to do great work, and anything less is unacceptable.
-Fuck that.
+Scratch that.
 Stop thinking, start doing.
 
 > A stone is powerless.
