@@ -20,7 +20,9 @@ From one of my favourite videos on the internet,
 Action is a life-giving breath; inaction is a slow death.
 </td></tr>
 <tr><td align="center">
-<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/RIVVQkZtnAU?modestbranding=1&showinfo=0&rel=0&theme=light&color=white" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div class="responsive-iframe-container">
+<iframe class="responsive-iframe" src="https://www.youtube-nocookie.com/embed/RIVVQkZtnAU?modestbranding=1&showinfo=0&rel=0&theme=light&color=white" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
 </td></tr>
 </tbody>
 </table>
