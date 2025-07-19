@@ -3,7 +3,6 @@ layout: post
 title: Choosing Action
 description: Consciously building a bias for action.
 date: 2025-07-19 12:45 +0530
-# image: "/assets/images/idea-slot-machine/preview.png"
 ---
 
 I think I've been spending too much time just thinking about things lately.
