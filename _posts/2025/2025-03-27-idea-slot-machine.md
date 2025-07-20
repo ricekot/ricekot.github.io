@@ -207,6 +207,7 @@ If you want to build your own idea generating slot machine, you can copy and edi
             { name: 'Kubernetes', image: '/assets/images/idea-slot-machine/kubernetes.png' },
             { name: 'OpenTelemetry', image: '/assets/images/idea-slot-machine/opentelemetry.png' },
             { name: 'ZAP', image: '/assets/images/idea-slot-machine/zap.png' },
+            { name: 'Git', image: '/assets/images/idea-slot-machine/git.svg' }
         ];
 
         const slot1El = document.getElementById('slot1').querySelector('.slot-wrapper');
