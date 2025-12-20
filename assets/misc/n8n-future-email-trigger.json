@@ -1,0 +1,239 @@
+{
+    "name": "Future Email Trigger",
+    "nodes": [
+        {
+            "parameters": {
+                "rule": {
+                    "interval": [
+                        {
+                            "field": "hours",
+                            "hoursInterval": 6
+                        }
+                    ]
+                }
+            },
+            "type": "n8n-nodes-base.scheduleTrigger",
+            "typeVersion": 1.2,
+            "position": [
+                0,
+                0
+            ],
+            "id": "926c151c-124a-4fd1-811b-54959a7842d5",
+            "name": "Schedule Trigger"
+        },
+        {
+            "parameters": {
+                "operation": "get",
+                "dataTableId": {
+                    "__rl": true,
+                    "value": "HmUU9NmFeX5Npqnk",
+                    "mode": "list",
+                    "cachedResultName": "Future Emails",
+                    "cachedResultUrl": "/projects/LKsFC6yUkEqQQc1W/datatables/HmUU9NmFeX5Npqnk"
+                },
+                "matchType": "allConditions",
+                "filters": {
+                    "conditions": [
+                        {
+                            "keyName": "=emailSent",
+                            "condition": "=isFalse"
+                        },
+                        {
+                            "keyName": "=triggerDate",
+                            "condition": "=lte",
+                            "keyValue": "={{ $json.timestamp }}"
+                        }
+                    ]
+                },
+                "returnAll": true
+            },
+            "type": "n8n-nodes-base.dataTable",
+            "typeVersion": 1,
+            "position": [
+                208,
+                0
+            ],
+            "id": "bd67a138-7933-4fde-8493-b1ed3814a097",
+            "name": "Get row(s)"
+        },
+        {
+            "parameters": {
+                "fromEmail": "Future Email Service <n8n-noreply@example.com>",
+                "toEmail": "={{ $json.emailAddress }}",
+                "subject": "={{ $json.emailSubject }}",
+                "html": "={{ $json.emailContent }}",
+                "options": {
+                    "appendAttribution": false
+                }
+            },
+            "type": "n8n-nodes-base.emailSend",
+            "typeVersion": 2.1,
+            "position": [
+                416,
+                0
+            ],
+            "id": "4385c867-5f3c-48f3-99b8-8158dc1588dc",
+            "name": "Send email",
+            "webhookId": "67f08100-0657-480d-a17b-b46557c9b9fc",
+            "credentials": {
+                "smtp": {
+                    "id": "Dm1sBnAKW8cN3pM9",
+                    "name": "Migadu (n8n)"
+                }
+            }
+        },
+        {
+            "parameters": {
+                "operation": "update",
+                "dataTableId": {
+                    "__rl": true,
+                    "value": "HmUU9NmFeX5Npqnk",
+                    "mode": "list",
+                    "cachedResultName": "Future Emails",
+                    "cachedResultUrl": "/projects/LKsFC6yUkEqQQc1W/datatables/HmUU9NmFeX5Npqnk"
+                },
+                "matchType": "allConditions",
+                "filters": {
+                    "conditions": [
+                        {
+                            "keyName": "=id",
+                            "condition": "=eq",
+                            "keyValue": "={{ $('Get row(s)').item.json.id }}"
+                        }
+                    ]
+                },
+                "columns": {
+                    "mappingMode": "defineBelow",
+                    "value": {
+                        "emailSent": true
+                    },
+                    "matchingColumns": [],
+                    "schema": [
+                        {
+                            "id": "emailContent",
+                            "displayName": "emailContent",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "string",
+                            "readOnly": false,
+                            "removed": true
+                        },
+                        {
+                            "id": "triggerDate",
+                            "displayName": "triggerDate",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "dateTime",
+                            "readOnly": false,
+                            "removed": true
+                        },
+                        {
+                            "id": "emailAddress",
+                            "displayName": "emailAddress",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "string",
+                            "readOnly": false,
+                            "removed": true
+                        },
+                        {
+                            "id": "emailSent",
+                            "displayName": "emailSent",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "boolean",
+                            "readOnly": false,
+                            "removed": false
+                        },
+                        {
+                            "id": "emailSubject",
+                            "displayName": "emailSubject",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "string",
+                            "readOnly": false,
+                            "removed": true
+                        }
+                    ],
+                    "attemptToConvertTypes": false,
+                    "convertFieldsToString": false
+                },
+                "options": {
+                    "dryRun": false
+                }
+            },
+            "type": "n8n-nodes-base.dataTable",
+            "typeVersion": 1,
+            "position": [
+                608,
+                0
+            ],
+            "id": "690b07de-8120-4067-a38b-002bbc01e424",
+            "name": "Update row(s)"
+        }
+    ],
+    "pinData": {
+        "Get row(s)": [
+            {
+                "json": {
+                    "emailAddress": "hello@example.com",
+                    "emailSubject": "Letter from the Future",
+                    "emailContent": "Hello future Me!",
+                    "triggerDate": "2025-11-30",
+                    "emailSent": false,
+                    "id": 1
+                },
+                "pairedItem": {
+                    "item": 0
+                }
+            }
+        ]
+    },
+    "connections": {
+        "Schedule Trigger": {
+            "main": [
+                [
+                    {
+                        "node": "Get row(s)",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "Get row(s)": {
+            "main": [
+                [
+                    {
+                        "node": "Send email",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "Send email": {
+            "main": [
+                [
+                    {
+                        "node": "Update row(s)",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        }
+    },
+    "active": true,
+    "settings": {
+        "executionOrder": "v1"
+    },
+    "versionId": "16b93cf8-b6c0-45ea-a585-4715074c6db6",
+    "id": "FC0jVApACSxxz3pD",
+    "tags": []
+}

@@ -1,0 +1,167 @@
+{
+    "name": "Future Email Form",
+    "nodes": [
+        {
+            "parameters": {
+                "path": "future-email-form",
+                "formTitle": "Send a Message to Your Future Self",
+                "formDescription": "Write something for your future self and pick when it should arrive.",
+                "formFields": {
+                    "values": [
+                        {
+                            "fieldLabel": "Email Address",
+                            "fieldType": "email",
+                            "requiredField": true
+                        },
+                        {
+                            "fieldLabel": "Email Subject",
+                            "placeholder": "Letter from the Future",
+                            "requiredField": true
+                        },
+                        {
+                            "fieldLabel": "Email Content",
+                            "fieldType": "textarea",
+                            "requiredField": true
+                        },
+                        {
+                            "fieldLabel": "Trigger Date",
+                            "fieldType": "date",
+                            "requiredField": true
+                        }
+                    ]
+                },
+                "responseMode": "lastNode",
+                "options": {
+                    "formSubmittedText": "Your email has been recorded. It will reach you in the future!"
+                }
+            },
+            "id": "6829b4a1-12b5-4ad0-bdd7-e3ca70acd0ee",
+            "name": "Form Trigger",
+            "type": "n8n-nodes-base.formTrigger",
+            "typeVersion": 1,
+            "position": [
+                144,
+                144
+            ],
+            "webhookId": "2ed54940-246e-4a78-9266-c2bd8d066ff9"
+        },
+        {
+            "parameters": {
+                "dataTableId": {
+                    "__rl": true,
+                    "value": "HmUU9NmFeX5Npqnk",
+                    "mode": "list",
+                    "cachedResultName": "Future Emails",
+                    "cachedResultUrl": "/projects/LKsFC6yUkEqQQc1W/datatables/HmUU9NmFeX5Npqnk"
+                },
+                "columns": {
+                    "mappingMode": "defineBelow",
+                    "value": {
+                        "emailContent": "={{ $json['Email Content'] }}",
+                        "triggerDate": "={{ $json['Trigger Date'] }}",
+                        "emailAddress": "={{ $json['Email Address'] }}",
+                        "emailSubject": "={{ $json['Email Subject'] }}",
+                        "emailSent": false
+                    },
+                    "matchingColumns": [],
+                    "schema": [
+                        {
+                            "id": "emailContent",
+                            "displayName": "emailContent",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "string",
+                            "readOnly": false,
+                            "removed": false
+                        },
+                        {
+                            "id": "triggerDate",
+                            "displayName": "triggerDate",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "dateTime",
+                            "readOnly": false,
+                            "removed": false
+                        },
+                        {
+                            "id": "emailAddress",
+                            "displayName": "emailAddress",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "string",
+                            "readOnly": false,
+                            "removed": false
+                        },
+                        {
+                            "id": "emailSent",
+                            "displayName": "emailSent",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "boolean",
+                            "readOnly": false,
+                            "removed": false
+                        },
+                        {
+                            "id": "emailSubject",
+                            "displayName": "emailSubject",
+                            "required": false,
+                            "defaultMatch": false,
+                            "display": true,
+                            "type": "string",
+                            "readOnly": false,
+                            "removed": false
+                        }
+                    ],
+                    "attemptToConvertTypes": false,
+                    "convertFieldsToString": false
+                },
+                "options": {}
+            },
+            "type": "n8n-nodes-base.dataTable",
+            "typeVersion": 1,
+            "position": [
+                416,
+                144
+            ],
+            "id": "8854bd13-d314-459d-a2ef-1fa41273fe5f",
+            "name": "Insert row"
+        }
+    ],
+    "pinData": {
+        "Form Trigger": [
+            {
+                "json": {
+                    "Email Address": "hello@example.com",
+                    "Email Subject": "Letter from the Future",
+                    "Email Content": "Hello future Me!",
+                    "Trigger Date": "2025-11-30",
+                    "formMode": "test"
+                }
+            }
+        ]
+    },
+    "connections": {
+        "Form Trigger": {
+            "main": [
+                [
+                    {
+                        "node": "Insert row",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        }
+    },
+    "active": true,
+    "settings": {
+        "executionOrder": "v1"
+    },
+    "versionId": "5ff1193a-118c-4389-9977-d4158d8c84e9",
+    "id": "RgcYiFJfoPQgAoRy",
+    "tags": []
+}
