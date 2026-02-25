@@ -1,0 +1,29 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+import Container from "@components/Container.astro";
+import ZapconNav from "@components/ZapconNav.astro";
+---
+
+<PageLayout title="ZAPCon 2022 - OAST with ZAP" description="Resources related to my presentation on &quot;OAST with ZAP&quot; at ZAPCon 2022.">
+  <Container>
+    <ZapconNav active="slides" />
+    <div class="animate space-y-6">
+
+      <h2 class="text-xl font-semibold text-black dark:text-white">Slides</h2>
+
+      <p>
+        If you can't see the slides below, you can view them by
+        <a href="https://docs.google.com/presentation/d/1UGIfeulIyW0Zmr3YsDDnSB4CQAeYTdAs2qI5bnhSoeE/edit?usp=sharing" class="underline underline-offset-2">clicking here</a>.
+      </p>
+
+      <div class="relative w-full" style="padding-bottom: 61%;">
+        <iframe
+          class="absolute inset-0 w-full h-full rounded"
+          src="https://docs.google.com/presentation/d/e/2PACX-1vRkwKlwpTRO5jMo-sOVBiXh-3wSKZviEyYM_kMUT6GAVqnFHUDfhnEWYQFiMsibfmS6k1YU7rIjw-J_/embed?start=false&loop=false&delayms=3000"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </Container>
+</PageLayout>

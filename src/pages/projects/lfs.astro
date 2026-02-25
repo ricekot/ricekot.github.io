@@ -1,0 +1,33 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+import Container from "@components/Container.astro";
+import BackToPrev from "@components/BackToPrev.astro";
+import Link from "@components/Link.astro";
+---
+
+<PageLayout title="Linux From Scratch" description="Building Linux from scratch following the LFS guide.">
+  <Container>
+    <div class="animate">
+      <BackToPrev href="/projects/">
+        Back to projects
+      </BackToPrev>
+    </div>
+    <div class="my-10 space-y-6">
+      <div class="animate">
+        <h1 class="text-2xl font-semibold text-black dark:text-white">Linux From Scratch</h1>
+      </div>
+      <div class="animate space-y-4">
+        <p>
+          I want to gain a better understanding of how Linux works and I think building Linux from scratch is a step in this direction. I will be following version 11.1 (with SystemD) of the <Link href="http://www.linuxfromscratch.org/" external>Linux From Scratch</Link> guide. I am grateful to its creators.
+        </p>
+      </div>
+      <hr class="border-black/10 dark:border-white/10" />
+      <div class="animate">
+        <h2 class="font-semibold text-black dark:text-white">Posts</h2>
+        <div class="mt-4">
+          <p class="text-sm text-black/50 dark:text-white/50">No posts yet.</p>
+        </div>
+      </div>
+    </div>
+  </Container>
+</PageLayout>

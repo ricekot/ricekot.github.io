@@ -1,0 +1,110 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+import Container from "@components/Container.astro";
+import Link from "@components/Link.astro";
+
+const ART = {
+  TITLE: "Art",
+  DESCRIPTION: "Video editing and animation work.",
+};
+
+const items = [
+  {
+    title: "Oasis 2019 Curtain Raiser",
+    description: "I directed the camera movements from 0:55 to 1:15 in Unity. The 3D models of the campus buildings, the titles, and the editing were done in Blender, After Effects and Premiere respectively by the DVM Video Team.",
+    embed: "https://www.youtube-nocookie.com/embed/wl3XLIzR4QQ?modestbranding=1&showinfo=0&rel=0&theme=light&color=white",
+    align: "right",
+  },
+  {
+    title: "Rocktaves",
+    description: "A promotional video for Rocktaves, a rock band competition. Titles in Cinema4D, Lightning effect with the help of Saber plugin in After Effects, compiled in Premiere.",
+    embed: "https://www.youtube-nocookie.com/embed/0AlBafi2NiQ?modestbranding=1&showinfo=0&rel=0&theme=light&color=white",
+    align: "left",
+  },
+  {
+    title: "Oasis 2020 Theme Reveal",
+    description: "I directed the camera movements inside the room in Unreal Engine, the crystal ball footage and the final compilation in Premiere. The 3D models, characters, camera movements, titles and animations were all created by the DVM Video Team.",
+    embed: "https://www.youtube-nocookie.com/embed/C8Mg71oIA2s?modestbranding=1&showinfo=0&rel=0&theme=light&color=white",
+    align: "right",
+  },
+  {
+    title: "Trying Adobe Animate",
+    description: "A simple hand-drawn animation created in Adobe Animate.",
+    image: "/assets/art/handrawn-AK.gif",
+    align: "left",
+  },
+  {
+    title: "Oasis 2018 Sponsors",
+    description: "The first video I created (along with Samir and Hithesh) as part of DVM. This is a video that lists the sponsors of Oasis 2018, the annual cultural festival held at my college.",
+    embed: "https://www.youtube-nocookie.com/embed/8sOT8UOizTQ?modestbranding=1&showinfo=0&rel=0&theme=light&color=white",
+    align: "right",
+  },
+  {
+    title: "Flashy Text Intro",
+    description: "A title animation created in Adobe After Effects.",
+    descriptionExtra: [
+      { text: "Flashy Text Intro by Mt. Mograph", href: "https://youtu.be/VVVhb-CilkM" },
+      { text: "Simple Squiggling Line by ECAbrams", href: "https://youtu.be/yG9jsBYaXfY" },
+    ],
+    image: "/assets/art/flashy_text_intro.gif",
+    align: "left",
+  },
+  {
+    title: "The huMAN",
+    description: "A superhero movie trailer I created to enter a video editing competition. This is the first good video I ever made. Effects done in After Effects, edited with videopad.",
+    embed: "https://www.youtube-nocookie.com/embed/sCrmsDiqKbo?modestbranding=1&showinfo=0&rel=0&theme=light&color=white",
+    align: "right",
+  },
+];
+---
+
+<PageLayout title={ART.TITLE} description={ART.DESCRIPTION}>
+  <Container>
+    <div class="space-y-10">
+      <div class="animate font-semibold text-black dark:text-white">
+        Art
+      </div>
+      <div class="animate space-y-6">
+        {items.map((item) => (
+          <div class="rounded-lg border border-black/15 dark:border-white/20 p-4">
+            <div class:list={["flex flex-col sm:flex-row gap-4", item.align === "right" ? "sm:flex-row-reverse" : ""]}>
+              <div class="sm:w-[356px] flex-shrink-0">
+                {item.embed ? (
+                  <iframe
+                    src={item.embed}
+                    allowfullscreen
+                    style="border:0"
+                    height="200"
+                    width="356"
+                    class="w-full sm:w-[356px]"
+                    loading="lazy"
+                  />
+                ) : item.image ? (
+                  <img src={item.image} alt={item.title} class="h-[200px]" loading="lazy" />
+                ) : null}
+              </div>
+              <div class="flex-1">
+                <div class="font-semibold text-black dark:text-white mb-1">{item.title}</div>
+                <div class="text-sm italic">
+                  {item.description}
+                  {item.descriptionExtra && (
+                    <span>
+                      {" "}I followed these two tutorials:{" "}
+                      {item.descriptionExtra.map((link, i) => (
+                        <>
+                          <Link href={link.href} external>{link.text}</Link>
+                          {i < item.descriptionExtra.length - 1 && " and "}
+                        </>
+                      ))}
+                      .
+                    </span>
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </Container>
+</PageLayout>

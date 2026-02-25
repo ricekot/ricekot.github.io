@@ -1,0 +1,22 @@
+---
+type Props = {
+    src: string;
+    alt: string;
+    caption: string;
+    width?: string;
+    shadow?: boolean;
+}
+
+const { src, alt, caption, width = "w-full", shadow = true } = Astro.props as Props;
+---
+
+<figure class={`mx-auto my-8 max-w-3xl text-center ${width}`}>
+  <img
+    src={src}
+    alt={alt}
+    class={`mx-auto rounded-md ${shadow ? "shadow-md" : ""}`}
+  />
+  <figcaption class="mt-3 text-sm text-gray-500 dark:text-gray-400">
+    {caption}
+  </figcaption>
+</figure>

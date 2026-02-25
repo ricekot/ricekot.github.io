@@ -1,0 +1,75 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+import Container from "@components/Container.astro";
+import ZapconNav from "@components/ZapconNav.astro";
+---
+
+<PageLayout title="ZAPCon 2022 - OAST with ZAP" description="Resources related to my presentation on &quot;OAST with ZAP&quot; at ZAPCon 2022.">
+  <Container>
+    <ZapconNav active="links" />
+    <div class="animate space-y-6">
+
+      <section class="space-y-4">
+        <h2 class="text-xl font-semibold text-black dark:text-white">Blog Posts about ZAP and OAST</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-black/10 dark:border-white/10">
+                <th class="text-left py-2 pr-4 font-semibold text-black dark:text-white">Name / Link</th>
+                <th class="text-left py-2 font-semibold text-black dark:text-white">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-black/5 dark:border-white/5">
+                <td class="py-2 pr-4"><a href="/2021/levelling-up-zap-with-oast" class="underline underline-offset-2">Levelling up ZAP with OAST</a></td>
+                <td class="py-2">Introductory post about OAST and ZAP.</td>
+              </tr>
+              <tr class="border-b border-black/5 dark:border-white/5">
+                <td class="py-2 pr-4"><a href="/2021/zap-oast-basic-design-decisions" class="underline underline-offset-2">ZAP OAST: Basic Design Decisions</a></td>
+                <td class="py-2">Design decisions taken at the time of development of the OAST add-on.</td>
+              </tr>
+              <tr class="border-b border-black/5 dark:border-white/5">
+                <td class="py-2 pr-4"><a href="https://www.zaproxy.org/blog/2021-08-23-oast-with-owasp-zap/" class="underline underline-offset-2">OAST with OWASP ZAP</a></td>
+                <td class="py-2">The OAST Add-on GUI and Scripting APIs.</td>
+              </tr>
+              <tr class="border-b border-black/5 dark:border-white/5">
+                <td class="py-2 pr-4"><a href="https://www.zaproxy.org/blog/2021-12-14-log4shell-detection-with-zap/" class="underline underline-offset-2">Log4Shell Detection with ZAP</a></td>
+                <td class="py-2">Detecting Log4Shell Vulnerabilities with the OAST add-on.</td>
+              </tr>
+              <tr class="border-b border-black/5 dark:border-white/5">
+                <td class="py-2 pr-4"><a href="https://www.zaproxy.org/blog/2020-03-09-zap-ssrf-setup/" class="underline underline-offset-2">ZAP SSRF Setup</a></td>
+                <td class="py-2">Configuring the Callback Service for SSRF Attacks.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-xl font-semibold text-black dark:text-white">Documentation</h2>
+        <ul class="list-disc list-inside space-y-1">
+          <li><a href="https://www.zaproxy.org/docs/desktop/addons/oast-support/" class="underline underline-offset-2">ZAP OAST Add-on Desktop User Guide</a></li>
+          <li><a href="https://github.com/projectdiscovery/interactsh" class="underline underline-offset-2">Interactsh GitHub Repository</a></li>
+          <li><a href="https://github.com/marcoagner/boast" class="underline underline-offset-2">BOAST GitHub Repository</a></li>
+        </ul>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-xl font-semibold text-black dark:text-white">ZAP Scan Rules that use OAST</h2>
+        <ul class="list-disc list-inside space-y-1">
+          <li><a href="https://github.com/zaproxy/zap-extensions/blob/main/addOns/ascanrulesAlpha/src/main/java/org/zaproxy/zap/extension/ascanrulesAlpha/Log4ShellScanRule.java" class="underline underline-offset-2">Log4Shell Scan Rule</a></li>
+          <li><a href="https://github.com/zaproxy/zap-extensions/blob/main/addOns/ascanrulesBeta/src/main/java/org/zaproxy/zap/extension/ascanrulesBeta/XxeScanRule.java" class="underline underline-offset-2">XML External Entity Scan Rule</a></li>
+          <li><a href="https://github.com/zaproxy/zap-extensions/blob/main/addOns/ascanrulesAlpha/src/main/java/org/zaproxy/zap/extension/ascanrulesAlpha/OutOfBandXssScanRule.java" class="underline underline-offset-2">Out-of-band XSS Scan Rule</a></li>
+        </ul>
+      </section>
+
+      <section class="space-y-4">
+        <h2 class="text-xl font-semibold text-black dark:text-white">More Reading Resources</h2>
+        <ul class="list-disc list-inside space-y-1">
+          <li><a href="https://portswigger.net/blog/oast-out-of-band-application-security-testing" class="underline underline-offset-2">OAST (Out-of-band Application Security Testing) | Blog - PortSwigger</a></li>
+          <li><a href="https://portswigger.net/blog/introducing-burp-collaborator" class="underline underline-offset-2">Introducing Burp Collaborator | Blog - PortSwigger</a></li>
+        </ul>
+      </section>
+    </div>
+  </Container>
+</PageLayout>

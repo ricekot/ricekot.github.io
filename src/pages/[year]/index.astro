@@ -1,0 +1,48 @@
+---
+import { getCollection } from "astro:content";
+import PageLayout from "@layouts/PageLayout.astro";
+import Container from "@components/Container.astro";
+import ArrowCard from "@components/ArrowCard.astro";
+import BackToPrev from "@components/BackToPrev.astro";
+
+export async function getStaticPaths() {
+  const posts = (await getCollection("blog"))
+    .filter(post => !post.data.draft);
+
+  const years = [...new Set(posts.map(post => post.data.date.getFullYear().toString()))];
+
+  return years.map(year => ({
+    params: { year },
+    props: {
+      year,
+      posts: posts
+        .filter(post => post.data.date.getFullYear().toString() === year)
+        .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf()),
+    },
+  }));
+}
+
+const { year, posts } = Astro.props;
+---
+
+<PageLayout title={`${year}`} description={`All posts from ${year}.`}>
+  <Container>
+    <div class="animate">
+      <BackToPrev href="/archive/">
+        Back to archive
+      </BackToPrev>
+    </div>
+    <div class="space-y-10 my-10">
+      <div class="animate font-semibold text-black dark:text-white">
+        {year}
+      </div>
+      <ul class="animate flex flex-col gap-4">
+        {posts.map((post) => (
+          <li>
+            <ArrowCard entry={post} />
+          </li>
+        ))}
+      </ul>
+    </div>
+  </Container>
+</PageLayout>

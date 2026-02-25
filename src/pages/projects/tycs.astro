@@ -1,0 +1,48 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+import Container from "@components/Container.astro";
+import BackToPrev from "@components/BackToPrev.astro";
+import Link from "@components/Link.astro";
+---
+
+<PageLayout title="Learning Computer Science" description="Working through the teachyourselfcs.com guide to study the fundamentals of computer science.">
+  <Container>
+    <div class="animate">
+      <BackToPrev href="/projects/">
+        Back to projects
+      </BackToPrev>
+    </div>
+    <div class="my-10 space-y-6">
+      <div class="animate">
+        <h1 class="text-2xl font-semibold text-black dark:text-white">Learning Computer Science</h1>
+      </div>
+      <div class="animate space-y-4">
+        <p>
+          I've been writing code for quite some time now and I owe it to myself to study the fundamentals of computer science. This is a long term project. Whenever I find some extra time on my hands, I'm going to continue where I left off. The plan is to work through the entire <Link href="https://teachyourselfcs.com/" external>teachyourselfcs.com</Link> guide.
+        </p>
+      </div>
+      <hr class="border-black/10 dark:border-white/10" />
+      <div class="animate">
+        <h2 class="font-semibold text-black dark:text-white">Posts</h2>
+        <div class="mt-4">
+          <table class="w-full text-sm">
+            <tbody>
+              <tr class="border-b border-black/5 dark:border-white/5">
+                <td class="py-2 pr-4 text-black/50 dark:text-white/50 whitespace-nowrap">Aug 7, 2022</td>
+                <td class="py-2"><Link href="/2022/sicp-exercises-116-119/">SICP Exercises 1.16 - 1.19</Link></td>
+              </tr>
+              <tr class="border-b border-black/5 dark:border-white/5">
+                <td class="py-2 pr-4 text-black/50 dark:text-white/50 whitespace-nowrap">Jan 5, 2021</td>
+                <td class="py-2"><Link href="/2021/sicp-exercises-111-115/">SICP Exercises 1.11 - 1.15</Link></td>
+              </tr>
+              <tr>
+                <td class="py-2 pr-4 text-black/50 dark:text-white/50 whitespace-nowrap">Nov 12, 2020</td>
+                <td class="py-2"><Link href="/2020/grand-scheme/">The Grand SCHEME of Things</Link></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </Container>
+</PageLayout>

@@ -1,0 +1,62 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+import Container from "@components/Container.astro";
+import BackToPrev from "@components/BackToPrev.astro";
+import Link from "@components/Link.astro";
+---
+
+<PageLayout title="Google Summer of Code 2021 at OWASP ZAP" description="Google Summer of Code 2021 at OWASP ZAP - Project Blog">
+  <Container>
+    <div class="animate">
+      <BackToPrev href="/projects/">
+        Back to projects
+      </BackToPrev>
+    </div>
+    <div class="my-10 space-y-6">
+      <div class="animate flex justify-center">
+        <img src="/assets/images/GSoC-ZAP-banner.png" alt="GSoC ZAP Banner" class="max-w-[600px] w-full" />
+      </div>
+      <div class="animate text-center text-xl text-black/50 dark:text-white/50">
+        <Link href="https://summerofcode.withgoogle.com/projects/#6734301854433280" external>Project</Link> Blog
+      </div>
+      <div class="animate space-y-4">
+        <p>
+          In the summer of 2021, I worked under the guidance of my mentors Simon, Rick and Ricardo to add Out-of-band Application Security Testing (OAST) Support to ZAP, the world's most widely used web app scanner. Since then, I have continued to work on enhancing the OAST add-on for ZAP. Read more about ZAP at <Link href="https://www.zaproxy.org/" external>zaproxy.org</Link>.
+        </p>
+        <p>
+          Follow <Link href="https://twitter.com/zaproxy" external>@zaproxy</Link> on Twitter for latest ZAP updates.
+        </p>
+      </div>
+      <hr class="border-black/10 dark:border-white/10" />
+      <div class="animate">
+        <h2 class="font-semibold text-black dark:text-white">Posts</h2>
+        <div class="mt-4">
+          <table class="w-full text-sm">
+            <tbody>
+              <tr class="border-b border-black/5 dark:border-white/5">
+                <td class="py-2 pr-4 text-black/50 dark:text-white/50 whitespace-nowrap">Mar 8, 2022</td>
+                <td class="py-2"><Link href="/2022/zapcon-2022/">ZAPCon 2022 Presentation Resources</Link></td>
+              </tr>
+              <tr class="border-b border-black/5 dark:border-white/5">
+                <td class="py-2 pr-4 text-black/50 dark:text-white/50 whitespace-nowrap">Dec 14, 2021</td>
+                <td class="py-2"><Link href="https://www.zaproxy.org/blog/2021-12-14-log4shell-detection-with-zap/" external>Log4Shell Detection with ZAP</Link></td>
+              </tr>
+              <tr class="border-b border-black/5 dark:border-white/5">
+                <td class="py-2 pr-4 text-black/50 dark:text-white/50 whitespace-nowrap">Aug 23, 2021</td>
+                <td class="py-2"><Link href="https://www.zaproxy.org/blog/2021-08-23-oast-with-owasp-zap/" external>Out-of-band Application Security Testing with OWASP ZAP</Link></td>
+              </tr>
+              <tr class="border-b border-black/5 dark:border-white/5">
+                <td class="py-2 pr-4 text-black/50 dark:text-white/50 whitespace-nowrap">Jul 11, 2021</td>
+                <td class="py-2"><Link href="/2021/zap-oast-basic-design-decisions/">ZAP OAST: Basic Design Decisions</Link></td>
+              </tr>
+              <tr>
+                <td class="py-2 pr-4 text-black/50 dark:text-white/50 whitespace-nowrap">Jun 25, 2021</td>
+                <td class="py-2"><Link href="/2021/levelling-up-zap-with-oast/">Levelling Up ZAP with OAST</Link></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </Container>
+</PageLayout>

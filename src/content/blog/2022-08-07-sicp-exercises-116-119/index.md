@@ -1,0 +1,83 @@
+---
+title: "SICP Exercises 1.16 - 1.19"
+description: "My solutions to some exercises from the book \"Structure and Interpretation of Computer Programs\"."
+date: "Aug 07 2022"
+# category: tycs
+# tags: notes sicp
+# contains_math: true
+---
+
+This post contains my solutions to exercises from Section 1.2.4 "Exponentiation" of the book "Structure and Interpretation of Computer Programs" that I'm working through as part of my "[Learning Computer Science](/projects/tycs/)" project.
+You can find an online version of the text at the [companion website for the book](https://mitpress.mit.edu/sites/default/files/sicp/index.html).
+
+## Exercise 1.16
+```scheme
+(define (fast-expt b n)
+  (define (square n)
+    (* n n))
+  (define (iter a b n)
+    (cond ((= n 0) a)
+          ((even? n) (iter a (square b) (/ n 2)))
+          (else (iter (* a b) (square b) (/ (- n 1) 2)))))
+  (iter 1 b n))
+```
+
+## Exercise 1.17
+```scheme
+(define (double n)
+  (+ n n))
+(define (halve n)
+  (/ n 2))
+(define (fast-multiply a b)
+  (cond ((= b 0) 0)
+        ((even? b) (double (fast-multiply a (halve b))))
+        (else (+ a (fast-multiply a (- b 1))))))
+```
+
+## Exercise 1.18
+The *invariant quantity* I picked in this case is `a+b*c`.
+As defined in the hint of exercise 1.16, an *invariant quantity* remains constant throughout the iterative process.
+For the following procedure, this means that when the three arguments of `iter` are used to compute `a+b*c`, they will give the same value at any state of the generated iterative process (e.g. `(iter 0 5 6)`, `(iter 0 10 3)`, and `(10 20 1)`, etc.).
+
+```scheme
+(define (fast-multiply b c)
+  (define (double n)
+    (+ n n))
+  (define (halve n)
+    (/ n 2))
+  (define (iter a b c)
+    (cond ((= c 0) a)
+          ((even? c) (iter a (double b) (halve c)))
+          (else (iter (+ a b) (double b) (halve (- c 1))))))
+  (iter 0 b c))
+```
+
+## Exercise 1.19
+
+$$
+T_{pq}=(bq+aq+ap,bp+aq)\\
+T_{pq}^2=T_{pq}(bq+aq+ap,bp+aq)\\
+\quad= ((bp+aq)q+(bq+aq+ap)q+(bq+aq+ap)p, (bp+aq)p+(bq+aq+ap)q)\\
+\quad= (b(q^2+2pq)+a(q^2+2pq)+a(p^2+q^2), b(p^2+q^2)+a(q^2+2pq))\\
+\quad= T_{p'q'}(a,b);\text{ where, } p'=p^2+q^2 \text{ and } q'=q^2+2pq
+$$
+
+Thus, the completed procedure is:
+
+```scheme
+(define (fib n)
+  (fib-iter 1 0 0 1 n))
+(define (fib-iter a b p q count)
+  (cond ((= count 0) b)
+        ((even? count)
+         (fib-iter a
+                   b
+                   (+ (* p p) (* q q))
+                   (+ (* q q) (* 2 p q))
+                   (/ count 2)))
+        (else (fib-iter (+ (* b q) (* a q) (* a p))
+                        (+ (* b p) (* a q))
+                        p
+                        q
+                        (- count 1)))))
+```

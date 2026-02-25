@@ -1,0 +1,54 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+import Container from "@components/Container.astro";
+import { PROJECTS } from "@consts";
+
+const projects = [
+  {
+    title: "OAST Add-On For ZAP",
+    dateRange: "Jun 2021 - September 2021",
+    image: "/assets/images/project-zap-oast.png",
+    href: "/projects/zap-oast/",
+  },
+  {
+    title: "GraphQL Add-On for ZAP",
+    dateRange: "May 2020 - September 2020",
+    image: "/assets/images/project-zap-graphql.png",
+    href: "/projects/zap-graphql/",
+  },
+];
+---
+
+<PageLayout title={PROJECTS.TITLE} description={PROJECTS.DESCRIPTION}>
+  <Container>
+    <div class="space-y-10">
+      <div class="animate font-semibold text-black dark:text-white">
+        My Projects
+      </div>
+      <div class="animate grid grid-cols-1 sm:grid-cols-2 gap-4">
+        {projects.map((project) => (
+          <a
+            href={project.href}
+            class="group rounded-lg border border-black/15 dark:border-white/20 overflow-hidden hover:bg-black/5 dark:hover:bg-white/5 transition-colors duration-300 ease-in-out"
+          >
+            <div class="p-4 flex flex-col items-center text-center gap-3">
+              <img
+                src={project.image}
+                alt={project.title}
+                class="h-[15vh] object-contain"
+              />
+              <div>
+                <div class="font-semibold text-black dark:text-white">
+                  {project.title}
+                </div>
+                <div class="text-sm text-black/50 dark:text-white/50">
+                  {project.dateRange}
+                </div>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </Container>
+</PageLayout>

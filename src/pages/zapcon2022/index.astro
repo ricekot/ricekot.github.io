@@ -1,0 +1,29 @@
+---
+import PageLayout from "@layouts/PageLayout.astro";
+import Container from "@components/Container.astro";
+import ZapconNav from "@components/ZapconNav.astro";
+---
+
+<PageLayout title="ZAPCon 2022 - OAST with ZAP" description="Resources related to my presentation on &quot;OAST with ZAP&quot; at ZAPCon 2022.">
+  <Container>
+    <ZapconNav active="home" />
+    <div class="animate space-y-6">
+
+      <p>
+        Resources related to my presentation on "Out-of-band Application Security Testing with ZAP"
+        at <a href="https://zapcon.io/" class="underline underline-offset-2">ZAPCon</a> on March 8, 2022.
+      </p>
+
+      <div class="relative w-full" style="padding-bottom: 61%;">
+        <iframe
+          class="absolute inset-0 w-full h-full rounded"
+          src="https://www.youtube-nocookie.com/embed/6tkraWH4bwY"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </Container>
+</PageLayout>
