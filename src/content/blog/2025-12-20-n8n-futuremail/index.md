@@ -33,13 +33,14 @@ You should be able to explore these workflows by clicking into them.
 <script src="https://www.unpkg.com/lit@2.0.0-rc.2/polyfill-support.js"></script>
 <script type="module" src="https://cdn.jsdelivr.net/npm/@n8n_io/n8n-demo-component/n8n-demo.bundled.js"></script>
 <script>
+  document.addEventListener('astro:page-load', () => {
   [
     ['n8n-future-email-form', '/assets/misc/n8n-future-email-form.json'],
     ['n8n-future-email-trigger', '/assets/misc/n8n-future-email-trigger.json']
   ].forEach(([id, url]) =>
     fetch(url).then(r => r.text())
       .then(j => document.getElementById(id).setAttribute('workflow', j))
-  );
+  );});
 </script>
 
 <n8n-demo id='n8n-future-email-form' frame="true" theme="light" collapseformobile="false"></n8n-demo>
