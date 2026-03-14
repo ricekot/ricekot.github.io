@@ -4,9 +4,10 @@ import { formatDate } from "@lib/utils";
 
 type Props = {
   entry: CollectionEntry<"blog">;
+  showYear?: boolean;
 }
 
-const { entry } = Astro.props;
+const { entry, showYear = true } = Astro.props;
 ---
 
 <a href={`/${entry.data.date.getFullYear()}/${entry.slug.replace(/^\d{4}-\d{2}-\d{2}-/, "")}/`} class="relative group flex flex-nowrap py-3 px-4 pr-10 rounded-lg border border-black/15 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/5 hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out">
@@ -19,7 +20,7 @@ const { entry } = Astro.props;
         {entry.data.description}
       </div>
     </div>
-    <span class="shrink-0 text-xs text-black/50 dark:text-white/50 mt-0.5">{formatDate(entry.data.date)}</span>
+    <span class="shrink-0 text-xs text-black/50 dark:text-white/50 mt-0.5">{formatDate(entry.data.date, showYear)}</span>
   </div>
   <svg 
     xmlns="http://www.w3.org/2000/svg" 

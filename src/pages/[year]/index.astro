@@ -39,7 +39,7 @@ const { year, posts } = Astro.props;
       <ul class="animate flex flex-col gap-4">
         {posts.map((post) => (
           <li>
-            <ArrowCard entry={post} />
+            <ArrowCard entry={post} showYear={false} />
           </li>
         ))}
       </ul>

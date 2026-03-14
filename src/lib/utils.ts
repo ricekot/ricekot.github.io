@@ -5,12 +5,13 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export function formatDate(date: Date) {
-  return Intl.DateTimeFormat("en-US", {
+export function formatDate(date: Date, showYear: boolean = true) {
+  const options: Intl.DateTimeFormatOptions = {
     month: "short",
     day: "2-digit",
-    year: "numeric"
-  }).format(date);
+    ...(showYear && { year: "numeric" }),
+  };
+  return Intl.DateTimeFormat("en-US", options).format(date);
 }
 
 export function readingTime(html: string) {
