@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import { formatDate } from "@lib/utils";
 
 type Props = {
   entry: CollectionEntry<"blog">;
@@ -9,13 +10,16 @@ const { entry } = Astro.props;
 ---
 
 <a href={`/${entry.data.date.getFullYear()}/${entry.slug.replace(/^\d{4}-\d{2}-\d{2}-/, "")}/`} class="relative group flex flex-nowrap py-3 px-4 pr-10 rounded-lg border border-black/15 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/5 hover:text-black dark:hover:text-white transition-colors duration-300 ease-in-out">
-  <div class="flex flex-col flex-1 truncate">
-    <div class="font-semibold">
-      {entry.data.title}
+  <div class="flex flex-1 min-w-0 gap-4">
+    <div class="flex flex-col flex-1 min-w-0">
+      <div class="font-semibold">
+        {entry.data.title}
+      </div>
+      <div class="text-sm">
+        {entry.data.description}
+      </div>
     </div>
-    <div class="text-sm">
-      {entry.data.description}
-    </div>
+    <span class="shrink-0 text-xs text-black/50 dark:text-white/50 mt-0.5">{formatDate(entry.data.date)}</span>
   </div>
   <svg 
     xmlns="http://www.w3.org/2000/svg" 
