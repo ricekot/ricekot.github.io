@@ -97,7 +97,7 @@ html.scrolled #back-to-top {
   padding-bottom: 0.15rem;
   font-weight: 500;
 }
-.prose-invert :not(pre)>code {
+.dark .prose :not(pre)>code {
   color: theme('colors.slate.200');
   background-color: theme('colors.slate.800');
 }
