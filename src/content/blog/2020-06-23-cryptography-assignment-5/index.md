@@ -30,8 +30,10 @@ $$
 where $a_0 = D$, the shared secret and $D_i \equiv q(i) \pmod {p}$. So we have,
 
 $$
-D_1 = 12\equiv a_0 + a_1 \pmod {17}\\
-D_4 = 3\equiv a_0 + 4a_1 \pmod {17}
+\begin{aligned}
+D_1 = 12 &\equiv a_0 + a_1 \pmod {17}\\
+D_4 = 3 &\equiv a_0 + 4a_1 \pmod {17}
+\end{aligned}
 $$
 
 Upon solving this system of equations, we get $D = a_0 = 15$ and $a_1 = 14$.
@@ -58,8 +60,10 @@ $$
 Finding the point at which it intersects the elliptic curve, 
 
 $$
-(x-2)^2 \equiv x^3 + x + 1 \pmod{23}\\
-\implies x^3 - x^2 + 5x - 3 \equiv 0 \pmod{23}
+\begin{aligned}
+(x-2)^2 &\equiv x^3 + x + 1 \pmod{23}\\
+&\implies x^3 - x^2 + 5x - 3 \equiv 0 \pmod{23}
+\end{aligned}
 $$
 
 Here's a quick python script I wrote that will help us find the real roots of the above cubic equation:

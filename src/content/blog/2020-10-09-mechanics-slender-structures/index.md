@@ -78,9 +78,11 @@ My notes from Chapter 3 of "An Introduction to the Mechanics of Solids" by Crand
         One method is to calculate the resultant force on the slender member.
 
         $$
+        \begin{aligned}
         \text{For forces acting in a single dimension,}\\
-        \text{Resultant Force, }R = \int qdx \\
-        \text{Centroid, }\bar{x} = \frac{\int qxdx}{R}
+        \text{Resultant Force, }R &= \int qdx \\
+        \text{Centroid, }\bar{x} &= \frac{\int qxdx}{R}
+        \end{aligned}
         $$
 
         where $q(x)$ is the intensity of loading - a function of $x$, the distance from an end of the member.
@@ -116,25 +118,32 @@ My notes from Chapter 3 of "An Introduction to the Mechanics of Solids" by Crand
         </center>
 
         $$
-        \Sigma F=0 \\\implies -V+q(x)\Delta x+V+\Delta V=0
-        \\\implies q(x)\Delta x+\Delta V=0
-        \\\implies q(x)=-\frac{\Delta V}{\Delta x}
+        \begin{aligned}
+        \Sigma F &= 0 \\
+        &\implies -V+q(x)\Delta x+V+\Delta V = 0 \\
+        &\implies q(x)\Delta x+\Delta V = 0 \\
+        &\implies q(x) = -\frac{\Delta V}{\Delta x}
+        \end{aligned}
         $$
 
         Also,
 
         $$
-        \Sigma M_A = 0
-        \\\implies -M_b + \Delta x\cdot(V+\Delta V) + (M_b + \Delta M_b) = 0
-        \\\implies V\Delta x + \Delta V\Delta x + \Delta M_b = 0
-        \\\implies V = -\frac{\Delta M_b}{\Delta x}-\Delta V
+        \begin{aligned}
+        \Sigma M_A &= 0 \\
+        &\implies -M_b + \Delta x\cdot(V+\Delta V) + (M_b + \Delta M_b) = 0 \\
+        &\implies V\Delta x + \Delta V\Delta x + \Delta M_b = 0 \\
+        &\implies V = -\frac{\Delta M_b}{\Delta x}-\Delta V
+        \end{aligned}
         $$
 
         In both the above equations, limiting $\Delta x\to0$ we get, 
 
         $$
-        q(x)=-\frac{dV}{dx}\\
-        V(x) = -\frac{dM_b}{dx}
+        \begin{aligned}
+        q(x) &= -\frac{dV}{dx}\\
+        V(x) &= -\frac{dM_b}{dx}
+        \end{aligned}
         $$
 
 - What is the relationship between the shear force, bending moment and loading diagrams?

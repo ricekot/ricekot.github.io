@@ -24,9 +24,11 @@ Let $\Sigma_Y = \{F:F\subseteq Y,\,\phi^{-1}[F]\in\Sigma\}$.
 (ii) Let $F\in\Sigma_Y$. Then $\phi^{-1}[F]\in\Sigma$ and since $\Sigma$ is a $\sigma$-algebra of subsets of $X$,  
 
 $$
-X\setminus\phi^{-1}[F]\in\Sigma \\
-\implies\phi^{-1}[Y]\setminus\phi^{-1}[F]\in\Sigma \\
-\implies\phi^{-1}[Y\setminus F]\in\Sigma
+\begin{aligned}
+X\setminus\phi^{-1}[F] &\in\Sigma \\
+&\implies\phi^{-1}[Y]\setminus\phi^{-1}[F] \in\Sigma \\
+&\implies\phi^{-1}[Y\setminus F] \in\Sigma
+\end{aligned}
 $$
 
 Also it is obvious that $Y\setminus F\subseteq Y$. Therefore, since $F$ was chosen arbitrarily, we have $Y\setminus F\in\Sigma_Y\,\,\forall\,\,F\in\Sigma_Y$.  
@@ -34,8 +36,10 @@ Also it is obvious that $Y\setminus F\subseteq Y$. Therefore, since $F$ was chos
 (iii) Let $\langle E_n \rangle_{n\in\Bbb N}$ be a sequence in $\Sigma_Y$. Then there exists a sequence $\langle\phi^{-1}[E_n]\rangle_{n\in\Bbb N}$ in $\Sigma$ corresponding to this one. Since $\Sigma$ is a $\sigma$-algebra of subsets of $X$,
 
 $$
-\bigcup_{n\in\Bbb N}\phi^{-1}[E_n]\in\Sigma \\
-\implies\phi^{-1}[\bigcup_{n\in\Bbb N}E_n]\in\Sigma
+\begin{aligned}
+\bigcup_{n\in\Bbb N}\phi^{-1}[E_n] &\in\Sigma \\
+&\implies\phi^{-1}[\bigcup_{n\in\Bbb N}E_n] \in\Sigma
+\end{aligned}
 $$
 
 Also since $\langle E_n \rangle_{n\in\Bbb N}\subseteq\mathcal PY$ we must have $\bigcup_{n\in\Bbb N} E_n \subseteq Y$. Therefore, for all sequences $\langle E_n \rangle_{n\in\Bbb N}$ in $\Sigma_Y$ we have $\bigcup_{n\in\Bbb N} E_n \in\Sigma_Y$.
@@ -59,16 +63,20 @@ Let $\Sigma = \{\phi^{-1}[F]:F\in T\}$.
 (iii) We know that for every $F\in T$ we have $Y\setminus F\in T$. This means that for every $\\phi^{-1}[S]\in\Sigma$ we also have    
 
 $$
-\phi^{-1}[Y\setminus F]\in\Sigma \\
-\implies\phi^{-1}[Y]\setminus\phi^{-1}[F]\in\Sigma \\
-\implies X\setminus\phi^{-1}[F]\in\Sigma
+\begin{aligned}
+\phi^{-1}[Y\setminus F] &\in\Sigma \\
+&\implies\phi^{-1}[Y]\setminus\phi^{-1}[F] \in\Sigma \\
+&\implies X\setminus\phi^{-1}[F] \in\Sigma
+\end{aligned}
 $$
 
 (iv) Let $\langle E_n \rangle_{n\in\Bbb N}$ be a sequence in $T$. Then $\bigcup_{n\in\Bbb N}E_n\in T$. Thus, for every sequence $\langle \phi^{-1}[E_n] \rangle_{n\in\Bbb N}\in\Sigma$ we also have 
 
 $$
-\bigcup_{n\in\Bbb N}\phi^{-1}[E_n]\in\Sigma  \\
-\implies\phi^{-1}[\bigcup_{n\in\Bbb N}E_n]\in\Sigma
+\begin{aligned}
+\bigcup_{n\in\Bbb N}\phi^{-1}[E_n] &\in\Sigma  \\
+&\implies\phi^{-1}[\bigcup_{n\in\Bbb N}E_n] \in\Sigma
+\end{aligned}
 $$
 
 Therefore, from (i), (ii) and (iii) we can conclude that $\Sigma$ is a $\sigma$-algebra of subsets of $X$. $\square$

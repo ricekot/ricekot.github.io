@@ -39,8 +39,10 @@ The message $m$ can be recovered from the ciphertext $80$ by taking its square r
 1. Compute the square root of $c$ modulo $p$ and $q$:  
 
     $$
-    m_p = 80^{\frac{1}{4}(11+1)} \bmod{11} = 5 \\
-    m_q = 80^{\frac{1}{4}(19+1)} \bmod{19} = 17
+    \begin{aligned}
+    m_p &= 80^{\frac{1}{4}(11+1)} \bmod{11} = 5 \\
+    m_q &= 80^{\frac{1}{4}(19+1)} \bmod{19} = 17
+    \end{aligned}
     $$
 
 1. Using the extended Euclidean algorithm to find $y_p$ and $y_q$ such that 
@@ -69,10 +71,12 @@ The message $m$ can be recovered from the ciphertext $80$ by taking its square r
 
 1. Using the Chinese remainder theorem to find the four square roots of $c$ modulo $n$:
     $$
-    r_1 = (7 \cdot 11 \cdot 17 + (-4) \cdot 19 \cdot 5) \bmod 209 = 93\\
-    r_2 = 209 - 93 = 116\\
-    r_3 = (7 \cdot 11 \cdot 17 - (-4) \cdot 19 \cdot 5) \bmod 209 = 17\\
-    r_4 = 209 - 17 = 192 
+    \begin{aligned}
+    r_1 &= (7 \cdot 11 \cdot 17 + (-4) \cdot 19 \cdot 5) \bmod 209 = 93\\
+    r_2 &= 209 - 93 = 116\\
+    r_3 &= (7 \cdot 11 \cdot 17 - (-4) \cdot 19 \cdot 5) \bmod 209 = 17\\
+    r_4 &= 209 - 17 = 192
+    \end{aligned}
     $$
 
     One of these four values is the original plaintext $m$, although which of the four is the correct one cannot be determined without additional information.  

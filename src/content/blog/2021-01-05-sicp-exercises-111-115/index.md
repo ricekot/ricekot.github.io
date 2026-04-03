@@ -55,9 +55,11 @@ Let $\mathcal{P}(n):Fib(n)=\frac{\phi^n-\psi^n}{\sqrt5}$. We will use induction 
 $\mathcal{P}(1)$ is true:
 
 $$
-\text{LHS}=Fib(1)=1\\
-\text{RHS}=\frac{\phi-\psi}{\sqrt5}=\frac{\frac{1+\sqrt5}{2}-\frac{1-\sqrt5}{2}}{\sqrt5}=1\\
-\text{LHS}=\text{RHS}
+\begin{aligned}
+\text{LHS} &= Fib(1)=1\\
+\text{RHS} &= \frac{\phi-\psi}{\sqrt5}=\frac{\frac{1+\sqrt5}{2}-\frac{1-\sqrt5}{2}}{\sqrt5}=1\\
+\text{LHS} &= \text{RHS}
+\end{aligned}
 $$
 
 Now, let $\mathcal{P}(n)$ be true for all $n\le k\in\mathbb{N}$. We will try to show that $\mathcal{P}(k+1)$ is also true.
@@ -65,11 +67,13 @@ Now, let $\mathcal{P}(n)$ be true for all $n\le k\in\mathbb{N}$. We will try to 
 By the definition of $Fib(n)$, 
 
 $$
-Fib(k+1) = Fib(k) + Fib(k-1)\\
-\implies Fib(k+1) = \frac{\phi^k-\psi^k}{\sqrt5} + \frac{\phi^{k-1}-\psi^{k-1}}{\sqrt5}\\
-\implies Fib(k+1) = \frac{\phi^{k-1}(\phi+1)-\psi^{k-1}(\psi+1)}{\sqrt5}\\
-\implies Fib(k+1) = \frac{\phi^{k-1}(\phi^2)-\psi^{k-1}(\psi^2)}{\sqrt5}\\
-\implies Fib(k+1) = \frac{\phi^{k+1}-\psi^{k+1}}{\sqrt5}
+\begin{aligned}
+Fib(k+1) &= Fib(k) + Fib(k-1)\\
+&\implies Fib(k+1) = \frac{\phi^k-\psi^k}{\sqrt5} + \frac{\phi^{k-1}-\psi^{k-1}}{\sqrt5}\\
+&\implies Fib(k+1) = \frac{\phi^{k-1}(\phi+1)-\psi^{k-1}(\psi+1)}{\sqrt5}\\
+&\implies Fib(k+1) = \frac{\phi^{k-1}(\phi^2)-\psi^{k-1}(\psi^2)}{\sqrt5}\\
+&\implies Fib(k+1) = \frac{\phi^{k+1}-\psi^{k+1}}{\sqrt5}
+\end{aligned}
 $$
 
 Thus, $\mathcal{P}(k+1)$ is true whenever $\mathcal{P}(n)$ is true for all $n\le k\in\mathbb{N}$.  
@@ -289,23 +293,25 @@ $$
 Proceeding with similar logic for `(cc n 3)`, `(cc n 4)`, and `(cc n 5)`, here are all the five functions:
 
 $$
-P_1(n)=2n+1 \\
+\begin{aligned}
+P_1(n) &= 2n+1 \\
 
-P_2(n)=\sum_{k=0}^{\lfloor n/5\rfloor}P_1(n-5k)+\lfloor n/5\rfloor + 
+P_2(n) &= \sum_{k=0}^{\lfloor n/5\rfloor}P_1(n-5k)+\lfloor n/5\rfloor + 
 {\left\lbrace\begin{matrix}{0}&{\text{if 5 divides n}}\\
 2&{\text{otherwise}}\end{matrix}\right.}\\
 
-P_3(n)=\sum_{k=0}^{\lfloor n/10\rfloor}P_2(n-10k)+\lfloor n/10\rfloor + 
+P_3(n) &= \sum_{k=0}^{\lfloor n/10\rfloor}P_2(n-10k)+\lfloor n/10\rfloor + 
 {\left\lbrace\begin{matrix}{0}&{\text{if 10 divides n}}\\
 2&{\text{otherwise}}\end{matrix}\right.}\\
 
-P_4(n)=\sum_{k=0}^{\lfloor n/25\rfloor}P_3(n-25k)+\lfloor n/25\rfloor + 
+P_4(n) &= \sum_{k=0}^{\lfloor n/25\rfloor}P_3(n-25k)+\lfloor n/25\rfloor + 
 {\left\lbrace\begin{matrix}{0}&{\text{if 25 divides n}}\\
 2&{\text{otherwise}}\end{matrix}\right.}\\
 
-P_5(n)=\sum_{k=0}^{\lfloor n/50\rfloor}P_4(n-50k)+\lfloor n/50\rfloor + 
+P_5(n) &= \sum_{k=0}^{\lfloor n/50\rfloor}P_4(n-50k)+\lfloor n/50\rfloor + 
 {\left\lbrace\begin{matrix}{0}&{\text{if 50 divides n}}\\
 2&{\text{otherwise}}\end{matrix}\right.}\\
+\end{aligned}
 $$
 
 Based on these definitions, we can write a single recursive function to compute the number of steps of the generated process. I wrote it in C++ first, because that's what I'm most comfortable with, and then in Scheme.
@@ -389,10 +395,12 @@ $$
 We can rearrange the above inequality as,
 
 $$
-10a\le3^k\\
-\implies\log{10a}\le\log{3^k}\\
-\implies\log{10a}\le k\log{3}\\
-\implies\log_{\,3}{10a}\le k
+\begin{aligned}
+10a &\le 3^k\\
+&\implies\log{10a} \le \log{3^k}\\
+&\implies\log{10a} \le k\log{3}\\
+&\implies\log_{\,3}{10a} \le k
+\end{aligned}
 $$
 
 Since $k$ is the smallest integer that satisfies the above inequality, 

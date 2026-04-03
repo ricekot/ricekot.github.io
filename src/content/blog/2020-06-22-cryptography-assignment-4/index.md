@@ -20,8 +20,10 @@ Let the public key be $(y, p, g) = (64, 101, 2)$. The _El Gamal Digital Signatur
         The signature of a message $m$ is a pair $(r, s)$. Since this is a probabilistic signature scheme, in order to generate such a pair, the signer begins by choosing a random number $k$ such that $0 \ne k \ne p-1$ and $\gcd (k, p-1) = 1$. Then,  
         
         $$
-        r \equiv g^{k} \pmod p \\
-        s \equiv (m - xr)\cdot k^{-1} \pmod{(p-1)}
+        \begin{aligned}
+        r &\equiv g^{k} \pmod p \\
+        s &\equiv (m - xr)\cdot k^{-1} \pmod{(p-1)}
+        \end{aligned}
         $$
 
     1. Verifying:  
@@ -30,11 +32,13 @@ Let the public key be $(y, p, g) = (64, 101, 2)$. The _El Gamal Digital Signatur
     The equation for s in the Signing step was obtained as follows:
 
     $$
-    g^m \equiv y^r r^s \pmod p \\
-    g^m \equiv g^{xr} g^{ks} \pmod p \\
-    g^m \equiv g^{xr + ks} \pmod p \\
-    m \equiv xr + ks \pmod{(p-1)} \\
-    s \equiv (m - xr) k^{-1} \pmod{(p-1)}
+    \begin{aligned}
+    g^m &\equiv y^r r^s \pmod p \\
+    g^m &\equiv g^{xr} g^{ks} \pmod p \\
+    g^m &\equiv g^{xr + ks} \pmod p \\
+    m &\equiv xr + ks \pmod{(p-1)} \\
+    s &\equiv (m - xr) k^{-1} \pmod{(p-1)}
+    \end{aligned}
     $$
 
     The second-to-last step might be confusing. Since $g$ is a generator of $\mathbb{Z}_p^*$ and $p$ is a prime number, we have that 
@@ -49,8 +53,10 @@ Let the public key be $(y, p, g) = (64, 101, 2)$. The _El Gamal Digital Signatur
 For this problem, we need to find $s$. We already have the values of $m$,$r$ and $p$, which means we need the values of $x$ and $k$. Those can be found easily by examining these equations:
 
 $$
-64 \equiv 2^{x} \pmod{101} \\
-8 \equiv 2^{k} \pmod{101}
+\begin{aligned}
+64 &\equiv 2^{x} \pmod{101} \\
+8 &\equiv 2^{k} \pmod{101}
+\end{aligned}
 $$
 
 It is clear that $x=6$ and $k=3$. We can now find $s$ as, 

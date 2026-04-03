@@ -57,8 +57,10 @@ Now,
 (ii) Let $D\in\mathcal D$. For every $\phi^{-1}[D]\in\bigcap T$ we have,
 
 $$
-Y\setminus\phi^{-1}[D]\in\bigcap T \\
-\implies\phi^{-1}[X\setminus D]\in\bigcap T
+\begin{aligned}
+Y\setminus\phi^{-1}[D] &\in\bigcap T \\
+&\implies\phi^{-1}[X\setminus D] \in\bigcap T
+\end{aligned}
 $$
 
 Also, it is obvious that $X\setminus D\subseteq X$. Thus, $X\setminus D\in\mathcal D\,\,\forall\,\,D\in\mathcal D$.
@@ -66,8 +68,10 @@ Also, it is obvious that $X\setminus D\subseteq X$. Thus, $X\setminus D\in\mathc
 (iii) Let $\langle E_n \rangle_{n\in\Bbb N}$ be a sequence of sets in $\mathcal D$. Then $\langle\phi^{-1}[E_n]\rangle_{n\in\Bbb N}\in\bigcap T$. This means that, 
 
 $$
-\bigcup_{n\in\Bbb N}\phi^{-1}[E_n]\in\bigcap T  \\
-\implies\phi^{-1}[\bigcup_{n\in\Bbb N}E_n]\in\bigcap T
+\begin{aligned}
+\bigcup_{n\in\Bbb N}\phi^{-1}[E_n] &\in\bigcap T  \\
+&\implies\phi^{-1}[\bigcup_{n\in\Bbb N}E_n] \in\bigcap T
+\end{aligned}
 $$
 
 Also, $\bigcup_{n\in\Bbb N}E_n\subseteq X$. Thus, $\bigcup_{n\in\Bbb N}E_n\in\mathcal D$.
@@ -77,8 +81,10 @@ From (i), (ii) and (iii) it is clear that $\mathcal D$ is a $\sigma$-algebra of 
 (iv) From the definition of $T$,
 
 $$
-\{\phi^{-1}[A]:A\in\mathcal A\}\subseteq\bigcap T \\
-\implies\mathcal A\subseteq\mathcal D
+\begin{aligned}
+\{\phi^{-1}[A]:A\in\mathcal A\} &\subseteq\bigcap T \\
+&\implies\mathcal A\subseteq\mathcal D
+\end{aligned}
 $$
 
 Thus, $D$ is a $\sigma$-algebra of subsets of $X$ that contains $\mathcal A$. This means that 
@@ -90,8 +96,10 @@ $$
 and therefore from the definition of $\mathcal D$, 
 
 $$
-\phi^{-1}[E]\in\bigcap T\,\,\forall\,\, E\in\Sigma \\
-\implies\{\phi^{-1}[E]: E\in\Sigma \}\subseteq\bigcap T
+\begin{aligned}
+\phi^{-1}[E]\in\bigcap T\,\,\forall\,\, E &\in\Sigma \\
+&\implies\{\phi^{-1}[E]: E\in\Sigma \} \subseteq\bigcap T
+\end{aligned}
 $$
 
 We have thus proved both the sides, $\bigcap T\subseteq\{\phi^{-1}[E]:E\in\Sigma\}$ and 

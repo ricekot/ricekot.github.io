@@ -55,11 +55,13 @@ For the following procedure, this means that when the three arguments of `iter` 
 ## Exercise 1.19
 
 $$
-T_{pq}=(bq+aq+ap,bp+aq)\\
-T_{pq}^2=T_{pq}(bq+aq+ap,bp+aq)\\
-\quad= ((bp+aq)q+(bq+aq+ap)q+(bq+aq+ap)p, (bp+aq)p+(bq+aq+ap)q)\\
-\quad= (b(q^2+2pq)+a(q^2+2pq)+a(p^2+q^2), b(p^2+q^2)+a(q^2+2pq))\\
-\quad= T_{p'q'}(a,b);\text{ where, } p'=p^2+q^2 \text{ and } q'=q^2+2pq
+\begin{aligned}
+T_{pq}&=(bq+aq+ap,bp+aq)\\
+T_{pq}^2&=T_{pq}(bq+aq+ap,bp+aq)\\
+\quad&= ((bp+aq)q+(bq+aq+ap)q+(bq+aq+ap)p, (bp+aq)p+(bq+aq+ap)q)\\
+\quad&= (b(q^2+2pq)+a(q^2+2pq)+a(p^2+q^2), b(p^2+q^2)+a(q^2+2pq))\\
+\quad&= T_{p'q'}(a,b);\text{ where, } p'=p^2+q^2 \text{ and } q'=q^2+2pq
+\end{aligned}
 $$
 
 Thus, the completed procedure is:

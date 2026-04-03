@@ -63,8 +63,10 @@ This means that $[a, b]$ is also an open interval and hence a Borel set.
 In a similar fashion we can prove that, 
 
 $$
-(a, b] = \bigcap_{n\in\Bbb N} (a, b + \frac{1}{n}) \\
-[a, b) = \bigcap_{n\in\Bbb N} (a - \frac{1}{n}, b)
+\begin{aligned}
+(a, b] &= \bigcap_{n\in\Bbb N} (a, b + \frac{1}{n}) \\
+[a, b) &= \bigcap_{n\in\Bbb N} (a - \frac{1}{n}, b)
+\end{aligned}
 $$
 
 Hence, proved.
