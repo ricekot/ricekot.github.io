@@ -77,6 +77,6 @@ However, as someone who's deeply interested in security perhaps I should be more
 Anyway, that's all for now.
 I was pleasantly surprised with how easy it was to use n8n to set up these workflows and wanted to share them here.
 
-If you have any comments, suggestions, or ideas, feel free to reach me at the email on my [about page](/about/).
+If you have any comments, suggestions, or ideas, feel free to reach me at the email on my [homepage](/#contact).
 I recently had a reader email me about my [hledger finance workflow](/2023/finance-workflow) and that made me really happy.
 Until next time.
