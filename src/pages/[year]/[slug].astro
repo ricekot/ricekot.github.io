@@ -21,9 +21,30 @@ type Props = CollectionEntry<"blog">;
 
 const post = Astro.props;
 const { Content } = await post.render();
+
+// Resolve the og:image URL from frontmatter.
+// Relative paths (e.g. "./images/foo.png") refer to images co-located with the
+// blog post in src/content and need to be resolved through Astro's image pipeline
+// to get the optimized URL.  Absolute paths (e.g. "/assets/...") refer to files
+// in public/ and are passed through as-is.
+let image: string | undefined = post.data.image;
+if (image && !image.startsWith("/")) {
+  const images = import.meta.glob<{ default: ImageMetadata }>(
+    "/src/content/blog/**/*.{png,jpg,jpeg,gif,webp,svg}",
+    { eager: true },
+  );
+  // Resolve the relative frontmatter path (e.g. "./images/trmnl-ipad.png")
+  // against the post's directory to build the full glob key.
+  const postDir = `/src/content/blog/${post.id.replace(/\/[^/]+$/, "")}`;
+  const resolved = `${postDir}/${image.replace(/^\.\//, "")}`;
+  const match = images[resolved];
+  if (match) {
+    image = match.default.src;
+  }
+}
 ---
 
-<PageLayout title={post.data.title} description={post.data.description} image={post.data.image}>
+<PageLayout title={post.data.title} description={post.data.description} image={image}>
   <Container>
     <div class="space-y-1">
       <div class="animate flex items-center gap-1.5">
