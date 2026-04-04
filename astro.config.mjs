@@ -1,5 +1,6 @@
 import { defineConfig } from "astro/config";
 import remarkMath from 'remark-math'
+import { rehypeAccessibleEmojis } from "rehype-accessible-emojis";
 import rehypeKatex from 'rehype-katex'
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
@@ -11,6 +12,6 @@ export default defineConfig({
   trailingSlash: "always",
   markdown: {
     remarkPlugins: [remarkMath],
-    rehypePlugins: [rehypeKatex],
+    rehypePlugins: [rehypeAccessibleEmojis, rehypeKatex],
   },
 });

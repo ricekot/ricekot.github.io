@@ -29,6 +29,7 @@
     "eslint-plugin-astro": "^0.32.0",
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "katex": "^0.16.33",
+    "rehype-accessible-emojis": "^0.3.2",
     "rehype-katex": "^7.0.1",
     "remark-math": "^6.0.0",
     "sharp": "^0.33.3",
