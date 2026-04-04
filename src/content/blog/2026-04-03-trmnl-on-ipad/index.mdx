@@ -1,0 +1,152 @@
+---
+title: "Setting up TRMNL on my old iPad"
+description: "Repurposing my dusty old iPad 3 as a TRMNL display, with a self-hosted TRMNL server running in my homelab."
+date: "Apr 03 2026"
+---
+import Figure from "@components/Figure.astro";
+import TrmnlIpadImage from "./images/trmnl-ipad.png";
+import LaraPaperHomeImage from "./images/larapaper-home.png"
+import LaraPaperDeviceModelImage from "./images/larapaper-device-model.png"
+import LaraPaperMirrorScreenshotImage from "./images/larapaper-mirror-screenshot.png"
+
+{/* Outline:
+- YT video: https://youtu.be/YWw5NKUx40o
+- TRMNL: https://trmnl.com/
+- BYOD/S: https://docs.trmnl.com/go/diy/byod-s
+- Larapaper: https://github.com/usetrmnl/larapaper
+- Docker compose setup
+- Larapaper config (custom display) at 
+- iPad / nginx
+- Using LLMs to create custom recipes quickly, screenshot of xkcd
+ */}
+
+I recently watched [a YouTube video](https://youtu.be/YWw5NKUx40o) about a company called [TRMNL](https://trmnl.com/) that sells always-on e-ink displays.
+These e-ink displays are intended to be used as dashboards for whatever info you want to show on them.
+
+The cool thing about TRMNL is that a lot of their software stack is open-source, [self-hostable](https://docs.trmnl.com/go/diy/byod-s), and compatible with various third-party devices (e.g. Kindles) or any device that can open a webpage.
+
+I had an old iPad 3 collecting dust in one of my drawers, and I thought it would be fun to set this up in my homelab.
+The setup was pretty straightforward.
+I haven't invested a lot of time into creating many info screens yet, but even with the limited few I have right now, I'm happy with how it works.
+
+<Figure
+  src={TrmnlIpadImage.src}
+  alt="A white iPad sits on a wooden surface, connected to a charging cable, displaying a dark screen with a quote attributed to Marcus Aurelius. The quote is centered in white text, and a faint reflection of the person taking the photo is visible on the screen."
+  caption="An iPad 3 being used as a TRMNL display"
+/>
+
+As I understand it, the the TRMNL software architecture is pretty simple.
+The server periodically collects data from various sources (e.g. by polling an endpoint or via webhooks), renders it into a webpage using templates, and takes a screenshot of that page for your device.
+Your device that runs the client - e.g. for my iPad, it's simply Safari with a webpage open - polls the server at fixed intervals, fetches the latest screenshots, and displays them on the screen.
+
+I think it should be fairly easy to vibe-code something like this for your specific use-case, perhaps with an even simpler setup (e.g. skip the image generation, just have your device open a page that keeps updating regularly).
+I still like this setup though and will continue to use it.
+
+## The Setup
+I ended up using [LaraPaper](https://github.com/usetrmnl/larapaper) for the server.
+It has a pretty minimal UI, is easy to setup with a single Docker image, and supports recipes from official and community catalogs out of the box.
+
+<Figure
+  src={LaraPaperHomeImage.src}
+  alt="Screenshot of the LaraPaper dashboard interface in dark mode. The top navigation bar shows options like Dashboard, Devices, Plugins & Recipes, and Playlists, with a toggle for 'Permit Auto-Join' on the right. In the center, a card labeled 'iPad 3' displays a preview of a minimalist calendar-style widget titled 'Q2 2026.' The widget shows '2 Days Passed' and '89 Days Left,' along with a horizontal grid of small squares representing daily progress. The layout is clean and monochromatic, with light gray content on a white panel framed by a dark background."
+  caption="A Screenshot of the LaraPaper Dashboard"
+/>
+
+### Docker Compose
+I added the following YAML to my homelab Docker Compose file:
+
+```yaml
+volumes:
+  trmnl_database:
+  trmnl_storage:
+
+services:
+  trmnl:
+    image: ghcr.io/usetrmnl/larapaper:0.31.3
+    container_name: trmnl
+    restart: unless-stopped
+    networks:
+      - homelab
+    environment:
+        # Generate the APP_KEY with `echo "base64:$(openssl rand -base64 32)"`
+        - APP_KEY=base64:TmV2ZXIgZ29ubmEgZ2l2ZSB5b3UgdXA=
+        - APP_URL=https://trmnl.example.com
+        - FORCE_HTTPS=true
+        - PHP_OPCACHE_ENABLE=1
+        - TRMNL_PROXY_REFRESH_MINUTES=15
+        - DB_DATABASE=database/storage/database.sqlite
+    volumes:
+        - trmnl_database:/var/www/html/database/storage
+        - trmnl_storage:/var/www/html/storage/app/public/images/generated
+```
+
+### nginx
+
+And the following server block to my nginx config:
+
+```nginx
+server {
+  listen 443 ssl;
+  server_name trmnl.example.com;
+  set $trmnl trmnl;
+  location / {
+    proxy_pass http://$trmnl:8080;
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection "upgrade";
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP $remote_addr;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_set_header X-Forwarded-Protocol $scheme;
+    proxy_set_header X-Forwarded-Host $http_host;
+  }
+}
+```
+
+### Custom Device Model
+
+After bringing up my new service and restarting nginx with the new config, I visited the LaraPaper dashboard and registered an account.
+To have the server render images in the dimensions of my iPad's screen, I had to first add a custom device model.
+
+<Figure
+  src={LaraPaperDeviceModelImage.src}
+  alt="A dark-themed user interface showing a modal titled “Edit Device Model” over a list of device presets. The modal contains form fields with values for an Apple iPad 3 device (2048x1536, 24-bit color, and more)."
+  caption="Adding a new iPad 3 Device Model"
+/>
+
+After adding the device model, I added a new device with a random MAC address and API key, and created a playlist for the device.
+
+### iPad
+
+On my iPad, I simply opened the `/mirror` page on my hosted LaraPaper instance URL, and added it to my homescreen for a full screen view.
+I could also open this page in my browser to inspect any recipes that I wanted to try.
+
+<Figure
+  src={LaraPaperMirrorScreenshotImage.src}
+  alt="A screenshot of the /mirror page, showing an xkcd comic."
+  caption="A screenshot of the <code>/mirror</code> page, showing an <a href='https://xkcd.com/'>xkcd</a> comic."
+/>
+
+### Recipes
+
+One thing I like about LaraPaper is how you can immediately edit any recipe you select from a catalog to your liking once they are imported.
+There were a few recipes I liked (e.g. one that fetches the latest xkcd comic, or another that displays stoic quotes), but not all of them looked great on my iPad screen out of the box. 
+This is presumably because of its bigger dimensions as compared to the standard TRMNL displays.
+
+However, with LLMs, it's pretty easy to edit these recipe templates to your liking.
+Just copy the template code into an LLM chat and prompt it to modify the template as per your desires.
+It's not perfect but you can get what you want after a few iterations.
+
+## What's Next?
+I only have a limited number of info screens set up at the moment, but with the flexibility provided by LaraPaper, I can think of a few ideas:
+- Fetch data from the Garmin or Strava API and display an activity calendar
+- Show my GitHub contribution graph (this isn't something I optimize for, I think it's just cool to see)
+- Display excerpts of any new posts from my RSS subscriptions
+- Track my portfolio's performance using Zerodha's API
+- Show me the weather or AQI of the area around me
+- View when the next Anime episode I want to watch is going to air
+
+When I get a chance, I'd also like to experiment with showing coloured panels on the iPad.
+
+That's all for now. I'd love to know about your TRMNL too, if you decide to set one up yourself. Please write to me with any ideas, comments, or suggestions at the email on my [homepage](/#contact).
