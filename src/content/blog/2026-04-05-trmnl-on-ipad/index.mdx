@@ -8,6 +8,7 @@ import Figure from "@components/Figure.astro";
 import TrmnlIpadImage from "./images/trmnl-ipad.png";
 import LaraPaperHomeImage from "./images/larapaper-home.png"
 import LaraPaperDeviceModelImage from "./images/larapaper-device-model.png"
+import LaraPaperDevicePlaylistImage from "./images/larapaper-device-playlist.png"
 import LaraPaperMirrorScreenshotImage from "./images/larapaper-mirror-screenshot.png"
 
 I recently watched [a YouTube video](https://youtu.be/YWw5NKUx40o) about a company called [TRMNL](https://trmnl.com/) that sells always-on e-ink displays.
@@ -97,7 +98,7 @@ server {
 ### Custom Device Model
 
 After bringing up my new service and restarting nginx with the new config, I visited the LaraPaper dashboard and registered an account.
-To have the server render images in the dimensions of my iPad's screen, I had to first add a custom device model.
+To have the server render images in the dimensions of my iPad's screen, I had to first add a custom *Device Model*.
 
 <Figure
   src={LaraPaperDeviceModelImage.src}
@@ -105,7 +106,13 @@ To have the server render images in the dimensions of my iPad's screen, I had to
   caption="Adding a new iPad 3 Device Model"
 />
 
-After configuring the Device Model, I added a new Device with a random MAC address and API key, and created a playlist for the Device.
+After configuring the *Device Model*, I added a new *Device* with a random MAC address and API key, and created a *Playlist* for the *Device*.
+
+<Figure
+  src={LaraPaperDevicePlaylistImage.src}
+  alt="Dark-themed LaraPaper dashboard showing a Devices panel with one iPad 3 entry (including MAC, refresh, and controls) and a Playlists panel with an active “iPad 3 Playlist” listing items like Stoic Quotes, xkcd, date, and Quarter Progress, each with toggles and action icons."
+  caption="Device and Playlist Configurations for my iPad"
+/>
 
 ### iPad
 
