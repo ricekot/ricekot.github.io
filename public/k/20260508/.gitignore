@@ -1,0 +1,3 @@
+# bun x pagecrypt message_in.html message.html (cat secret.txt)
+message_in.html
+secret.txt
