@@ -93,14 +93,6 @@ const { title, description, image = "/favicon.ico" } = Astro.props;
       toggleTheme(!isDark);
     });
 
-    window.matchMedia("(prefers-color-scheme: dark)")
-      .addEventListener("change", event => {
-        if (!localStorage.theme) {
-          toggleTheme(event.matches);
-        }
-      }
-    );
-
     document.addEventListener("scroll", onScroll);
   }
 
@@ -164,7 +156,7 @@ function toggleTheme(dark) {
     if (userTheme === "light" || userTheme === "dark") {
       toggleTheme(userTheme === "dark");
     } else {
-      toggleTheme(window.matchMedia("(prefers-color-scheme: dark)").matches);
+      toggleTheme(false);
     }
   }
 
