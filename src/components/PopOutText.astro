@@ -1,0 +1,61 @@
+---
+type Props = {
+  popOut: string;
+  color: string;
+};
+
+const { popOut, color } = Astro.props;
+---
+<span
+  class="pop-out-text"
+  data-pop-out={popOut}
+  style={{ "--pop-out-color": color }}
+><slot /></span>
+
+<style>
+  .pop-out-text {
+    position: relative;
+    display: inline-block;
+    transition: color 250ms ease;
+  }
+
+  .pop-out-text::after {
+    position: absolute;
+    left: 50%;
+    bottom: 70%;
+    color: var(--pop-out-color);
+    content: attr(data-pop-out);
+    font-size: 1em;
+    line-height: 1;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, 0) scale(0) rotate(-12deg);
+  }
+
+  .pop-out-text:hover {
+    color: var(--pop-out-color);
+  }
+
+  .pop-out-text:hover::after {
+    animation: pop-out-rising-text 1s ease-out forwards;
+  }
+
+  @keyframes pop-out-rising-text {
+    0% {
+      opacity: 1;
+      transform: translate(-50%, 0rem) scale(0.5) rotate(-12deg);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-50%, -1rem) scale(1) rotate(12deg);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .pop-out-text:hover::after {
+      animation: none;
+      opacity: 1;
+      transform: translate(-50%, -0.5rem) scale(1) rotate(0);
+    }
+  }
+</style>
