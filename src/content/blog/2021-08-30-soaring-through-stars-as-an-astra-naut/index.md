@@ -2,7 +2,7 @@
 title: "Soaring Through the Stars as an Astra-Naut"
 description: "My Experience as an SDE Intern at Astra Security"
 date: "Aug 30 2021"
-# image: "/assets/images/astra-naut-stars.png"
+image: "/assets/images/astra-naut-stars.png"
 ---
 
 <figure class="mx-auto my-8 max-w-3xl w-3/4">

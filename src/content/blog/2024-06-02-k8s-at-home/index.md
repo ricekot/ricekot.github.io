@@ -2,7 +2,7 @@
 title: "Running a Kubernetes Cluster at Home for Fun"
 description: "An overview of the things I did to setup a Kubernetes cluster at home with old laptops."
 date: "Jun 02 2024"
-# image: "/assets/images/homelab-2024.jpg"
+image: "/assets/images/homelab-2024.jpg"
 ---
 
 This weekend, I set up a Kubernetes cluster at home with some old laptops [just for fun](https://justforfunnoreally.dev/).

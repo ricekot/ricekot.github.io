@@ -3,7 +3,7 @@ title: "Getting Kubernetes Metadata on Linux Nodes"
 description: "How to get Kubernetes Pod metadata for processes on Linux nodes in Kubernetes clusters"
 date: "Feb 20 2024"
 # canonical_url: https://www.levo.ai/post/getting-kubernetes-metadata-on-linux-nodes
-# image: "/assets/images/levo-dashboard-k8s-context.png"
+image: "/assets/images/levo-dashboard-k8s-context.png"
 ---
 
 This post will discuss how you can get Kubernetes Pod metadata for a process on a Linux node in a Kubernetes cluster.

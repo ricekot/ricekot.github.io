@@ -2,7 +2,7 @@
 title: "Freedom to Hack"
 description: "My reflections on free software and how it has shaped my life in the past 10 years."
 date: "Aug 15 2024"
-# image: "/assets/images/tiranga-code.png"
+image: "/assets/images/tiranga-code.png"
 ---
 
 It's India's 78th Independence Day today.

@@ -2,7 +2,7 @@
 title: "A Visual Editor for the ZAP Automation Framework"
 description: "I built a drag-and-drop web-based editor for ZAP Automation Framework plans."
 date: "Feb 18 2025"
-# image: "/assets/images/zap-af-visual-editor.png"
+image: "/assets/images/zap-af-visual-editor.png"
 # tags: experiments
 ---
 
