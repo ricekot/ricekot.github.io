@@ -20,7 +20,3 @@ And ever since I've started programming professionally, the list of free librari
 
 All this to say, it's so easy to take free software for granted, but without the people behind them, the software industry probably wouldn't exist as we know it today.
 Thanks to free software, free knowledge, and the internet, even someone like me who was born in a third-world country, was able to grow up in the awe and fascination of computers.
-
-<center>
-<a href="http://www.catb.org/~esr/faqs/hacker-howto.html"><img src="/assets/images/hacker-emblem.svg"/></a>
-</center>
