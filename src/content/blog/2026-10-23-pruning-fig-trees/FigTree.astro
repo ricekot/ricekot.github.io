@@ -1,0 +1,183 @@
+---
+// Shared junctions keep the surviving tips connected all the way to the root.
+const nodes = [
+  { id: "root", x: 320, y: 470 },
+  { id: "trunk", parent: "root", x: 320, y: 355, keep: true },
+  { id: "left", parent: "trunk", x: 235, y: 285, fade: 0.54 },
+  { id: "left-outer", parent: "left", x: 155, y: 220, fade: 0.42 },
+  { id: "tip-1", parent: "left-outer", x: 65, y: 175, fade: 0.18 },
+  { id: "tip-2", parent: "left-outer", x: 110, y: 115, fade: 0.26 },
+  { id: "left-inner", parent: "left", x: 225, y: 190, fade: 0.48 },
+  { id: "tip-3", parent: "left-inner", x: 170, y: 115, fade: 0.3 },
+  { id: "tip-4", parent: "left-inner", x: 220, y: 75, fade: 0.35 },
+  { id: "middle", parent: "trunk", x: 310, y: 255, fade: 0.62 },
+  { id: "middle-left", parent: "middle", x: 280, y: 165, fade: 0.55 },
+  { id: "tip-5", parent: "middle-left", x: 260, y: 65, fade: 0.4 },
+  { id: "tip-6", parent: "middle-left", x: 300, y: 95, fade: 0.45 },
+  { id: "middle-right", parent: "middle", x: 335, y: 175, fade: 0.58 },
+  { id: "tip-7", parent: "middle-right", x: 335, y: 55, fade: 0.5 },
+  { id: "right", parent: "trunk", x: 405, y: 280, keep: true },
+  { id: "chosen", parent: "right", x: 400, y: 190, keep: true },
+  { id: "tip-8", parent: "chosen", x: 380, y: 95, keep: true },
+  { id: "tip-9", parent: "chosen", x: 430, y: 65, keep: true },
+  { id: "right-outer", parent: "right", x: 495, y: 220, fade: 0.5 },
+  { id: "right-upper", parent: "right-outer", x: 495, y: 155, fade: 0.4 },
+  { id: "tip-10", parent: "right-upper", x: 480, y: 85, fade: 0.24 },
+  { id: "tip-11", parent: "right-upper", x: 535, y: 110, fade: 0.3 },
+  { id: "tip-12", parent: "right-outer", x: 580, y: 175, fade: 0.2 },
+];
+const branches = nodes.filter(node => node.parent).map(node => {
+  const parent = nodes.find(candidate => candidate.id === node.parent)!;
+  const middleY = (parent.y + node.y) / 2;
+  return {
+    ...node,
+    path: `M ${parent.x} ${parent.y} C ${parent.x} ${middleY}, ${node.x} ${middleY}, ${node.x} ${node.y}`,
+    tip: !nodes.some(candidate => candidate.parent === node.id),
+  };
+});
+// SVG paints later siblings on top, so draw the selected branches last.
+branches.sort((a, b) => Number(Boolean(a.keep)) - Number(Boolean(b.keep)));
+---
+
+<fig-tree class="fig-tree">
+  <div class="tree-visual not-prose">
+    <svg viewBox="0 0 640 530" role="img" aria-label="A child sits at the root of a branching tree, leaning back on his hands, with his knees drawn up and his feet resting close to him, looking up. As you scroll, most branches dim while two tips and their shared path to the root stay illuminated.">
+      <ellipse class="ground" cx="315" cy="478" rx="120" ry="5" />
+      {branches.map(branch => (
+        <g class:list={["branch", { "is-chosen": branch.keep }]} data-fade={branch.keep ? undefined : branch.fade}>
+          <path class="branch-shadow" d={branch.path} />
+          <g class="branch-light">
+            <path class="branch-glow" d={branch.path} />
+            <path class="branch-core" d={branch.path} />
+            {branch.tip && <circle class="bud" cx={branch.x} cy={branch.y} r="3.5" />}
+          </g>
+        </g>
+      ))}
+      <!-- Leaning back on grounded hands, with knees drawn up and small, planted feet. -->
+      <g class="child" transform="translate(278 475)">
+        <!-- One continuous outer contour: no neck block, cutouts or interior seams. -->
+        <path class="child-silhouette" d="M-15.70 -48.77 Q-21.33 -56.40 -16.22 -63.32 L-19.05 -65.56 L-12.08 -66.77 L-10.16 -70.55 L-5.42 -68.93 L-0.67
+         -70.48 L1.52 -66.98 Q7.20 -65.67 7.79 -60.61 L11.88 -57.73 Q13.45 -56.14 10.91 -54.26 L11.84 -51.41 Q10.84 -44.78 4.18 -42.61 Q0 -41 -1 -36 Q1 -26 8 -17 C10 -14
+         12 -12 15 -16 L21 -24 C24 -28 28 -27 30 -23 L35 -7 Q36 -4 39 -2 Q41 0 38 0 L33 0 Q31 0 30 -3 L27 -13 L21 -4 Q18 0 10 0 Q3 0 -1 -3 Q-7 -8 -10 -17 L-15 -4 Q-16 0
+         -19 0 L-29 0 Q-33 0 -30 -3 L-24 -7 L-16 -33 Q-16 -39 -11.94 -43.68 Q-14 -45 -15.70 -48.77 Z" />
+        <g transform="translate(-10 -2) rotate(-18 7 -53)">
+          <ellipse class="eye" cx="12" cy="-54" rx="2" ry="2.6" />
+          <ellipse class="eye" cx="18" cy="-54" rx="1.3" ry="2.2" />
+        </g>
+      </g>
+    </svg>
+  </div>
+</fig-tree>
+
+<style>
+  .fig-tree {
+    --tree-ink: #78716c;
+    --tree-shadow: #d6d0c3;
+    --tree-gold: #bb8525;
+    --tree-core: #ffe4a3;
+    --progress: 0;
+    display: block;
+    width: 100%;
+    margin: 2.5rem 0 1.5rem;
+  }
+
+  :global(.dark) .fig-tree {
+    --tree-ink: #a8a29e;
+    --tree-shadow: #494138;
+    --tree-gold: #dfab52;
+    --tree-core: #fff0c9;
+  }
+
+  .tree-visual {
+    height: 50svh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  svg { display: block; width: 100%; max-width: 640px; min-height: 0; max-height: 100%; }
+  .ground { fill: var(--tree-ink); opacity: 0.12; }
+  .branch-shadow, .branch-glow, .branch-core { fill: none; stroke-linecap: round; }
+  .branch-shadow { stroke: var(--tree-shadow); stroke-width: 2.5; }
+  .branch-glow { stroke: var(--tree-gold); stroke-width: 4; filter: drop-shadow(0 0 5px var(--tree-gold)); }
+  .branch-core { stroke: var(--tree-core); stroke-width: 1.2; }
+  .bud { fill: var(--tree-core); stroke: var(--tree-gold); stroke-width: 1.5; }
+  .is-chosen .branch-glow { stroke-width: calc(4px + var(--progress) * 1.5px); }
+  .child { fill: #141311; }
+  .eye { fill: #fffdf1; }
+  :global(.dark) .child-silhouette { stroke: #b9a686; stroke-width: 0.5; }
+
+  @media (max-width: 700px) {
+    .fig-tree { margin-top: 1.5rem; }
+    .tree-visual { height: auto; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .fig-tree { --progress: 1; }
+    .branch:not(.is-chosen) .branch-light { opacity: 0; }
+  }
+</style>
+
+<script>
+  class FigTree extends HTMLElement {
+    private frame = 0;
+    private motion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    private observer?: ResizeObserver;
+    private branches: { light: SVGGElement; fade: number }[] = [];
+    private visual?: HTMLElement;
+
+    connectedCallback() {
+      this.visual = this.querySelector<HTMLElement>(".tree-visual") ?? undefined;
+      this.branches = Array.from(this.querySelectorAll<SVGGElement>("[data-fade]")).map(branch => ({
+        light: branch.querySelector<SVGGElement>(".branch-light")!,
+        fade: Number(branch.dataset.fade),
+      }));
+      window.addEventListener("scroll", this.schedule, { passive: true });
+      window.addEventListener("resize", this.schedule);
+      this.motion.addEventListener("change", this.schedule);
+      this.observer = new ResizeObserver(this.schedule);
+      this.observer.observe(this);
+      this.schedule();
+    }
+
+    disconnectedCallback() {
+      window.removeEventListener("scroll", this.schedule);
+      window.removeEventListener("resize", this.schedule);
+      this.motion.removeEventListener("change", this.schedule);
+      this.observer?.disconnect();
+      cancelAnimationFrame(this.frame);
+      this.frame = 0;
+    }
+
+    private schedule = () => {
+      if (!this.frame) this.frame = requestAnimationFrame(this.update);
+    };
+
+    private update = () => {
+      this.frame = 0;
+      if (!this.visual) return;
+      // Reduced motion shows the chosen paths without scroll-driven animation.
+      if (this.motion.matches) {
+        this.style.removeProperty("--progress");
+        this.branches.forEach(({ light }) => light.style.removeProperty("opacity"));
+        return;
+      }
+      const rect = this.visual.querySelector("svg")!.getBoundingClientRect();
+      const headerBottom = document.querySelector("header")?.getBoundingClientRect().bottom ?? 0;
+      // Finish before the canopy (about 10% down the SVG) passes behind the
+      // header. Waiting for the whole panel to exit hides the fades offscreen.
+      const exitScroll = Math.max(1, window.scrollY + rect.top + rect.height * 0.1 - headerBottom);
+      const progress = Math.min(1, Math.max(0, window.scrollY / exitScroll));
+      this.style.setProperty("--progress", progress.toFixed(4));
+      for (const { light, fade } of this.branches) {
+        const t = Math.min(1, Math.max(0, (progress - fade) / 0.18));
+        // Smoothstep gives each branch a gentle fade, not an on/off switch.
+        light.style.opacity = String(1 - t * t * (3 - 2 * t));
+      }
+    };
+  }
+
+  if (!customElements.get("fig-tree")) customElements.define("fig-tree", FigTree);
+</script>
